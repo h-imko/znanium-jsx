@@ -1,23 +1,23 @@
 export default function () {
 	document.querySelectorAll(".dropzone:not(.is-initialized)").forEach(dropzone => {
 		dropzone.classList.add("is-initialized")
-		let input = dropzone.querySelector("input")
-		let list = dropzone.querySelector(".dropzone__list")
-		let files = new Set()
-		let accept = input.accept
-		let maxlength = input.dataset.maxlength
-		let maxsize = input.dataset.maxsize
+		const input = dropzone.querySelector("input")
+		const list = dropzone.querySelector(".dropzone__list")
+		const files = new Set()
+		const accept = input.accept
+		const maxlength = input.dataset.maxlength ?? 1
+		const maxsize = input.dataset.maxsize
 
 		/**
 		 * 
 		 * @param {File} file 
 		 */
 		function makeThumb(file) {
-			let thumb = document.createElement("div")
+			const thumb = document.createElement("div")
 			thumb.classList.add("dropzone__item")
 			thumb.setAttribute("title", file.name)
 
-			let remover = document.createElement("button")
+			const remover = document.createElement("button")
 			remover.classList.add("dropzone__item__remove")
 			remover.type = "button"
 			remover.addEventListener("click", (event) => {
@@ -28,11 +28,11 @@ export default function () {
 				update()
 			})
 
-			let preview = document.createElement("a")
+			const preview = document.createElement("a")
 			preview.classList.add("dropzone__item__preview")
 			preview.setAttribute("target", "_blank")
 
-			let previewImg = document.createElement("img")
+			const previewImg = document.createElement("img")
 			preview.append(previewImg)
 
 			if (file.img) {
@@ -46,10 +46,12 @@ export default function () {
 		}
 
 		function update() {
-			let fileBuffer = new DataTransfer()
+			const fileBuffer = new DataTransfer()
+
 			files.forEach(file => {
 				fileBuffer.items.add(file)
 			})
+
 			input.files = fileBuffer.files
 			dropzone.classList.toggle("is-full", files.size == maxlength)
 		}
@@ -64,9 +66,11 @@ export default function () {
 					alert(`Превышен максимальный размер файла - ${file.name}`)
 				} else {
 					files.add(file)
+
 					if (file.type.includes("image")) {
 						file.img = URL.createObjectURL(file)
 					}
+
 					list.append(makeThumb(file))
 				}
 			}
@@ -77,6 +81,7 @@ export default function () {
 		input.addEventListener("dragenter", () => {
 			input.classList.add("is-dragover")
 		})
+
 		input.addEventListener("dragleave", () => {
 			input.classList.remove("is-dragover")
 		})

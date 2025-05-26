@@ -14,9 +14,9 @@
 		"init": "npm i && node ./node_modules/gulp/bin/gulp.js cleanInitials"
 	},
 	"devDependencies": {
-		"browser-sync": "^3.0.3",
-		"ejs": "^3.1.10",
-		"esbuild": "^0.25.1",
+		"browser-sync": "^3.0.4",
+		"clsx": "^2.1.1",
+		"esbuild": "^0.25.4",
 		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-esbuild": "^0.14.0",
@@ -25,17 +25,18 @@
 		"gulp-sass": "^6.0.1",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-stacksvg": "^5.0.1",
-		"preact": "^10.26.4",
+		"preact": "^10.26.7",
 		"preact-render-to-string": "^6.5.13",
-		"sass-embedded": "^1.86.0",
-		"sharp": "^0.33.5",
+		"sass-embedded": "^1.89.0",
+		"sharp": "^0.34.2",
 		"svgo": "^3.3.2",
+		"uuid": "^11.1.0",
 		"vinyl": "^3.0.0",
 		"wawoff2": "^2.0.1"
 	},
 	"dependencies": {
 		"@splidejs/splide": "^4.1.4",
-		"clsx": "^2.1.1",
-		"uuid": "^11.1.0"
+		"@splidejs/splide-extension-intersection": "^0.2.0",
+		"chart.js": "^4.4.9"
 	}
 }

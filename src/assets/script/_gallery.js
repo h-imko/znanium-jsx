@@ -7,7 +7,7 @@ export const childGalleryPropertyName = "childGallery"
  * Должна быть вызвана до инициализации слайдеров
  */
 export default function () {
-	let galleries = {}
+	const galleries = {}
 
 	document.querySelectorAll("[data-gallery]").forEach(link => {
 		(galleries[link.dataset.gallery] ??= []).push(link)
@@ -36,7 +36,7 @@ export default function () {
 			splide.classList.add("splide")
 			splideTrack.classList.add("splide__track")
 			splideList.classList.add("splide__list")
-			splideArrows.classList.add("splide__arrows")
+			splideArrows.classList.add("/splide__arrows")
 			splideArrowPrev.classList.add("splide__arrow", "splide__arrow--prev")
 			splideArrowNext.classList.add("splide__arrow", "splide__arrow--next")
 		}

@@ -1,6 +1,6 @@
 export default function () {
 	document.querySelectorAll(".counter:not(.is-initialized)").forEach(counter => {
-		let input = counter.querySelector("input")
+		const input = counter.querySelector("input")
 		counter.classList.add("is-initialized")
 
 		if (!input.step) {

@@ -51,7 +51,7 @@ export default function () {
 					<div className="container">
 						<div className="header__top__inner">
 							<div className="header__top__block">
-								<a href="/src/index.ejs" className="header__logo" aria-label="Главная">
+								<a href="/src/index.jsx" className="header__logo" aria-label="Главная">
 									<div className="header__logo__desktop">
 										<Logo />
 									</div>

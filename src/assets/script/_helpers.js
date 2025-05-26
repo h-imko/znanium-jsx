@@ -1,39 +1,7 @@
-/**
- *	@description Блокирует {@link true} или разблокирует {@link false}  прокрутку страницы
- * @param {Boolean} action
- */
-
+import { Intersection } from '@splidejs/splide-extension-intersection'
 import Splide from "@splidejs/splide"
 // import { Grid } from "@splidejs/splide-extension-grid"
 import { childGalleryPropertyName } from "./_gallery"
-
-const toggleNoscrollBody = (function () {
-	let scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
-	return function (action) {
-		function disable() {
-			document.documentElement.style.setProperty("--scrollbar-width", `${scrollBarWidth}px`)
-			document.body.classList.add("noscroll")
-		}
-
-		function enable() {
-			document.body.classList.remove("noscroll")
-		}
-
-		function toggle() {
-			document.body.classList.contains("noscroll") ? enable() : disable()
-		}
-
-		if (typeof action !== "undefined") {
-			if (action) {
-				disable()
-			} else {
-				enable()
-			}
-		} else {
-			toggle()
-		}
-	}
-})()
 
 /**
  *
@@ -41,7 +9,7 @@ const toggleNoscrollBody = (function () {
  * @param {Array.<Element>} targets
  * @returns
  */
-function ifClickInside(event, ...targets) {
+export function ifClickInside(event, ...targets) {
 	return targets.some(target => {
 		return event.composedPath().includes(target)
 	})
@@ -63,8 +31,9 @@ export function bindSplideCounter(splide, counter) {
 	})
 }
 
-function setVh() {
+export function setVh() {
 	document.documentElement.style.setProperty("--vh", `${visualViewport.height / 100}px`)
+
 	visualViewport.addEventListener("resize", () => {
 		document.documentElement.style.setProperty("--vh", `${visualViewport.height / 100}px`)
 	})
@@ -75,11 +44,10 @@ function setVh() {
  * @param {Splide} splide
  * @param {HTMLElement[]} arrows
  */
-function bindSplideArrows(splide, arrows) {
+export function bindSplideArrows(splide, arrows) {
 	arrows.forEach(arrows => {
-
-		let arrow_prev = arrows.querySelector(".splide__arrow--prev")
-		let arrow_next = arrows.querySelector(".splide__arrow--next")
+		const arrow_prev = arrows.querySelector(".splide__arrow--prev")
+		const arrow_next = arrows.querySelector(".splide__arrow--next")
 
 		function setArrowsState(current_index = 0) {
 			arrow_prev.toggleAttribute("disabled", current_index == 0)
@@ -109,24 +77,36 @@ function bindSplideArrows(splide, arrows) {
  * @param {import("@splidejs/splide").Options} options 
  * @param {string} selector 
  */
-function makeSplide(selector, options) {
+export function makeSplide(selector, options = {}) {
 	document.querySelectorAll(selector).forEach(container => {
-		let slider = container.querySelector(".splide")
-		let arrows = container.querySelectorAll(".splide__arrows")
-		let counter = container.querySelector(".splide__counter")
-		let splide = new Splide(slider, options)
-		let childGallery = slider[childGalleryPropertyName]
+		const slider = container.querySelector(".splide")
+		const arrows = container.querySelectorAll(".splide__arrows")
+		const counter = container.querySelector(".splide__counter")
+		const splide = new Splide(slider, options)
+		const childGallery = slider[childGalleryPropertyName]
 
 		disableSplideDragOverflow(splide)
 
-		if (arrows.length) { bindSplideArrows(splide, arrows) }
-		if (counter) { bindSplideCounter(splide, counter) }
-		if (options.grid) { syncSplideGridToStyle(splide, container) }
-		if (childGallery) { splide.sync(childGallery) }
-		splide.mount({
-			// Grid
+		if (arrows.length && !splide.options.arrows) {
+			bindSplideArrows(splide, arrows)
+		}
+
+		if (counter) {
+			bindSplideCounter(splide, counter)
+		}
+
+		if (options.grid) {
+			syncSplideGridToStyle(splide, container)
+		}
+
+		if (childGallery) {
+			splide.sync(childGallery)
+		}
+
+		setTimeout(() => {
+			splide.mount({ Intersection })
+			childGallery?.mount()
 		})
-		childGallery.mount()
 	})
 }
 
@@ -134,7 +114,7 @@ function makeSplide(selector, options) {
  * 
  * @param {Splide} splide 
  */
-function disableSplideDragOverflow(splide) {
+export function disableSplideDragOverflow(splide) {
 	splide.on("overflow", isOverflow => {
 		splide.options = {
 			drag: isOverflow
@@ -147,7 +127,7 @@ function disableSplideDragOverflow(splide) {
  * @param {Splide} splide
  * @param {HTMLElement} container
  */
-function syncSplideGridToStyle(splide, container) {
+export function syncSplideGridToStyle(splide, container) {
 	function setStyle() {
 		container.style.setProperty("--splide-grid-row-gap", `${splide.options.grid.gap.row}px`)
 		container.style.setProperty("--splide-grid-col-gap", `${splide.options.grid.gap.col}px`)
@@ -156,7 +136,7 @@ function syncSplideGridToStyle(splide, container) {
 	splide.on("updated", setStyle)
 }
 
-function headerHeightToCSS() {
+export function headerHeightToCSS() {
 	let header = document.body.querySelector("header")
 
 	function setSize() {
@@ -170,13 +150,67 @@ function headerHeightToCSS() {
 	}).observe(header)
 }
 
-const breakpoints = (() => {
-	let style = getComputedStyle(document.documentElement)
-	return {
-		mobile: parseInt(style.getPropertyValue("--mobile")),
-		tablet: parseInt(style.getPropertyValue("--tablet")),
-		laptop: parseInt(style.getPropertyValue("--laptop"))
-	}
-})()
+/**
+ * @param {Function} func 
+ * @param {number} ms 
+ */
+export function throttle(func, ms) {
+	let isThrottled = false,
+		savedArgs,
+		savedThis
 
-export { toggleNoscrollBody, ifClickInside, bindSplideArrows, headerHeightToCSS, breakpoints, syncSplideGridToStyle, makeSplide, disableSplideDragOverflow }
+	function wrapper() {
+
+		if (isThrottled) {
+			savedArgs = arguments
+			savedThis = this
+			return false
+		}
+
+		const result = func.apply(this, arguments)
+
+		isThrottled = true
+
+		setTimeout(function () {
+			isThrottled = false
+			if (savedArgs) {
+				wrapper.apply(savedThis, savedArgs)
+				savedArgs = savedThis = null
+			}
+		}, ms)
+	}
+
+	return wrapper
+}
+
+/**
+ * @param {Function} func 
+ * @param {number} delay 
+ */
+export function debounce(func, delay) {
+	let timeout = null
+
+	return (...args) => {
+		if (timeout) clearTimeout(timeout)
+
+		timeout = setTimeout(() => {
+			func(...args)
+			timeout = null
+		}, delay)
+	}
+}
+
+export const breakpoints = {
+	mobile: 768,
+	tablet: 1024,
+	laptop: 1400
+}
+
+// const breakpoints = (() => {
+// 	const style = getComputedStyle(document.documentElement)
+// 	return {
+// 		mobile: parseInt(style.getPropertyValue("--mobile")),
+// 		tablet: parseInt(style.getPropertyValue("--tablet")),
+// 		laptop: parseInt(style.getPropertyValue("--laptop"))
+// 	}
+// })()

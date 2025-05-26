@@ -8,9 +8,11 @@ export default function ({ children }) {
 			<Head />
 			<body>
 				<Header />
-				<main>
-					{ children }
-				</main>
+				<div className="page">
+					<main className="page__content">
+						{ children }
+					</main>
+				</div>
 				<Footer />
 			</body>
 		</html >

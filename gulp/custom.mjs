@@ -2,7 +2,6 @@ import fs from "fs"
 import rename from "gulp-rename"
 import path from "path"
 import { changeExt, transform } from "./service.mjs"
-import ejs from "ejs"
 import { argv, bs, convertingImgTypes, gulpMem } from "./env.mjs"
 import sharp from "sharp"
 import wawoff2 from "wawoff2"
@@ -111,21 +110,6 @@ function clean() {
 	})
 }
 
-function ejsCompile() {
-	return transform((chunk, encoding, callback) => {
-		ejs.renderFile(chunk.path, {}, {
-			root: path.join(chunk.cwd, "src", "assets", "ejs"),
-		}).then(html => {
-			html = html.replaceAll(".scss", ".css").replaceAll(".ejs", ".html")
-			chunk.path = chunk.path.replace(chunk.extname, ".html")
-			chunk.contents = Buffer.from(html, encoding)
-			callback(null, chunk)
-		}).catch(error => {
-			callback(error, chunk)
-		})
-	})
-}
-
 function removeExcess(src, dest, ...extraExts) {
 	return transform((chunk, encoding, callback) => {
 		try {
@@ -188,4 +172,4 @@ function getDestPath(inSrc, ...replaces) {
 }
 
 
-export { ext, newer, replace, reload, replaceSrc, clean, ejsCompile, removeExcess, iconsToCSS, ttfToWoff, sharpWebp, getDestPath, svgOptimize }
+export { ext, newer, replace, reload, replaceSrc, clean, removeExcess, iconsToCSS, ttfToWoff, sharpWebp, getDestPath, svgOptimize }
