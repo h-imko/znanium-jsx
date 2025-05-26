@@ -1,0 +1,13 @@
+<svg id="self" preserveAspectRatio="xMidYMid meet" viewBox="0 0 173 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M52.2747 28H124.83V124.471H60.0509H53.2805C50.3641 124.471 48 122.121 48 119.221V32.25C48 29.9028 49.9138 28 52.2747 28Z" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M48.3574 119.014C48.3574 115.344 48.7505 109.838 58.7767 109.838C64.1921 109.838 104.41 110.148 125.469 110.148" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M61.4424 28.0035V110.149" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M92.8952 88.5C102.755 88.5 110.749 80.5531 110.749 70.75C110.749 60.9469 102.755 53 92.8952 53C83.0351 53 75.042 60.9469 75.042 70.75C75.042 80.5531 83.0351 88.5 92.8952 88.5Z" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M92.8959 72.5C93.868 72.5 94.6561 71.7165 94.6561 70.75C94.6561 69.7835 93.868 69 92.8959 69C91.9238 69 91.1357 69.7835 91.1357 70.75C91.1357 71.7165 91.9238 72.5 92.8959 72.5Z" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M92.3926 61.75V71.75L97.4216 76.75" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M91.8896 54.25V58.25" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M92.8955 83.25V87.25" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M109.491 70.75H105.468" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M80.323 70.75H76.2998" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M71.5645 67.0843C71.7925 64.8453 72.7622 61.4864 75.2947 58.0777C77.8781 54.6006 81.1562 52.7795 82.2218 52.25" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+</svg>

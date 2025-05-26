@@ -1,0 +1,68 @@
+@use "font" as *;
+
+.labels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.label {
+	--label-height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: var(--label-height);
+	min-height: min-content;
+	background-color: var(--color-accent);
+	@extend %font-4;
+	border-radius: calc(var(--default-border-radius-small) / 2);
+
+	&--alt {
+		background-color: var(--color-accent-alt);
+	}
+
+	&--alt1 {
+		background-color: var(--color-accent-alt1);
+	}
+
+	&--alt2 {
+		background-color: var(--color-accent-alt2);
+	}
+
+	&--alt3 {
+		background-color: var(--color-accent-alt3);
+	}
+
+	&--alt4 {
+		background-color: var(--color-accent-alt4);
+	}
+
+	&--alt5 {
+		background-color: var(--color-accent-alt5);
+	}
+
+	&--primary {
+		background-color: var(--color-primary);
+	}
+
+	&--primary-alt {
+		background-color: var(--color-primary-alt);
+	}
+
+	span {
+		display: block;
+		padding: 3px 7px;
+		color: var(--color-text-alt);
+		font-weight: 700;
+	}
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+
+	.icon {
+		--icon-width: var(--label-height);
+	}
+}

@@ -1,11 +1,93 @@
+@use "sass:meta";
+@use "icon" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+
 @layer {
-	@import "@splidejs/splide/dist/css/splide-core.min";
+	@include meta.load-css("../../../node_modules/@splidejs/splide/dist/css/splide-core.min")
 }
 
-.splide {
-	&__arrows {}
+// TODO скрыть ссылки в невидимых слайдах
+.splide,
+%splide {
+	&__arrows {
 
-	&__arrow {}
+		&:has(:disabled + :disabled),
+		&.is-disabled {
+			display: none !important;
+		}
+	}
+
+	&__arrow {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: var(--default-border-width) solid currentColor;
+		border-radius: 6px;
+		@include hoverType2;
+
+		&:disabled {
+			opacity: .5;
+		}
+
+		&--light {
+			--hover-default-color: var(--color-text-alt);
+		}
+
+		&--prev {
+			@extend %icon--chevron_left;
+		}
+
+		&--next {
+			@extend %icon--chevron_right;
+		}
+
+		&::after {
+			content: "";
+			@extend %icon;
+		}
+	}
+
+	&--float-arrows-block {
+		// размер стрелки
+		padding: 0 40px;
+
+		@media (max-width: $laptop) {
+			padding: 0;
+		}
+	}
+
+	&--float-arrows &__arrows {
+		display: contents;
+
+		@media (max-width: $laptop) {
+			margin-top: gap-scale(1);
+			justify-content: center;
+			display: flex;
+			gap: gap-scale(1);
+		}
+	}
+
+	&--float-arrows &__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@media (max-width: $laptop) {
+			position: static;
+			transform: none;
+		}
+
+		&--prev {
+			right: calc(100% + var(--container-padding));
+		}
+
+		&--next {
+			left: calc(100% + var(--container-padding));
+		}
+	}
 
 	&__pagination {
 		li {}

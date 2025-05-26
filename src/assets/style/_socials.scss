@@ -1,0 +1,34 @@
+.socials,
+%socials {
+	display: flex;
+	gap: 15px;
+	--main: var(--color-text-alt);
+	--alt: var(--color-primary);
+	--outline-width: 1px;
+	color: var(--main);
+
+	&--invert {
+		--alt: var(--color-text-alt);
+		--main: var(--color-primary);
+		--outline-width: 2px;
+	}
+
+	&__item {
+		display: flex;
+		transition: var(--default-duration) ease background-color;
+		--icon-size: 27;
+		border-radius: 5px;
+
+		&:not(&--bald) {
+			outline: var(--outline-width) solid var(--main);
+			outline-offset: calc(var(--outline-width) * -1);
+		}
+
+		&--bald {}
+
+		&:is(:hover, :focus-within) {
+			background-color: var(--main);
+			--icon-color: var(--alt);
+		}
+	}
+}

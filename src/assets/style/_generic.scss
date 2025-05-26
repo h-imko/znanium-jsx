@@ -1,0 +1,44 @@
+@use "mixins" as *;
+@use "container" as *;
+
+.generic {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(1);
+	@extend %container-fluid;
+
+	&__header {
+		:is(h1, h2, h3, h4, h5, h6) {
+			color: var(--color-primary);
+			display: inline;
+		}
+
+		p:has(.help, button) {
+			margin-top: 0;
+			display: inline-flex;
+		}
+
+		p:has(button) {
+			vertical-align: sub;
+			--icon-size: 32;
+		}
+
+		.help {
+			vertical-align: baseline;
+		}
+
+		p {
+			margin-top: 8px;
+		}
+
+		a {
+			@include hoverType1;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: inherit;
+	}
+}

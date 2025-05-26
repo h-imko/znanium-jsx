@@ -1,0 +1,10 @@
+@use "text" as *;
+@use "mixins" as *;
+
+.novelty {
+	@extend %text;
+
+	&__links {
+		padding-left: gap-scale(2);
+	}
+}

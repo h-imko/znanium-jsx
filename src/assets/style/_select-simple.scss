@@ -1,0 +1,58 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "button" as *;
+@use "icon" as *;
+
+%select-simple__select-element {
+	min-height: var(--input-height-small);
+	padding: 2px calc(4px + var(--icon-size) * 1px + 4px) 2px 8px;
+	cursor: pointer;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: var(--color-text-alt);
+	border: var(--default-border);
+	border-radius: var(--default-border-radius-small);
+	@include hoverTypeBorder;
+	@extend %font-2;
+
+	@layer unset {
+		& {
+			all: unset;
+		}
+	}
+}
+
+.select-simple,
+%select-simple {
+	display: flex;
+	flex-direction: column;
+	gap: 6px 0;
+	flex-grow: 1;
+	--icon-size: 20;
+	--pr: 4px;
+	@extend %font-2;
+
+	&--big select {
+		min-height: var(--input-height);
+	}
+
+	&__select {
+		display: flex;
+		position: relative;
+		align-items: center;
+		color: var(--color-primary);
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--chevron_down;
+			pointer-events: none;
+			position: absolute;
+			right: 4px;
+		}
+	}
+
+	select {
+		@extend %select-simple__select-element;
+	}
+}

@@ -1,0 +1,14 @@
+@use "mixins" as *;
+
+.placeholder {
+	border: var(--default-border);
+	height: 240px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: gap-scale(1.5);
+	background-color: var(--color-primary-lighter);
+	border-radius: var(--default-border-radius-small);
+	color: var(--color-primary);
+}

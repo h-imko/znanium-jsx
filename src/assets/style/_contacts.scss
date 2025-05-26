@@ -1,0 +1,5 @@
+@use "text" as *;
+
+.contacts {
+	@extend %text;
+}

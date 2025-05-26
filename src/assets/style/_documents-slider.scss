@@ -1,0 +1,55 @@
+@use "splide" as *;
+@use "mixins" as *;
+@use "font" as *;
+
+.documents-slider,
+%documents-slider {
+	&:not(.showcase &) {
+		@extend %splide--float-arrows-block;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(1.5);
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		&:is(:hover, :focus-within) &__title {
+			text-decoration: underline;
+		}
+
+		&__img {
+			height: rem(230);
+			width: auto;
+			border-radius: var(--default-border-radius-small);
+			box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+		}
+
+		&__author {
+			color: var(--color-accent);
+			font-weight: 700;
+			@extend %font-2;
+		}
+
+		&__title {
+			width: 0;
+			min-width: 100%;
+			@include text-line-clip(3);
+			@extend %font-2;
+		}
+
+		&__labels {
+			width: 0;
+			min-width: 100%;
+		}
+	}
+
+	.splide {
+		@extend %splide--float-arrows;
+	}
+}

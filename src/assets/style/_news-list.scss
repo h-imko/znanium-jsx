@@ -1,0 +1,95 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+.news-list {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(1);
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 3fr 5fr;
+		@include hoverType2;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+
+		// &:is(:hover, :focus-within) &__title {
+		// 	color: var(--color-accent);
+		// }
+		&__img {
+			min-height: 100%;
+			display: grid;
+			overflow: hidden;
+			border-radius: var(--default-border-radius) 0 0 var(--default-border-radius);
+
+			@media (max-width: $mobile) {
+				border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+			}
+
+			img {
+				grid-row: 1;
+				grid-column: 1;
+				height: 100%;
+				object-position: center;
+
+				@media (max-width: $mobile) {
+					height: 160px;
+					object-position: center;
+				}
+			}
+
+			&::before {
+				grid-row: 1;
+				grid-column: 1;
+				content: "";
+				background-image: var(--img);
+				background-position: center;
+				background-size: cover;
+				z-index: -2;
+				filter: blur(10px);
+			}
+
+			&::after {
+				content: "";
+				background-color: color-mix(in srgb, var(--color-primary) 20%, #0000);
+				grid-row: 1;
+				grid-column: 1;
+				z-index: -1;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: gap-scale(0.5);
+			padding: gap-scale(1) gap-scale(1.5);
+			border-style: solid;
+			border-color: var(--default-border-color);
+			border-radius: 0 var(--default-border-radius) var(--default-border-radius) 0;
+			border-width: var(--default-border-width) var(--default-border-width) var(--default-border-width) 0;
+
+			@media (max-width: $mobile) {
+				border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+				border-width: 0 var(--default-border-width) var(--default-border-width) var(--default-border-width);
+				padding: gap-scale(1.5) gap-scale(1);
+			}
+		}
+
+		&__title {
+			transition: color ease var(--default-duration);
+		}
+
+		&__text {
+			color: var(--color-text);
+		}
+
+		&__date {
+			color: var(--color-primary-alt);
+			margin-top: auto;
+		}
+	}
+}

@@ -1,0 +1,135 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "button" as *;
+@use "breakpoint" as *;
+@use "select-simple" as *;
+
+.quotes {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(1);
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	&__action {
+		@include hoverType2;
+	}
+
+	&__lists {
+		display: flex;
+		align-items: center;
+		gap: gap-scale(1);
+
+		&__select {
+			flex-grow: 1;
+		}
+	}
+
+	&__export {
+		display: flex;
+		justify-content: flex-end;
+
+		&__link {
+			@extend %font-2;
+			@extend %button-text;
+		}
+	}
+
+	&__list {
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+	}
+
+	&__item {
+		padding: gap-scale(1);
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(1);
+
+		&:not(:last-child) {
+			border-bottom: var(--default-border);
+		}
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 12px;
+			align-items: center;
+
+			@media (max-width: $mobile) {
+				align-items: flex-start;
+			}
+		}
+
+		&__datetime {
+			display: flex;
+			align-items: center;
+			gap: 8px 12px;
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+
+		&__title {
+			@extend %h5;
+		}
+
+		&__text {
+			display: flex;
+			align-items: flex-start;
+			gap: gap-scale(0.5);
+			@extend %font-2;
+
+			&::before {
+				content: "";
+				flex-shrink: 0;
+				--icon-size: 40;
+				@extend %icon, %icon--quote;
+
+				@media (max-width: $mobile) {
+					--icon-size: 32;
+				}
+			}
+
+			&__toggler {}
+
+			.rest-toggler:not(.is-active) ~ &__tail {
+				display: none;
+			}
+		}
+
+		&__record {
+			@extend %font-4;
+			color: var(--color-text2);
+		}
+
+		&__link {
+			@extend %button-text;
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+	}
+
+	.select-simple {
+		@extend %select-simple--big;
+	}
+}

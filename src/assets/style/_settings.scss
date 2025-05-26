@@ -1,0 +1,34 @@
+@use "text" as *;
+@use "button" as *;
+@use "mixins" as *;
+@use "select-simple" as *;
+
+.settings {
+	&__block {
+		@extend %text;
+
+		&:not(:last-child) {
+			padding-bottom: gap-scale(2);
+			border-bottom: var(--default-border);
+			margin-bottom: gap-scale(2);
+		}
+	}
+
+	&__button {
+		@extend %button;
+	}
+
+	&__input {
+		&:not(:last-child) {
+			margin-bottom: var(--gap-small);
+		}
+
+		&:not(:first-child) {
+			margin-top: var(--gap-small);
+		}
+	}
+
+	.select-simple {
+		@extend %select-simple--big;
+	}
+}

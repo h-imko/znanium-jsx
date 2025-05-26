@@ -1,0 +1,142 @@
+@use "mixins" as *;
+@use "splide" as *;
+@use "breakpoint" as *;
+@use "button-link" as *;
+@use "custom-list" as *;
+
+.collections-special {
+	color: var(--color-text-alt);
+	padding-top: 128px;
+	padding-bottom: 128px;
+	@extend %splide--float-arrows-block;
+
+	@media (max-width: $laptop) {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+
+	@media (max-width: $mobile) {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(2);
+	}
+
+	&__title {
+		padding: gap-scale(1);
+		border-radius: var(--default-border-radius);
+		backdrop-filter: blur(5px);
+		text-align: center;
+		background-color: color-mix(in srgb, color-mix(in srgb, var(--color-text) 50%, var(--color-primary)) 50%, #0000);
+
+		@media (max-width: $mobile) {
+			backdrop-filter: unset;
+		}
+	}
+
+	&__card {
+		color: var(--color-text-alt);
+		border-radius: var(--default-border-radius);
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		@include transition;
+		transition-property: color;
+		position: relative;
+		background-color: color-mix(in srgb, color-mix(in srgb, var(--color-text) 85%, var(--color-primary)) 50%, #0000);
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -2;
+			border-radius: var(--default-border-radius);
+			backdrop-filter: blur(5px);
+			inset: 2px;
+			@include themeHide;
+
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: linear-gradient(180deg, #0000 0%, var(--color-text-alt) 100%) border-box;
+			inset: 0;
+			border: var(--default-border-width) solid #0000;
+			border-radius: var(--default-border-radius);
+			mask:
+				linear-gradient(#000 0 0) padding-box,
+				linear-gradient(#000 0 0);
+			mask-composite: exclude;
+			pointer-events: none;
+		}
+
+		&:is(:hover, :focus-within) {
+			color: var(--color-accent);
+		}
+
+		&__body {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: gap-scale(1);
+			padding: gap-scale(1) gap-scale(1) gap-scale(1.5) gap-scale(1);
+		}
+
+		&__title {
+			@include transition;
+			transition-property: color;
+			color: var(--color-primary-light);
+			font-weight: 700;
+		}
+
+		&__img {
+			display: flex;
+			justify-content: center;
+			background-color: color-mix(in srgb, color-mix(in srgb, var(--color-text) 50%, var(--color-primary)) 50%, #0000);
+			border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+
+			.streak-img {
+				--streak-img-decorator-color: #0000;
+				--main-color: var(--color-text-alt);
+			}
+		}
+
+		&__link {
+			@extend %button-link;
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			gap: inherit;
+
+			ul {
+				@extend %custom-list, %custom-list--light;
+				color: var(--color-primary-light);
+			}
+		}
+
+		&__footer {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: auto;
+		}
+	}
+
+	.splide {
+		@extend %splide--float-arrows;
+
+		&__arrow {
+			@extend %splide__arrow--light;
+			background-color: color-mix(in srgb, color-mix(in srgb, var(--color-text) 50%, var(--color-primary)) 50%, #0000);
+		}
+	}
+}

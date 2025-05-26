@@ -1,0 +1,50 @@
+@use "mixins" as *;
+
+.m31 {
+	display: grid;
+
+	&__bg {
+		display: grid;
+		grid-row: 1;
+		grid-column: 1;
+		min-width: 0;
+		background-color: var(--color-text-alt);
+	}
+
+	&__bg.is-initialized.is-visible &__layer {
+		transition: background-position-y ease-out .5s;
+	}
+
+	&__content {
+		grid-row: 1;
+		grid-column: 1;
+		min-width: 0;
+	}
+
+	&__layer {
+		grid-row: 1;
+		min-width: 0;
+		grid-column: 1;
+		background-size: cover;
+		pointer-events: none;
+		background-position-x: center;
+		background-position-y: calc(75% + ((var(--scrolled) - var(--offset)) / var(--scroll-ratio)) * -1px);
+		@include themeHide;
+
+		&--1 {
+			--scroll-ratio: 3;
+		}
+
+		&--2 {
+			--scroll-ratio: 4;
+		}
+
+		&--3 {
+			--scroll-ratio: 3;
+		}
+
+		&--4 {
+			--scroll-ratio: 2;
+		}
+	}
+}

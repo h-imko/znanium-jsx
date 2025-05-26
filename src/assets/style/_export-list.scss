@@ -1,0 +1,57 @@
+@use "font" as *;
+@use "button" as *;
+@use "icon" as *;
+
+.export-list {
+	display: flex;
+	flex-direction: column;
+	@extend %font-3;
+
+	&__item {
+		padding-top: 8px;
+
+		&:not(:first-child) {
+			padding-top: 8px;
+		}
+
+		&:not(:last-child) {
+			padding-bottom: 8px;
+			border-bottom: 1px solid var(--default-border-color);
+		}
+
+		&__name {}
+
+		&__value {
+			padding-left: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			padding-top: 8px;
+
+			a {
+				@extend %button-text;
+
+				&::before {
+					content: "";
+					@extend %icon, %icon--download;
+				}
+			}
+
+			button {
+				@extend %button-text;
+			}
+
+			label {
+				@extend %button-text;
+				cursor: pointer;
+			}
+
+			input[type=file] {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+		}
+	}
+}

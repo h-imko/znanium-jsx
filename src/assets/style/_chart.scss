@@ -1,0 +1,21 @@
+@use "mixins" as *;
+
+.chart {
+	display: grid;
+	gap: gap-scale(0.75);
+	flex-grow: 1;
+	padding: gap-scale(0.75) gap-scale(1.25) gap-scale(0.5) gap-scale(1);
+	border: var(--default-border);
+	border-radius: var(--default-border-radius-small);
+
+	&__title {}
+
+	&__inner {
+		position: relative;
+		min-height: 300px;
+		aspect-ratio: 16 / 9;
+		flex-grow: 1;
+		min-width: 100%;
+		width: 0;
+	}
+}

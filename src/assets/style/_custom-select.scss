@@ -1,28 +1,82 @@
+@use "icon" as *;
+@use "font" as *;
+@use "mixins" as *;
+
 .custom-select {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 6px;
 	position: relative;
 
-	&__select {
-		&.is-hidden {
-			position: absolute;
-			pointer-events: none;
-			opacity: 0;
+	&__inner {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		border: var(--default-border-width) solid var(--border-color);
+		border-radius: var(--default-border-radius-small);
+		transition-property: background-color, border-color;
+		transition-timing-function: ease;
+		transition-duration: var(--default-duration);
+		background-color: #0000;
+		min-height: var(--input-height);
+		--border-color: var(--default-border-color);
+
+		&:has(&__chosen, &__input:focus),
+		&:is(:hover, :focus-within) {
+			--border-color: var(--color-primary);
 		}
 	}
 
-	&__list {
+	&__label {
+		// grid-row: -2;
+		// grid-column: 1 / -1;
+		@extend %font-2;
+	}
+
+	&__select {
+		position: absolute;
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	&__drop {
 		position: absolute;
 		left: 0;
 		right: 0;
-		background-color: #fff;
+		top: calc(100% + 6px);
+		background-color: var(--color-text-alt);
 		box-shadow: rgba(96, 103, 111, 0.4) 0 4px 14px;
 		opacity: 0;
 		pointer-events: none;
 		max-height: max(20dvh, 300px);
 		overflow: auto;
+		z-index: 1;
+		border-radius: var(--default-border-radius-small);
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		padding: 8px;
 
 		&.is-active {
 			opacity: 1;
 			pointer-events: all;
+			visibility: visible;
+		}
+	}
+
+	&__dialog {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		border-left: var(--default-border-width) solid var(--border-color);
+		padding: 4px;
+
+		&:is(:hover, :focus-within) {
+			color: var(--color-accent);
+		}
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--list;
 		}
 	}
 
@@ -31,9 +85,76 @@
 		transition-duration: var(--default-duration);
 		transition-timing-function: ease;
 		transition-property: background-color, color;
+		border-radius: var(--default-border-radius-small);
+		padding: 4px 12px;
 
-		&:hover {
-			background-color: #00000080;
+		&.is-active {
+			color: var(--color-primary);
+		}
+
+		&:is(:hover, :focus-within) {
+			background-color: var(--color-primary-light);
+		}
+	}
+
+	&__field {
+		width: 100%;
+		grid-column: 1;
+	}
+
+	&:not(.is-multiple) &__input {
+		display: none;
+	}
+
+	&__input {
+		width: 100%;
+		grid-column: 1;
+		padding: 0 12px;
+		height: 100%;
+
+		@layer unset {
+			& {
+				all: unset;
+			}
+		}
+	}
+
+	&:not(.is-multiple) &__list {
+		pointer-events: none;
+	}
+
+	&__list {
+		padding: 8px 4px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+
+		&:not(:has(:first-child)) {
+			display: none;
+		}
+	}
+
+	&:not(.is-multiple) &__chosen {
+		color: var(--color-primary);
+		padding: 0 8px;
+	}
+
+	&.is-multiple &__chosen {
+		background-color: var(--color-primary-light);
+		color: var(--color-primary);
+		border-radius: var(--default-border-radius-small);
+		display: flex;
+		gap: 4px;
+		padding: 4px 8px;
+
+		&__remove {
+			@include hoverType2;
+
+			&::after {
+				content: "";
+				@extend %icon, %icon--delete;
+				cursor: pointer;
+			}
 		}
 	}
 }

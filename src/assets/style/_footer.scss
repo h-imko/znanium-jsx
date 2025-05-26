@@ -1,1 +1,131 @@
-.footer {}
+@use "mixins" as *;
+@use "breakpoint" as *;
+@use "font" as *;
+
+.footer {
+	margin-top: 160px;
+	padding-top: 60px;
+	background-color: var(--color-primary);
+	color: var(--color-text-alt);
+
+	@media (max-width: $laptop) {
+		margin-top: 120px;
+	}
+
+	@media (max-width: $laptop) {
+		margin-top: 80px;
+	}
+
+	@media (max-width: $laptop) {
+		margin-top: 48px;
+	}
+
+	&__inner {}
+
+	&__logo {
+		display: flex;
+		max-height: 75px;
+	}
+
+	&__top {
+		padding-bottom: 26px;
+
+		&__inner {
+			display: grid;
+			grid-template-columns: 3fr 9fr;
+			gap: var(--column-gap);
+
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
+	&__bottom {
+		padding-top: 26px;
+		padding-bottom: 10px;
+		border-top: 1px solid color-mix(in srgb, currentColor 20%, #0000);
+
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			gap: 24px;
+
+			@media (max-width: $laptop) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
+	&__nav {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			gap: 24px 8px;
+
+			@media (max-width: $laptop) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+			}
+
+			&::before {
+				content: "";
+
+				@media (max-width: $laptop) {
+					display: none;
+				}
+			}
+		}
+
+		&__col {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+
+			&__list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				@extend %font-2;
+			}
+		}
+
+		a {
+			&:is(:hover, :focus-within) {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__info {
+		@extend %font-2;
+	}
+
+	&__extra {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		@extend %font-4;
+
+		a {
+			padding: 4px 0;
+
+			&:is(:hover, :focus-within) {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__socials {}
+}

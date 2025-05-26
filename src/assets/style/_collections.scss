@@ -1,0 +1,66 @@
+@use "button" as *;
+@use "font" as *;
+@use "breakpoint" as *;
+@use "accordion" as *;
+@use "icon" as *;
+@use "mixins" as *;
+
+.collections {
+	&__item {
+		@include accordion;
+
+		&__title {
+			@extend %h5;
+		}
+	}
+
+	&__collection {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: gap-scale(0.5);
+		width: 100%;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+
+			@media (max-width: $mobile) {
+				justify-content: space-between;
+			}
+		}
+
+		&__buy {
+			display: flex;
+			align-items: center;
+			gap: gap-scale(1);
+
+			@media (max-width: $mobile) {
+				align-self: flex-end;
+			}
+		}
+
+		&__title {
+			@extend %h5;
+			@include hoverType1;
+		}
+
+		&__price {
+			font-weight: 500;
+		}
+
+		&__button {
+			@extend %button;
+
+			&.is-active {
+				@extend %button--accent-alt;
+			}
+		}
+	}
+}

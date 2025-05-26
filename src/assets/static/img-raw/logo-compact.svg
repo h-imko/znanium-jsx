@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="self">
+	<g clip-path="url(#prefix__prefix__clip0_72_2)">
+		<path fill="currentColor" d="M21 0H3a3 3 0 00-3 3v18a3 3 0 003 3h18a3 3 0 003-3V3a3 3 0 00-3-3z" />
+		<path fill="var(--color-text-alt, #fff)" d="M10.676 16.495h6.457V19H6.613v-1.716l6.438-9.278H6.575V5.492h10.493v1.67l-6.392 9.333z" />
+	</g>
+</svg>

@@ -1,46 +1,62 @@
 .custom-radio {
 	display: flex;
 	align-items: center;
-	gap: 12px;
-	cursor: pointer;
-	--size: 24px;
+	gap: 8px;
+	user-select: none;
+
+	&:has(:disabled) {
+		cursor: not-allowed;
+	}
+
+	&:not(:has(:disabled)) {
+		cursor: pointer;
+
+		&:is(:hover, :focus-within) {
+			color: var(--color-primary);
+		}
+	}
 
 	input[type="radio"] {
-		width: var(--size);
-		height: var(--size);
+		width: 24px;
+		height: 24px;
 		position: relative;
 		appearance: none;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-shrink: 0;
-		user-select: none;
 		border-radius: 50%;
-		border-width: 1px;
+		border-width: 2px;
 		border-style: solid;
-		border-color: grey;
+		border-color: var(--default-border-color);
 		transition: border-color var(--default-duration) ease;
-		cursor: pointer;
+		cursor: inherit;
 
-		&::before {
-			content: "";
-			opacity: 0;
-			position: absolute;
-			border-radius: inherit;
-			border-style: solid;
-			border-color: black;
-			border-width: calc(var(--size) / 4);
-			transition: opacity var(--default-duration) ease;
+		&:disabled {
+			border-color: var(--color-text2);
 		}
 
-		&:hover,
-		&:checked {
-			border-color: black;
-		}
-
-		&:checked {
+		&:not(:disabled) {
 			&::before {
-				opacity: 1;
+				content: "";
+				position: absolute;
+				border-radius: inherit;
+				border-style: solid;
+				border-color: var(--color-primary);
+				border-width: 5px;
+				transform: scale(0);
+				transition: transform var(--default-duration) ease;
+			}
+
+			&:is(:hover, :focus-within),
+			&:checked {
+				border-color: var(--color-primary);
+			}
+
+			&:checked {
+				&::before {
+					transform: scale(1);
+				}
 			}
 		}
 	}

@@ -1,0 +1,78 @@
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.banners {
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+
+		@media (max-width: $mobile) {
+			gap: 12px;
+		}
+	}
+
+	&__slider {
+		grid-column: 1 / -1;
+	}
+
+	&__slide {
+		a {
+			display: flex;
+		}
+
+		img {
+			border-radius: var(--default-border-radius);
+			aspect-ratio: 1155 / 343;
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__banner {
+		display: flex;
+
+		img {
+			border-radius: var(--default-border-radius);
+			aspect-ratio: 568 / 161;
+			object-fit: cover;
+		}
+	}
+
+	.splide {
+		position: relative;
+
+		&__slide {
+			width: 100%;
+			height: fit-content;
+		}
+
+		&__pagination {
+			position: absolute;
+			bottom: gap-scale(1);
+			left: gap-scale(1);
+			right: gap-scale(1);
+			display: flex;
+			justify-content: center;
+			gap: 14px;
+
+			&__page {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: 1px solid var(--color-primary);
+				outline: 1px solid var(--color-text-alt);
+				outline-offset: -2px;
+
+				&.is-active {
+					background-color: var(--color-text-alt);
+				}
+			}
+		}
+	}
+}

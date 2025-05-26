@@ -1,0 +1,88 @@
+@use "font" as *;
+@use "button" as *;
+@use "icon" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		color: var(--color-text1);
+		flex-wrap: wrap;
+		position: relative;
+		flex: 1 1 content;
+		@extend %font-2;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+		padding: 8px 16px;
+
+		&__popover {
+			position: absolute;
+			top: calc(100% + 10px);
+			right: 0;
+			background-color: #fff;
+			z-index: 1;
+			padding: 12px;
+			box-shadow: 0 5px 12px color-mix(in srgb, var(--color-text) 25%, #0000);
+			border-radius: var(--default-border-radius-small);
+			width: max-content;
+			max-width: calc(100vw - var(--container-padding) * 2);
+
+			&:not(.is-active) {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+
+		&:not(:has(span)) {
+			flex-grow: 0;
+		}
+
+		em {
+			font-weight: 700;
+		}
+	}
+
+	&__group:only-child &__item,
+	&__item:not(&__group > *):only-child {
+		border: none;
+		padding: 0;
+		flex-grow: 0;
+		margin-left: auto;
+	}
+
+	&__item:has(&__item__popover) &__button {
+		&::after {
+			content: "";
+			@extend %icon, %icon--chevron_down;
+		}
+
+		&.is-active {
+			&::after {
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+	&__button {
+		@extend %button-text;
+
+		&__collapse {
+			&::after {
+				content: "";
+				@extend %icon, %icon--expand;
+			}
+
+			&.is-active {
+				@extend %icon, %icon--collapse;
+			}
+		}
+	}
+}

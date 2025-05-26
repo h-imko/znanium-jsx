@@ -1,1 +1,84 @@
-.button {}
+@use "mixins" as *;
+@use "font" as *;
+@use "breakpoint" as *;
+
+.button,
+%button {
+	--color: var(--color-primary);
+	--bg-color: var(--color);
+	background-color: var(--bg-color);
+	border-radius: var(--default-border-radius-small);
+	padding: 4px 32px;
+	min-height: var(--button-height);
+	border: #0000 solid var(--default-border-width);
+	transition: var(--default-duration) ease background-color;
+	color: var(--color-text-alt);
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 8px;
+	max-width: max-content;
+	overflow-wrap: normal;
+
+	@media (max-width: $mobile) {
+		padding: 4px 12px;
+	}
+
+	&:not(&--small) {
+		@extend %font-3;
+	}
+
+	&--small {
+		padding: 4px 12px;
+		min-height: var(--input-height-small);
+		@extend %font-2;
+		max-width: max-content;
+	}
+
+	&--secondary {
+		min-height: var(--button-height);
+		padding: 4px 24px;
+		background-color: #0000;
+		border-color: var(--color);
+		border-radius: var(--default-border-radius-small);
+		color: var(--color);
+
+		&:not(.is-disabled):is(:hover, :focus-within) {
+			background-color: var(--bg-color);
+			color: var(--color-text-alt);
+		}
+	}
+
+	&:disabled,
+	&.is-disabled {
+		background-color: var(--color-text2);
+		cursor: default;
+	}
+
+	&--accent {
+		--color: var(--color-accent);
+	}
+
+	&--accent-alt {
+		--color: var(--color-accent-alt);
+	}
+
+	&:not(:is(.is-disabled, :disabled)):is(:hover, :focus-within) {
+		--bg-color: color-mix(in srgb, var(--color) 88%, #0000);
+	}
+
+	&-group {
+		display: flex;
+		gap: gap-scale(0.5);
+		flex-wrap: wrap;
+	}
+}
+
+.button-text,
+%button-text {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	@include hoverType2;
+}

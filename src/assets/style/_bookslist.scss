@@ -1,0 +1,36 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+@use "document" as *;
+
+.bookslist {
+	border: var(--default-border);
+	border-radius: var(--default-border-radius-small);
+
+	&__item {
+		padding: gap-scale(1) gap-scale(1.5);
+
+		&:not(:last-child) {
+			border-bottom: var(--default-border);
+		}
+	}
+
+	&.is-alt {
+		border: none;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: gap-scale(1.5);
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.document {
+			@extend %document--compact;
+		}
+	}
+
+	&.is-alt &__item {
+		padding: 0;
+		border: none;
+	}
+}

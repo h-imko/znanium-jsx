@@ -1,48 +1,66 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	outline: none;
-	text-decoration: none;
+@use "mixins" as *;
+@use "breakpoint" as *;
 
-	&::before,
-	&::after {
+@layer defaults {
+	button {
+		all: unset;
+		cursor: pointer;
+	}
+
+	*,
+	button,
+	::before,
+	::after {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 		outline: none;
 		text-decoration: none;
+		scroll-behavior: smooth;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+		object-fit: contain;
+		object-position: center;
+		display: block;
 	}
 }
 
-img {
-	width: 100%;
-	height: auto;
-	max-height: 100%;
-	object-fit: contain;
-	object-position: center;
-	display: block;
-}
-
-html {
-	scroll-behavior: smooth;
-	display: grid;
-	min-height: 100%;
-}
-
-body {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-
-	&.noscroll {
-		overflow: hidden;
-		padding-right: var(--scrollbar-width, 0);
-	}
+[hidden] {
+	display: none !important;
 }
 
 :root {
-	--header-margin: 24px;
-	--container-padding: 16px;
-	--container-width: 1280px;
-	--default-duration: .3s;
+	--base-gap: 24px;
+	--container-padding: var(--base-gap);
+	--container-width: #{rem(1160)};
+	--default-duration: .2s;
+	--column-gap: 24px;
+	--button-height: 48px;
+	--input-height: 40px;
+	--input-height-small: 30px;
+	--default-border-radius: 16px;
+	--default-border-radius-small: 4px;
+	--default-border-width: 2px;
+	--default-border-color: var(--color-primary-light);
+	--default-border: var(--default-border-width) solid var(--default-border-color);
+	--page-gap: 64px;
+
+	@media (max-width: $tablet) {
+		--default-border-radius: 8px;
+		--column-gap: 12px;
+		--base-gap: 16px;
+	}
+
+	@media (max-width: $mobile) {
+		--base-gap: 12px;
+		--default-border-radius-small: 3px;
+		--input-height: 30px;
+		--button-height: 40px;
+		--page-gap: 32px;
+		--default-border-width: 2px;
+	}
 }

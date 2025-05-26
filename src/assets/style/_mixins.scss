@@ -1,6 +1,155 @@
+@use "sass:math";
+
 @mixin text-line-clip($lines) {
 	display: -webkit-box;
 	-webkit-line-clamp: $lines;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+@mixin mask($img) {
+	mask-image: $img;
+	mask-size: contain;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+@mixin transition($props...) {
+	transition-timing-function: ease;
+	transition-duration: var(--default-duration);
+}
+
+@function rem($px) {
+	@return calc((#{$px} / 16) * 1rem);
+}
+
+@function gap-scale($multiplier) {
+	@if $multiplier ==1 {
+		@return var(--base-gap);
+	}
+
+	@else {
+		@return calc(var(--base-gap) * #{$multiplier});
+	}
+}
+
+@mixin removeContainerPaddig {
+	margin-left: calc(var(--container-padding) * -1);
+	margin-right: calc(var(--container-padding) * -1);
+}
+
+@mixin addContainerPaddig {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+}
+
+@mixin themeHide {
+	:root[class*="theme--color"] & {
+		display: none;
+	}
+}
+
+@mixin scrollbar {
+	--sb-track-color: var(--color-text2);
+	--sb-thumb-color: var(--color-primary);
+	--sb-size: 4px;
+
+	::-webkit-scrollbar {
+		width: var(--sb-size);
+		height: var(--sb-size);
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--sb-track-color);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--sb-thumb-color);
+	}
+
+	@supports not selector(::-webkit-scrollbar) {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		scrollbar-width: var(--sb-size);
+		scrollbar-height: var(--sb-size);
+	}
+}
+
+@mixin hoverType1 {
+	&:is(a, button, select, input, label) {
+		&:not(.is-disabled, :disabled) {
+			color: var(--color-primary);
+
+			&.is-active {
+				text-decoration: underline;
+
+				&:is(:hover, :focus-within) {
+					text-decoration: none;
+				}
+			}
+
+			&:not(.is-active) {
+				text-decoration: none;
+
+				&:is(:hover, :focus-within) {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@mixin hoverType2 {
+	&:is(a, button, select, input, label) {
+		&:not(.is-disabled, :disabled) {
+			&.is-active {
+				color: var(--color-accent);
+
+				&:is(:hover, :focus-within) {
+					color: var(--hover-default-color, var(--color-primary));
+				}
+			}
+
+			&:not(.is-active) {
+				color: var(--hover-default-color, var(--color-primary));
+
+				&:is(:hover, :focus-within) {
+					color: var(--color-accent);
+				}
+			}
+		}
+	}
+}
+
+@mixin hoverType3 {
+	&:is(a, button, select, input, label) {
+		&:not(.is-disabled, :disabled) {
+			color: var(--color-primary);
+
+			&.is-active {
+				text-decoration: none;
+
+				&:is(:hover, :focus-within) {
+					text-decoration: underline;
+				}
+			}
+
+			&:not(.is-active) {
+				text-decoration: underline;
+
+				&:is(:hover, :focus-within) {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@mixin hoverTypeBorder {
+	&:is(a, button, select, input, label) {
+		&:is(:hover, :focus-within, .is-active) {
+			&:not(.is-disabled, :disabled) {
+				border-color: var(--color-primary);
+			}
+		}
+	}
 }

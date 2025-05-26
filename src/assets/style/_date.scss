@@ -1,0 +1,14 @@
+@use "icon" as *;
+
+.date,
+%date {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--color-accent);
+
+	&::before {
+		content: "";
+		@extend %icon, %icon--calendar;
+	}
+}

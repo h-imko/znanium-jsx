@@ -1,39 +1,81 @@
+@use "breakpoint" as *;
+@use "font" as *;
+@use "icon" as *;
+@use "button" as *;
+@use "mixins" as *;
+
 .dialog {
-	margin: auto;
-	overflow-y: auto;
-	height: 100%;
 	width: 100%;
-	background-color: transparent;
+	height: 100%;
+	max-width: unset;
+	max-height: unset;
+	background-color: #0000;
 	border: none;
-	opacity: 0;
-	pointer-events: none;
-	overscroll-behavior: contain;
-	display: grid;
-	grid-template-columns: 32px 1fr 32px;
-	grid-template-rows: 32px 1fr 32px;
+	overflow: hidden;
+	z-index: 999;
+	padding: gap-scale(1);
+
+	@media (max-width: $mobile) {
+		padding: 0;
+	}
+
+	&[open] {
+		display: flex;
+		justify-content: center;
+	}
 
 	&__body {
-		max-width: var(--container-width);
-		width: 100%;
-		grid-row: 2;
-		grid-column: 2;
-		justify-self: center;
-		align-self: center;
-		background-color: #fff;
+		max-height: 100%;
+		margin: auto;
+		background-color: var(--color-text-alt);
+		border-radius: var(--default-border-radius-small);
+		width: calc(var(--container-width) / 2);
+		padding: 32px gap-scale(1);
+		overflow: auto;
+		overscroll-behavior: none;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		@media (max-width: $mobile) {
+			border-radius: 0;
+			height: 100%;
+			padding: gap-scale(1);
+		}
 	}
 
-	&__close-backdrop {
-		opacity: 0;
-		grid-row: 1 / -1;
-		grid-column: 1 / -1;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
 	}
 
-	&:popover-open {
-		opacity: 1;
-		pointer-events: all;
+	&__title {
+		color: var(--color-primary);
+	}
+
+	&__hgroup {
+		@extend %font-2;
+	}
+
+	&__close {
+		align-self: flex-start;
+		flex-shrink: 0;
+		cursor: pointer;
+		color: var(--color-primary);
+		--icon-size: 32;
+
+		&:is(:hover, :focus-within) {
+			color: var(--color-accent);
+		}
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--close;
+		}
 	}
 
 	&::backdrop {
-		background: #00000080;
+		background: #0008;
 	}
 }

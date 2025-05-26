@@ -1,0 +1,20 @@
+@use "simplebooks";
+@use "shelf";
+
+.shelves {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&:not(.is-alt) {
+		.simplebook {
+			@extend %simplebook--alt;
+		}
+	}
+
+	&.is-alt {
+		.shelf {
+			@extend %shelf--alt;
+		}
+	}
+}

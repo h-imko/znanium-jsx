@@ -1,0 +1,90 @@
+@use "icon" as *;
+@use "font" as *;
+@use "breakpoint" as *;
+@use "button-link" as *;
+@use "mixins" as *;
+
+.tariffs {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(2);
+	}
+
+	&__title {
+		color: var(--color-primary);
+	}
+
+	&__list {
+		display: flex;
+		align-items: stretch;
+		gap: gap-scale(1);
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex: 1 1 0;
+		position: relative;
+		display: grid;
+		--streak-img-size: 140px;
+
+		@media (max-width: $tablet) {
+			flex-basis: 40%;
+			--streak-img-size: 100px;
+		}
+
+		@media (max-width: $mobile) {
+			flex-basis: 100%;
+		}
+
+		.block-arrow-border {
+			--gap-size: var(--streak-img-size);
+			min-width: 0;
+		}
+
+		&__img {}
+
+		&__title {
+			@extend %h5;
+			color: var(--color-primary);
+		}
+
+		&__price {
+			@extend %h4;
+
+			em {
+				color: var(--color-accent);
+				@extend %h2;
+			}
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: gap-scale(.75);
+			padding-bottom: gap-scale(1.5);
+			padding-left: gap-scale(1);
+			padding-right: gap-scale(1);
+		}
+
+		&__footer {
+			margin-top: auto;
+			border-top: 2px dashed var(--default-border-color);
+			padding: gap-scale(0.5);
+			align-self: stretch;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		&__link {
+			@extend %button-link;
+		}
+	}
+}

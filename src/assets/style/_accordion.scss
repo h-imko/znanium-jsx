@@ -1,20 +1,134 @@
-.accordion {
-	&__controller {
-		display: none;
+@use "breakpoint" as *;
+@use "mixins" as *;
+@use "button" as *;
+@use "icon" as *;
+
+%accordion-base {
+	&__toggler {
+		user-select: none;
+		cursor: pointer;
+
+		&:disabled,
+		&.is-disabled {
+			cursor: default;
+			pointer-events: none;
+		}
 	}
 
 	&__content {
 		min-height: 0;
+		min-width: 0;
 	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-rows: 0fr;
 		overflow: hidden;
-		transition: grid-template-rows var(--default-duration) ease;
+		transition: grid-template-rows ease var(--default-duration);
+
+		&:not(.is-active) {
+			visibility: hidden;
+		}
+
+		&.is-active {
+			grid-template-rows: 1fr;
+		}
+	}
+}
+
+@mixin accordion-opened {
+	.accordion__wrapper {
+		visibility: visible;
+		grid-template-rows: 1fr;
+	}
+}
+
+@mixin accordion-wrapper-opened {
+	grid-template-rows: 1fr !important;
+	visibility: visible !important;
+}
+
+@mixin accordion {
+	--icon-size: 24;
+	--toggler-gap: #{gap-scale(0.5)};
+	--inner-offset: calc(var(--icon-size) * 1px + var(--toggler-gap));
+	--py: 16px;
+	@extend %accordion-base;
+
+	&:not(:first-child),
+	& & {
+		padding-top: var(--py);
 	}
 
-	&__toggler:has(&__controller:checked) ~ &__wrapper {
-		grid-template-rows: 1fr;
+	& & {
+		padding-left: gap-scale(1);
+	}
+
+	&__header {
+		padding-bottom: var(--py);
+		display: flex;
+		align-items: center;
+		gap: var(--toggler-gap);
+		border-bottom: var(--default-border);
+		// border-bottom-style: dashed;
+		width: 100%;
+	}
+
+	*:not(:has(> & > &__wrapper)) > &:not(:last-child) > &__header {
+		border-bottom-style: dashed;
+	}
+
+	&__header:not(:has(&__toggler)):not([data-accordion-toggler]) {
+		padding-left: var(--inner-offset);
+	}
+
+	&__title {
+		@include hoverType2;
+
+		.is-active + & {
+			font-weight: 700;
+		}
+	}
+
+	&__header[data-accordion-toggler],
+	&__toggler {
+		@extend %accordion-base__toggler;
+		@include hoverType2;
+
+		&::before {
+			content: "";
+			@extend %icon, %icon--chevron_down;
+		}
+
+		&.is-active {
+			&::before {
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+	&__wrapper {
+		@extend %accordion-base__wrapper;
+	}
+
+	&__content {
+		@extend %accordion-base__content;
+	}
+}
+
+[data-accordion-group] {
+	[data-accordion-collapse] {
+		cursor: pointer;
+		--icon-size: 28;
+		@extend %button-text;
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--expand;
+		}
+	}
+
+	&:has([data-accordion].is-active) [data-accordion-collapse]::after {
+		@extend %icon--collapse;
 	}
 }

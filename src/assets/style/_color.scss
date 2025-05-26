@@ -1,1 +1,62 @@
-:root {}
+@use "font" as *;
+
+//  TODO придумать как вертеть картинки в несерых темах
+:root {
+	--base-hue: 208;
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(218, 11%, 20%);
+	--color-orange: hsl(calc(var(--base-hue) + 180), 91%, 54%);
+	--color-blue: hsl(var(--base-hue), 56%, 46%);
+	--color-blue1: hsl(var(--base-hue), 60%, 70%);
+	--color-blue2: hsl(var(--base-hue), 75%, 90%);
+	--color-blue3: hsl(var(--base-hue), 100%, 97%);
+	--color-red: hsl(0, 52%, 46%);
+	--color-grey: hsl(var(--base-hue), 1%, 29%);
+	--color-grey1: hsl(var(--base-hue), 0%, 69%);
+	--color-green: hsl(136, 53%, 43%);
+	--color-aqua: hsl(187, 52%, 46%);
+	--color-purple: hsl(338, 41%, 54%);
+	--color-purple1: hsl(278, 41%, 54%);
+	--color-brown: hsl(38, 41%, 54%);
+	--color-yellow: hsl(38, 91%, 84%);
+}
+
+:root {
+	font-family: "GolosText", sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-text-alt);
+	--color-text: var(--color-black);
+	--color-text1: var(--color-grey);
+	--color-text2: var(--color-grey1);
+	--color-text-alt: var(--color-white);
+	--color-primary: var(--color-blue);
+	--color-primary-alt: var(--color-blue1);
+	--color-primary-light: var(--color-blue2);
+	--color-primary-lighter: var(--color-blue3);
+	--color-accent: var(--color-orange);
+	--color-accent-alt: var(--color-green);
+	--color-accent-alt1: var(--color-red);
+	--color-accent-alt2: var(--color-aqua);
+	--color-accent-alt3: var(--color-purple);
+	--color-accent-alt4: var(--color-purple1);
+	--color-accent-alt5: var(--color-brown);
+	--color-accent-alt6: var(--color-yellow);
+
+	&.theme {
+		:is(a, button) {
+			text-decoration: underline !important;
+
+			&:is(:hover, :focus-within, .is-disabled, :disabled, .is-active) {
+				text-decoration: none !important;
+			}
+		}
+
+		:focus {
+			outline: var(--default-border);
+		}
+	}
+}
+
+a {
+	color: inherit;
+}

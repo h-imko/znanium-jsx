@@ -1,0 +1,156 @@
+@use "icon" as *;
+@use "font" as *;
+@use "button" as *;
+@use "accordion" as *;
+@use "mixins" as *;
+
+.shelf,
+%shelf {
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	&__controls {
+		display: flex;
+		gap: 4px;
+		margin-left: auto;
+	}
+
+	&__control {
+		@extend %button-text, %font-3;
+	}
+
+	&.is-active &__name::after {
+		@layer {
+			& {
+				transform: scaleY(-1)
+			}
+		}
+	}
+
+	&__name {
+		@extend %accordion-base__toggler;
+		@extend %button-text, %font-3;
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--chevron_down;
+		}
+	}
+
+	&__handle {
+		@extend %button-text, %font-3;
+		cursor: grab;
+
+		&:is(:hover, :focus-within)::after {
+			@extend %icon, %icon--drag_handle;
+		}
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--newsstand;
+		}
+	}
+
+	&__main {
+		@extend %accordion-base__wrapper;
+	}
+
+	&__main-inner {
+		@extend %accordion-base__content;
+		container-type: inline-size;
+	}
+
+	&--alt &__content {
+		display: flex;
+		padding: 0;
+		background: none;
+		gap: 0;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+	}
+
+	&__content {
+		margin-top: 10px;
+		padding: 7.9% 6% 3.8%;
+		position: relative;
+		background: url(/src/assets/static/img/shelves_first.svg) no-repeat, url(/src/assets/static/img/shelves.svg);
+		background-size: 100%, 100%;
+		transition: opacity .35s ease-in-out;
+		border-radius: var(--default-border-radius-small);
+		display: flex;
+		gap: 10.125cqw 0;
+		flex-wrap: wrap;
+		width: 0;
+		min-width: 100%;
+
+		&:not(:has(> :first-child)) {
+			aspect-ratio: 896 / 327;
+		}
+	}
+
+	&--alt &__book {
+		display: flex;
+		align-items: flex-start;
+		gap: gap-scale(0.5);
+		height: auto;
+		box-shadow: none;
+		width: 100%;
+
+		&__remove {
+			position: static;
+			transform: unset;
+			background-color: unset;
+			box-shadow: unset;
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		&:not(:last-child) {
+			border-bottom: var(--default-border-width) dashed var(--default-border-color);
+		}
+	}
+
+	&__book {
+		box-shadow: -4px 0 10px rgba(3, 22, 50, .25);
+		position: relative;
+		height: 26cqw;
+		display: flex;
+
+		&__cover {
+			display: flex;
+
+			img {
+				width: auto;
+			}
+		}
+
+		&:is(:hover, :focus-within) &__remove {
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		&__remove {
+			@extend %button-text, %font-3;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(50%, -50%);
+			background-color: var(--color-primary-lighter);
+			z-index: 1;
+			border-radius: var(--default-border-radius-small);
+			box-shadow: 0 1px 5px rgba(0, 0, 0, .55);
+			opacity: 0;
+			pointer-events: none;
+			padding: 4px;
+
+			&::after {
+				content: "";
+				@extend %icon, %icon--delete;
+			}
+		}
+	}
+}

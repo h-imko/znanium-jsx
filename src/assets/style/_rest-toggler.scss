@@ -1,0 +1,28 @@
+@use "icon" as *;
+
+.rest-toggler {
+	--icon-size: 24;
+	display: inline-flex;
+	align-items: center;
+	width: calc(var(--icon-size) * 1px);
+	height: calc(var(--icon-size) * 0.5px);
+	background-color: var(--color-primary-light);
+	border-radius: var(--default-border-radius-small);
+	vertical-align: middle;
+	overflow: hidden;
+	color: var(--color-primary);
+	cursor: pointer;
+
+	&.is-active {
+		display: none;
+	}
+
+	&:hover {
+		color: var(--color-accent);
+	}
+
+	&::after {
+		content: "";
+		@extend %icon, %icon--more_h;
+	}
+}

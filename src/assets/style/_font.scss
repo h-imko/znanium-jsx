@@ -1,37 +1,135 @@
-// @font-face {
-// 	font-family: "";
-// 	src: url(/src/assets/static/font/);
-// 	font-weight: 500;
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: "";
-// 	src: url(/src/assets/static/font/) format("woff2-variations");
-// 	font-display: swap;
-// 	font-weight: 125 950;
-// 	font-style: normal;
-// }
-@use "breakpoint" as *;
+ @use "breakpoint" as *;
+ @use "mixins" as *;
 
-body,
-input {
-	@media screen and (max-width: $mobile) {}
-}
+ @font-face {
+ 	font-family: "GolosText";
+ 	src: url(/src/assets/static/font/golos-text_vf.woff2) format("woff2-variations");
+ 	font-display: swap;
+ 	font-weight: 100 900;
+ 	font-style: normal;
+ }
 
-a {
-	color: inherit;
-}
+ :root {
+ 	overflow-wrap: anywhere;
+ }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-textarea {
-	appearance: textfield;
-	font: inherit;
+ body {
+ 	@extend %font-3;
+ }
 
-	&::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-	}
-}
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="tel"],
+ input[type="number"],
+ input[type="date"],
+ textarea,
+ em {
+ 	appearance: textfield;
+ 	font: inherit;
+
+ 	&::-webkit-inner-spin-button {
+ 		-webkit-appearance: none;
+ 	}
+ }
+
+ h1,
+ .h1,
+ %h1 {
+ 	font-size: rem(32);
+ 	font-weight: 400;
+ 	line-height: 1.2;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(26);
+ 	}
+ }
+
+ h2,
+ .h2,
+ %h2 {
+ 	font-size: rem(28);
+ 	font-weight: 400;
+ 	line-height: 1.2;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(24);
+ 	}
+ }
+
+ h3,
+ .h3,
+ %h3 {
+ 	font-size: rem(24);
+ 	font-weight: 400;
+ 	line-height: 1.2;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(22);
+ 	}
+ }
+
+ h4,
+ .h4,
+ %h4 {
+ 	font-size: rem(22);
+ 	line-height: 1.2;
+ 	font-weight: 400;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(20);
+ 	}
+ }
+
+ h5,
+ .h5,
+ %h5 {
+ 	font-size: rem(20);
+ 	line-height: 1.2;
+ 	font-weight: 400;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(18);
+ 	}
+ }
+
+ h6,
+ .h6,
+ %h6 {
+ 	font-size: rem(18);
+ 	line-height: 1.2;
+ 	font-weight: 400;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(16);
+ 	}
+ }
+
+ .font-2,
+ %font-2 {
+ 	font-weight: 400;
+ 	font-size: rem(14);
+ 	line-height: 1.2;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(12);
+ 	}
+ }
+
+ .font-3,
+ %font-3 {
+ 	font-weight: 400;
+ 	font-size: rem(16);
+ 	line-height: 1.2;
+
+ 	@media (max-width: $mobile) {
+ 		font-size: rem(14);
+ 	}
+ }
+
+ .font-4,
+ %font-4 {
+ 	font-weight: 400;
+ 	font-size: rem(12);
+ 	line-height: 1.2;
+ }

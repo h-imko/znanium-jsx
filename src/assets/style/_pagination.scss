@@ -1,0 +1,64 @@
+@use "font" as *;
+@use "button" as *;
+@use "icon" as *;
+@use "mixins" as *;
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	max-width: max-content;
+	text-align: center;
+
+	&__item {
+		min-width: max-content;
+		width: 34px;
+		height: 34px;
+		padding: 0 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		border-radius: var(--default-border-radius-small);
+		@include hoverType2;
+
+		&.is-active {
+			background-color: var(--color-primary);
+			color: var(--color-text-alt);
+		}
+
+		&--prev,
+		&--next,
+		&--first,
+		&--last {
+			&::after {
+				content: "";
+				@extend %icon;
+			}
+		}
+
+		&--first {
+			&::after {
+				@extend %icon--double_arrow_backward;
+			}
+		}
+
+		&--last {
+			&::after {
+				@extend %icon--double_arrow;
+			}
+		}
+
+		&--prev {
+			&::after {
+				@extend %icon--arrow_backward;
+			}
+		}
+
+		&--next {
+			&::after {
+				@extend %icon--arrow_forward;
+			}
+		}
+	}
+}

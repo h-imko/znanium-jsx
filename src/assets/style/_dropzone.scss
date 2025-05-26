@@ -1,7 +1,38 @@
-.dropzone {
-	&__label {}
+@use "mixins" as *;
+@use "text" as *;
+@use "breakpoint" as *;
 
-	&__label &__input {}
+.dropzone {
+	display: flex;
+	flex-direction: column;
+	gap: 6px 0;
+
+	&__title {
+		@extend %font-2;
+	}
+
+	&__label {
+		border-radius: var(--default-border-radius-small);
+		border: var(--default-border-width) dashed var(--default-border-color);
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100px;
+		padding: gap-scale(0.5) gap-scale(1);
+		cursor: pointer;
+		transition: border-color ease var(--default-duration);
+		order: 1;
+		@include hoverTypeBorder;
+
+		&__accent {}
+	}
+
+	&__label &__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
 
 	&.is-full &__label {
 		display: none;
@@ -13,10 +44,19 @@
 		&.is-dragover {}
 	}
 
-	&__list {}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
 
 	&__item {
-		display: grid;
+		display: flex;
+		gap: 8px;
+
+		& + & {
+			border-top: var(--default-border-width) dotted var(--default-border-color);
+		}
 
 		&::after {
 			content: attr(title);
@@ -24,8 +64,6 @@
 			max-height: 100%;
 			overflow: hidden;
 			min-width: 0;
-			grid-column: 1;
-			grid-row: 1;
 			align-self: center;
 			justify-self: center;
 			overflow-wrap: break-word;
@@ -34,9 +72,10 @@
 
 		&__preview {
 			display: block;
-			grid-column: 1;
-			grid-row: 1;
-			min-height: 0;
+			width: 64px;
+			height: 64px;
+			order: -1;
+			flex-shrink: 0;
 
 			img {
 				height: 100%;
@@ -44,16 +83,17 @@
 		}
 
 		&__remove {
-			grid-column: 1;
-			grid-row: 1;
+			order: 1;
 			align-self: start;
 			justify-self: end;
 			border: none;
 			background-color: transparent;
 			cursor: pointer;
+			@include hoverType2;
 
 			&::after {
-				content: "X";
+				content: "";
+				@extend %icon, %icon--close;
 			}
 		}
 	}

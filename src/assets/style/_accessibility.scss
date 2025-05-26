@@ -1,0 +1,57 @@
+@use "mixins" as *;
+
+.accessibility {
+	background-color: var(--color-text2);
+	padding: gap-scale(1) 0;
+
+	&:not(.is-active) {
+		display: none;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		display: flex;
+		align-items: baseline;
+		gap: 0.5ch;
+		flex-wrap: wrap;
+
+		&__buttons {
+			display: flex;
+			align-items: baseline;
+			flex-wrap: wrap;
+			gap: 0.5ch;
+		}
+
+		&__button {
+			padding: 2px 6px;
+			border-radius: var(--default-border-radius-small);
+			text-decoration: underline;
+
+			&:is(.is-active, :hover) {
+				text-decoration: none;
+			}
+
+			&:not(&--color).is-active {
+				background-color: var(--color-text);
+				color: var(--color-text-alt);
+			}
+
+			&--color {
+				background-color: var(--color-text-alt);
+				color: var(--color-text);
+
+				&.is-active {
+					outline: 3px solid var(--color-text);
+					outline-offset: -2px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@use "mixins" as *;
+@use "text" as *;
+@use "breakpoint" as *;
+
+.firstvisit {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(1);
+
+	&__item {
+		display: grid;
+		align-items: center;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		gap: gap-scale(1);
+
+		@media (max-width: $mobile) {
+			grid-auto-flow: row;
+			justify-content: center;
+		}
+
+		&:nth-child(even) &__img {
+			order: -1;
+
+			@media (max-width: $mobile) {
+				order: unset;
+			}
+		}
+
+		&__text {
+			@extend %text;
+			grid-column: span 5;
+			padding: gap-scale(1) 0;
+
+			@media (max-width: $mobile) {
+				grid-column: unset;
+			}
+		}
+
+		&__img {
+			grid-column: span 4;
+			max-width: 400px;
+
+			@media (max-width: $mobile) {
+				grid-column: unset;
+			}
+		}
+	}
+}

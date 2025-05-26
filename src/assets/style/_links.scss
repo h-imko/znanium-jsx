@@ -1,0 +1,13 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "button" as *;
+
+.links {
+	display: flex;
+	gap: gap-scale(0.5) gap-scale(0.75);
+
+	&__item {
+		@extend %font-2;
+		@extend %button-text;
+	}
+}

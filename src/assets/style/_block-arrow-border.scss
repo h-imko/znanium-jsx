@@ -1,0 +1,61 @@
+@use "icon" as *;
+@use "font" as *;
+
+.block-arrow-border {
+	--gap-size: 140px;
+	--actual-gap-size: min(var(--gap-size), calc(100% - var(--icon-size) * 2px - min(calc(var(--gap-size) / 2), 25%)));
+	--clip-padding: calc(var(--actual-gap-size) / 4);
+	--left-clip-side: calc(50% - var(--actual-gap-size) / 2 - var(--clip-padding));
+	--right-clip-side: calc(50% + var(--actual-gap-size) / 2 + var(--clip-padding));
+	--bottom-clip-side: calc(var(--actual-gap-size) / 2);
+	--top-padding: 50%;
+	--icon-size: 28;
+	--border-radius: var(--default-border-radius);
+	display: flex;
+	flex-direction: column;
+
+	&__top {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: var(--top-padding);
+			border-width: var(--default-border-width) var(--default-border-width) 0 var(--default-border-width);
+			border-style: solid;
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
+			border-color: var(--default-border-color);
+			clip-path: polygon(0 0, var(--left-clip-side) 0, var(--left-clip-side) 100%, var(--right-clip-side) 100%, var(--right-clip-side) 0, 100% 0, 100% 100%, 0 100%);
+			pointer-events: none;
+		}
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--chevron_left_big;
+			position: absolute;
+			top: var(--top-padding);
+			right: var(--left-clip-side);
+			// 65% волшебное число из-за конкретного расположения стрелочки в иконке
+			transform: translate(65%, calc(-50% + var(--default-border-width) / 2));
+			--icon-color: var(--default-border-color);
+		}
+
+		&__content {
+			width: var(--actual-gap-size);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__bottom {
+		flex-grow: 1;
+		border-width: 0 var(--default-border-width) var(--default-border-width) var(--default-border-width);
+		border-style: solid;
+		border-radius: 0 0 var(--border-radius) var(--border-radius);
+		border-color: var(--default-border-color);
+		display: grid;
+	}
+}

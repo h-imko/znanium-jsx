@@ -1,29 +1,33 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "icon" as *;
+
 .breadcrumbs {
-	font-size: 0;
+	@extend %font-2;
+	margin: 16px 0;
 
-	&__container {
-		@extend .container;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
 
-		&__item {
-			span {}
+	&__item {
+		display: flex;
+		align-items: center;
+		color: var(--color-text2);
+		gap: 4px;
 
-			&:not(:last-child) {
-				span {
-					&::after {
-						content: "";
-						--size: 3px;
-						width: var(--size);
-						height: var(--size);
-						// margin: 0 5px;
-						display: inline-block;
-						// background-color: ;
-						vertical-align: middle;
-					}
-				}
-			}
+		a {
+			@include hoverType1;
+		}
 
-			&:last-child {
-				// color:  ;
+		&:not(:last-child) {
+			&::after {
+				content: "";
+				@extend %icon, %icon--chevron_right;
+				color: var(--color-primary);
+				margin: 0 -4px;
 			}
 		}
 	}

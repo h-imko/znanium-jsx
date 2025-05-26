@@ -1,0 +1,141 @@
+@use "font" as *;
+@use "icon" as *;
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+%input__input-base {
+	font-size: rem(16);
+	background-color: var(--color-text-alt);
+	width: 100%;
+	border: var(--default-border);
+	border-radius: var(--default-border-radius-small);
+	padding: 6px 12px;
+	transition-property: background-color, border-color;
+	transition-timing-function: ease;
+	color: var(--color-text);
+	transition-duration: var(--default-duration);
+	height: var(--input-height);
+
+	&::placeholder {
+		color: var(--color-text2);
+	}
+
+	&:read-only {
+		background-color: var(--color-primary-lighter);
+	}
+
+	&:not(:disabled):is(:hover, :focus, :not(:placeholder-shown)) {
+		border-color: var(--color-primary);
+	}
+
+	&--small {
+		@extend %font-2;
+		height: var(--input-height-small);
+	}
+}
+
+.input,
+%input {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	width: 100%;
+	gap: 6px 0;
+	@extend %font-3;
+
+	&__label {
+		grid-column: 1 / -1;
+		@extend %font-2;
+		// color: var(--color-primary);
+	}
+
+	&__caption {
+		grid-column: 1 / -1;
+		@extend %font-2;
+	}
+
+	&:has(:required) &__label {
+		&::after {
+			content: "*";
+		}
+	}
+
+	&__caption {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__clear {
+		@include hoverType2;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+		height: 100%;
+		min-width: var(--input-height);
+		--icon-size: 28;
+		--icon-color: var(--color-primary);
+		transition: border-color ease var(--default-duration);
+		margin-left: 4px;
+		@include hoverTypeBorder;
+		padding: 0 4px;
+		color: var(--color-primary);
+
+		@media (max-width: $mobile) {
+			--icon-size: 24;
+			padding: 0;
+		}
+
+		&--eye {
+			&::before {
+				content: "";
+				@extend %icon, %icon--eye;
+			}
+
+			&.is-active {
+				&::before {
+					@extend %icon--eye_off;
+				}
+			}
+		}
+	}
+
+	&__link {
+		@include hoverType3;
+	}
+
+	&__error {
+		grid-column: 1 / -1;
+		@extend %font-2;
+		color: var(--color-accent-alt1);
+	}
+
+	&:not(.has-error) &__error {
+		display: none;
+	}
+
+	&--small {
+		input {
+			@extend %input__input-base--small;
+		}
+	}
+
+	:is(input, textarea) {
+		@extend %input__input-base;
+	}
+
+	&.has-error :is(input, textarea):not(:disabled, :focus, :hover) {
+		border-color: var(--color-accent-alt1);
+		background-color: color-mix(in srgb, var(--color-accent-alt1) 10%, #0000);
+	}
+
+	textarea {
+		resize: vertical;
+		min-height: var(--input-height);
+		height: calc(var(--input-height) * 2);
+	}
+}

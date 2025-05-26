@@ -1,0 +1,34 @@
+@use "font" as *;
+@use "mixins" as *;
+
+.alphabetical {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	&__row {
+		display: flex;
+		// justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 8px 12px;
+		background-color: var(--color-primary-light);
+		padding: 6px 10px;
+		border-radius: var(--default-border-radius-small);
+		// @extend %font-2;
+		font-weight: 700;
+		color: var(--color-primary);
+	}
+
+	&__item {
+		@include hoverType1;
+
+		&.is-active {
+			color: var(--color-accent);
+		}
+
+		&.is-disabled {
+			color: var(--color-text2);
+			pointer-events: none;
+		}
+	}
+}

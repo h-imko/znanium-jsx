@@ -1,0 +1,8 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "button" as *;
+@use "icon" as *;
+
+.catalog-list {
+	&__shelves {}
+}

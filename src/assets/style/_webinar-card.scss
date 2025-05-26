@@ -1,0 +1,48 @@
+@use "font" as *;
+@use "button" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+@use "webinar" as *;
+
+.webinar-card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	@include webinar-base;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(0.5);
+		padding: gap-scale(1.5) gap-scale(1);
+		border-width: var(--default-border-width);
+		border-style: solid;
+		border-color: var(--default-border-color);
+		border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+		flex-grow: 1;
+	}
+
+	&__title {
+		@extend %h4;
+		font-weight: 700;
+	}
+
+	&__date {
+		color: var(--color-primary);
+	}
+
+	&__presenters {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		margin-top: auto;
+		align-self: flex-start;
+		@extend %button;
+
+		&--alt {
+			@extend %button--accent;
+		}
+	}
+}

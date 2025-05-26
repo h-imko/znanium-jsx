@@ -1,22 +1,123 @@
-// @use "breadcrumbs";
-// @use "header";
-// @use "button";
-// @use "custom-checkbox";
-// @use "custom-radio";
-// @use "footer";
-// @use "icon";
-// @use "splide";
-// @use "dropzone";
-// @use "custom-input";
-// @use "article";
-// @use "dialog";
-// @use "dialog-gallery";
-// @use "custom-select";
-// @use "accordion";
-// @use "counter";
 @use "breakpoint";
 @use "container";
 @use "color";
 @use "font";
 @use "mixins";
 @use "general";
+@use "logo";
+@use "footer";
+@use "breadcrumbs";
+@use "page";
+@use "banners";
+@use "button";
+@use "article";
+@use "icon";
+@use "filter";
+@use "splide";
+@use "contacts";
+@use "cart";
+@use "hover";
+@use "firstvisit";
+@use "webinar-calendar";
+@use "warning";
+@use "loader";
+@use "toasts";
+@use "placeholder";
+@use "singleform";
+@use "custom-radio";
+@use "checkbox";
+@use "input";
+@use "custom-select";
+@use "block-arrow-border";
+@use "showcase";
+@use "counter";
+@use "links";
+@use "header";
+@use "preferences-settings";
+@use "theme";
+@use "accessibility";
+@use "socials";
+@use "export-list";
+@use "fund-list";
+@use "tariffs";
+@use "form";
+@use "fpl";
+@use "date";
+@use "time";
+@use "rest-toggler";
+@use "manual";
+@use "novelty";
+@use "reflist";
+@use "generic";
+@use "shelves";
+@use "shelf";
+@use "quotes";
+@use "groups";
+@use "pagination";
+@use "settings";
+@use "select-simple";
+@use "document";
+@use "simplebooks";
+@use "controls";
+@use "bookslist";
+@use "alphabetical";
+@use "icon-buttons";
+@use "accordion";
+@use "dropzone";
+@use "catalog-nav";
+@use "catalog-list";
+@use "details";
+@use "m31";
+@use "help";
+@use "webinar";
+@use "labels";
+@use "accordion-nav";
+@use "accordion-list";
+@use "advantages";
+@use "collections-special";
+@use "collections";
+@use "dialog";
+@use "table";
+@use "news";
+@use "news-list";
+@use "button-link";
+@use "documents-slider";
+@use "streak-img";
+@use "cards-slider";
+@use "news-card";
+@use "webinar-card";
+@use "chart";
+@use "affiliated-authors";
+
+@keyframes move-out {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes move-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Apply the custom animation to the old and new page states */
+::view-transition-old(root) {
+	animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+	animation: 0.4s ease-in both move-in;
+}
+
+@view-transition {
+	navigation: auto;
+}

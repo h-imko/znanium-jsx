@@ -1,0 +1,36 @@
+import clsx from "clsx"
+import { v4 as uuid } from "uuid"
+
+const id = uuid()
+
+function Textarea({ placeholder, required, maxLength, readOnly, value }) {
+	return (
+		<textarea { ...{ id, placeholder, required, maxLength, readOnly } }>
+			{ value }
+		</textarea>
+	)
+}
+
+function Input({ placeholder, required, maxLength, readOnly, value, type }) {
+	return (
+		<input { ...{ type: type ?? "text", id, placeholder, required, maxLength, readOnly, value } } />
+	)
+}
+
+export default function ({ label, type, textarea, small, placeholder, required, maxLength, readOnly, value, buttonEye, customButton, customButtonLink, caption }) {
+	return (
+		<>
+			<div className={ clsx({
+				input: true,
+				"input--small": small
+			}) }>
+				{ label && (<label className={ `input__label` } htmlFor={ id }>{ label }</label>) }
+				{ textarea ? <Textarea { ...{ placeholder, required, maxLength, readOnly, value } } /> : <Input { ...{ placeholder, required, maxLength, readOnly, value, type } } /> }
+				{ buttonEye && (<button type="button" className="input__button input__button--eye" data-input-button="toggleType" title="Показать/скрыть пароль"></button>) }
+				{ customButton && (<button type="button" className="input__button" title="Какое-то действие"> { customButton } </button>) }
+				{ customButtonLink && (<a href="" className="input__button">{ customButtonLink }</a>) }
+			</div>
+			{ caption && (<div className="form__item__caption"> { caption } </div>) }
+		</>
+	)
+}

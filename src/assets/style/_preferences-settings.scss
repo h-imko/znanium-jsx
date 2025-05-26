@@ -1,0 +1,85 @@
+@use "mixins" as *;
+@use "accordion" as *;
+@use "breakpoint" as *;
+
+.preferences-settings {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: gap-scale(2);
+
+	@media (max-width: $laptop) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(1.5);
+
+		&__title {
+			color: var(--color-primary);
+		}
+	}
+
+	&__list {
+		&__header {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		&__item {
+			@include accordion;
+
+			&__toggler.is-active ~ &__category {
+				font-weight: 700;
+			}
+
+			&__category {
+				@include hoverType2;
+			}
+		}
+	}
+
+	&__chosen {
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+
+		&__item {
+			padding: gap-scale(0.25) gap-scale(0.5);
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 12px;
+
+			&__button {
+				flex-shrink: 0;
+				@include hoverTypeBorder;
+				border: var(--default-border);
+				border-radius: var(--default-border-radius-small);
+				padding: 2px;
+				color: var(--color-primary);
+
+				&::before {
+					content: "";
+					@extend %icon, %icon--delete;
+				}
+			}
+
+			&__link {
+				@include hoverType1;
+			}
+
+			&:not(:last-child) {
+				border-bottom: var(--default-border);
+			}
+		}
+	}
+}

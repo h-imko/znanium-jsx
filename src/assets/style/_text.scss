@@ -1,0 +1,91 @@
+@use "custom-list" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+@use "table" as *;
+
+.text,
+%text {
+	--gap-medium: 40px;
+	--gap-small: 24px;
+	--gap-xsmall: 12px;
+
+	@media (max-width: $mobile) {
+		--gap-medium: 24px;
+		--gap-small: 16px;
+	}
+
+	ul,
+	ol {
+		@extend %custom-list;
+		margin: var(--gap-xsmall) 0;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto !important;
+		margin: var(--gap-xsmall) 0;
+	}
+
+	iframe {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 16 / 9;
+		border-radius: var(--default-border-radius);
+		margin: var(--gap-xsmall) 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: var(--color-primary);
+		margin-bottom: var(--gap-small);
+	}
+
+	h1 {
+		margin-bottom: var(--gap-small);
+	}
+
+	h1,
+	h2 {
+		margin-top: var(--gap-medium);
+	}
+
+	h3,
+	h4 {
+		margin-top: var(--gap-small);
+	}
+
+	p {
+		margin-top: var(--gap-xsmall);
+		margin-bottom: var(--gap-xsmall);
+	}
+
+	table {
+		@extend %table;
+	}
+
+	.table-scroll {
+		@extend %table-wrapper;
+	}
+
+	a {
+		@include hoverType2;
+	}
+
+	> :first-child {
+
+		&,
+		:first-child {
+			margin-top: 0;
+		}
+	}
+
+	> :last-child {
+
+		&,
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

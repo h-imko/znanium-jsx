@@ -1,0 +1,142 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+@use "icon" as *;
+@use "button" as *;
+@use "accordion" as *;
+
+.accordion-nav {
+	--sub-left: 30px;
+	display: flex;
+	flex-direction: column;
+
+	%item-base {
+		border: var(--default-border);
+		position: relative;
+		padding: 12px 12px 12px 20px;
+		background-color: var(--bgc);
+		border-radius: var(--default-border-radius-small);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: block;
+
+		&:not(:last-child) &__self {
+			border-bottom: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&:not(:first-child) &__self {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		&__self {
+			@extend %item-base;
+
+			a {
+				@include hoverType1;
+			}
+		}
+
+		&__self:has(+ &__list:focus-within, .is-active) {
+			border-bottom: var(--default-border);
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: var(--sub-left);
+				top: 100%;
+				width: 14px;
+				height: 14px;
+				clip-path: polygon(100% 0, 0 100%, 100% 100%);
+				transform: translateY(-50%) rotate(45deg);
+				border: var(--default-border);
+				background-color: var(--color-text-alt);
+			}
+		}
+
+		&__toggler {
+			@extend %button-text;
+			@extend %accordion-base__toggler;
+
+			&.is-active::after {
+				@layer {
+					& {
+						transform: scaleY(-1);
+					}
+				}
+			}
+
+			&::after {
+				content: "";
+				@extend %icon, %icon--chevron_down;
+			}
+		}
+
+		&__list {
+			@extend %accordion-base__wrapper;
+		}
+
+		&__content {
+			@extend %accordion-base__content;
+		}
+	}
+
+	&__content {
+		@extend %accordion-base__content;
+	}
+
+	&__list {
+		padding-top: 12px;
+	}
+
+	&__wrapper {
+		@extend %accordion-base__wrapper;
+
+		@media (min-width: $tablet) {
+			@include accordion-wrapper-opened;
+		}
+	}
+
+	&__sub {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 14px var(--sub-left);
+
+		&__item {
+			display: flex;
+
+			a {
+				@include hoverType1;
+			}
+		}
+	}
+
+	&.is-active &__toggler::after {
+		transform: scaleY(-1);
+	}
+
+	&__toggler {
+		@extend %item-base;
+		@extend %accordion-base__toggler;
+		@include hoverType2;
+
+		@media (min-width: $tablet) {
+			pointer-events: none;
+		}
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--chevron_down;
+
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+}

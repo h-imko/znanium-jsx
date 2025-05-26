@@ -1,0 +1,13 @@
+<svg id="self" preserveAspectRatio="xMidYMid meet" viewBox="0 0 173 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M137.626 40V114.738M36.0391 114.738V43C36.0391 41.3431 37.39 40 39.0565 40H121.533" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M36.541 114.738H138.128" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M87.3359 40L87.4703 80.6882L87.5823 114.626" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M35.471 47.1665H32.0174C30.3509 47.1665 29 48.5096 29 50.1665V118.139C29 119.795 30.3509 121.139 32.0174 121.139H82.0479C82.3175 122.74 83.7487 126 87.6431 126C91.6875 126 93.1024 122.449 93.3721 121.139H141.651C143.317 121.139 144.668 119.795 144.668 118.139V50.1665C144.668 48.5096 143.317 47.1665 141.651 47.1665H138.602" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M79.2895 56H45.0918M79.2895 63.5H45.0918" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M78.7867 72H46.0977" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M93.8789 56.2637H109.469" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M120.031 56.2637H129.083" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M113.996 63.2637H129.083" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M93.8789 63.2637H102.931" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M101.549 63.8695L139.697 27.0685C139.697 27.0685 142.268 26.6405 143.554 27.9243C144.84 29.2082 144.84 30.4919 144.411 32.2035C143.983 33.9151 107.55 69.0046 107.55 69.0046M101.549 63.8695L99.4062 72L107.55 69.0046M101.549 63.8695C102.406 63.7269 104.464 63.6984 105.835 64.7254C107.207 65.7524 107.55 68.0061 107.55 69.0046" stroke="var(--accent-color, #F58220)" stroke-width="1.5" stroke-linejoin="round" />
+</svg>

@@ -1,0 +1,20 @@
+@use "icon" as *;
+@use "font" as *;
+@use "mixins" as *;
+
+.button-link,
+%button-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	@extend %font-3;
+	font-weight: 700;
+	cursor: pointer;
+	@include hoverType2;
+
+	&::after {
+		content: "";
+		@extend %icon, %icon--arrow_forward;
+	}
+}

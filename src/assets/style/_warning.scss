@@ -1,0 +1,52 @@
+@use "text" as *;
+@use "icon" as *;
+@use "font" as *;
+@use "mixins" as *;
+
+.warning {
+	margin: 16px 0;
+	// background-color: var(--color-accent-alt6);
+	color: color-mix(in srgb, var(--color-accent-alt5) 50%, var(--color-text));
+	--bg: color-mix(in srgb, var(--color-accent-alt6) 30%, var(--color-text-alt));
+
+	&--alt {
+		color: color-mix(in srgb, var(--color-accent-alt) 50%, var(--color-text));
+		--bg: color-mix(in srgb, var(--color-accent-alt) 30%, var(--color-text-alt));
+	}
+
+	&--primary-outlined {
+		color: var(--color-primary);
+	}
+
+	&--primary-outlined &__inner {
+		background-color: unset;
+		border: var(--default-border);
+	}
+
+	&--big {
+		@extend %h1;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 12px;
+		padding: 12px 20px;
+		border-radius: var(--default-border-radius-small);
+		background-color: var(--bg)
+	}
+
+	&__text {
+		@extend %text;
+	}
+
+	&__button {
+		@include hoverType2;
+
+		&::after {
+			content: "";
+			@extend %icon, %icon--close;
+		}
+	}
+}

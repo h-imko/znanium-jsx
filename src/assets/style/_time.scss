@@ -1,0 +1,14 @@
+@use "icon" as *;
+
+.time {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--color-text);
+
+	&::before {
+		content: "";
+		color: var(--color-text2);
+		@extend %icon, %icon--clock;
+	}
+}

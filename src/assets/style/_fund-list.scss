@@ -1,0 +1,37 @@
+@use "icon" as *;
+@use "font" as *;
+@use "accordion" as *;
+@use "breakpoint" as *;
+@use "button-link" as *;
+@use "mixins" as *;
+
+.fund-list {
+	&__items {
+		padding: gap-scale(2) gap-scale(1);
+		border: var(--default-border);
+	}
+
+	&__item {
+		@include accordion;
+
+		&__title {
+			display: flex;
+			align-items: center;
+			gap: gap-scale(0.5);
+			flex-grow: 1;
+
+			&__name {
+				@include hoverType2;
+			}
+
+			&__code {
+				color: var(--color-text2);
+			}
+
+			&__count {
+				margin-left: auto;
+				color: var(--color-text2);
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@use "splide" as *;
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+.cards-slider {
+	@extend %splide--float-arrows-block;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(1.5);
+	}
+
+	&__title {
+		@include hoverType1;
+	}
+
+	&__slider {
+		.splide {
+			@extend %splide--float-arrows;
+		}
+	}
+}

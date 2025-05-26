@@ -1,6 +1,21 @@
-.container {
+@use "mixins" as *;
+
+.container,
+%container {
 	margin-left: auto;
 	margin-right: auto;
 	width: min(calc(var(--container-width) + var(--container-padding) * 2), 100%);
-	padding: 0 var(--container-padding);
+	padding: 0 gap-scale(1);
+}
+
+.container-fluid,
+%container-fluid {
+	@extend %container;
+
+	.container &,
+	& &,
+	.page:has(.page__aside) & {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

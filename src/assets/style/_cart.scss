@@ -1,0 +1,139 @@
+@use "icon" as *;
+@use "font" as *;
+@use "button" as *;
+@use "breakpoint" as *;
+@use "input" as *;
+
+.cart {
+	&__inner {
+		display: grid;
+		grid-template-columns: 9fr 3fr;
+		gap: calc(var(--column-gap) * 2) var(--column-gap);
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__header {
+		grid-column: 1 / -1;
+		color: var(--color-primary);
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		min-width: 0;
+	}
+
+	&__aside {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	&__tabs {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			padding: 10px 16px;
+			color: var(--color-primary-alt);
+			border-bottom: var(--default-border);
+			@extend %font-2;
+
+			&:is(:hover, :focus-within),
+			&.is-active {
+				color: var(--color-primary);
+			}
+
+			&.is-active {
+				border-bottom-color: var(--color-primary);
+			}
+		}
+	}
+
+	&__table {
+		@extend %font-2;
+
+		th,
+		td {
+
+			&:last-child,
+			&:first-child {
+				width: 0;
+			}
+		}
+
+		tr {
+			border-bottom: var(--default-border);
+		}
+
+		&__button {
+			@extend %button-text;
+		}
+
+		&__clear {
+			@extend %button-text;
+			margin-left: auto;
+
+			&::before {
+				content: "";
+				@extend %icon, %icon--delete;
+			}
+		}
+
+		.input {
+			display: inline-flex;
+			vertical-align: middle;
+			@extend %input--small;
+		}
+	}
+
+	&__summary {
+		padding: 16px;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+		background-color: var(--color-primary-lighter);
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+		text-align: center;
+
+		&__title {
+			@extend %h4;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			@extend %font-2;
+			color: var(--color-text2);
+
+			em {
+				font-weight: 700;
+				color: var(--color-text);
+			}
+		}
+
+		&__total {
+			display: flex;
+			flex-direction: column;
+			@extend %h4;
+
+			em {
+				font-weight: 700;
+			}
+		}
+
+		&__button {
+			@extend %button;
+		}
+	}
+}

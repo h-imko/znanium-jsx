@@ -1,0 +1,19 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+.affiliated-authors {
+	column-count: 2;
+
+	@media (max-width: $mobile) {
+		column-count: 1;
+	}
+
+	a {
+		display: block;
+		@include hoverType1;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+}

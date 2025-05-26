@@ -1,6 +1,6 @@
-import Head from "./head"
-import Footer from "./footer"
-import Header from "./header"
+import Head from "./Head"
+import Footer from "./Footer"
+import Header from "./Header"
 
 export default function ({ children }) {
 	return (

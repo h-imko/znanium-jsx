@@ -1,0 +1,17 @@
+@use "mixins" as *;
+
+.hover-type-1 {
+	@include hoverType1;
+}
+
+.hover-type-2 {
+	@include hoverType2;
+}
+
+.hover-type-3 {
+	@include hoverType3;
+}
+
+.hover-type-border {
+	@include hoverTypeBorder;
+}

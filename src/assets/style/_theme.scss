@@ -1,0 +1,90 @@
+.theme {
+	&--font-size {
+		&-small {
+			font-size: 12px;
+		}
+
+		&-normal {
+			font-size: medium;
+		}
+
+		&-large {
+			font-size: 20px;
+		}
+	}
+
+	&--font-serif {
+		&-sans-serif {
+			font-family: "GolosText", sans-serif;
+		}
+
+		&-serif {
+			font-family: "Times New Roman", serif;
+		}
+	}
+
+	&--letter-spacing {
+		&-normal {
+			letter-spacing: normal;
+		}
+
+		&-large {
+			letter-spacing: 0.04em;
+		}
+
+		&-larger {
+			letter-spacing: 0.08em;
+		}
+	}
+
+	&--color {
+		&-0 {
+			--color-text: var(--color-blue);
+			--color-text-alt: var(--color-white);
+		}
+
+		&-1 {
+			filter: grayscale(1);
+			--color-text: var(--color-black);
+			--color-text1: var(--color-grey);
+			--color-text2: var(--color-grey1);
+			--color-text-alt: var(--color-white);
+			--color-primary: var(--color-black);
+			--color-primary-alt: var(--color-grey);
+			--color-primary-light: var(--color-grey);
+			--color-primary-lighter: var(--color-grey1);
+			--color-accent: var(--color-black);
+			--color-accent-alt: var(--color-black);
+			--color-accent-alt1: var(--color-black);
+			--color-accent-alt2: var(--color-black);
+			--color-accent-alt3: var(--color-black);
+			--color-accent-alt4: var(--color-black);
+			--color-accent-alt5: var(--color-black);
+			--color-accent-alt6: var(--color-black);
+		}
+
+		&-2 {
+			filter: grayscale(1);
+			--color-text: var(--color-white);
+			--color-text1: var(--color-grey1);
+			--color-text2: var(--color-grey1);
+			--color-text-alt: var(--color-black);
+			--color-primary: var(--color-white);
+			--color-primary-alt: var(--color-grey1);
+			--color-primary-light: var(--color-grey);
+			--color-primary-lighter: var(--color-grey);
+			--color-accent: var(--color-white);
+			--color-accent-alt: var(--color-white);
+			--color-accent-alt1: var(--color-white);
+			--color-accent-alt2: var(--color-white);
+			--color-accent-alt3: var(--color-white);
+			--color-accent-alt4: var(--color-white);
+			--color-accent-alt5: var(--color-white);
+			--color-accent-alt6: var(--color-white);
+		}
+	}
+}
+
+// :root[class*="theme"] * {
+// 	overflow-wrap: anywhere;
+// }

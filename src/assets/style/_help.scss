@@ -1,0 +1,15 @@
+@use "icon" as *;
+@use "mixins" as *;
+
+.help {
+	display: inline-flex;
+	vertical-align: top;
+	// color: var(--color-primary);
+	@include hoverType2;
+
+	&::before {
+		content: "";
+		@extend %icon, %icon--info;
+		display: inline-flex;
+	}
+}

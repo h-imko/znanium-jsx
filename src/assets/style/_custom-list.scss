@@ -1,0 +1,80 @@
+@use "mixins" as *;
+@use "font" as *;
+
+%list-base {
+	list-style-position: inside;
+	list-style-type: none;
+	display: block;
+
+	li {
+		padding-left: var(--pl);
+		position: relative;
+
+		+ li {
+			margin-top: 6px;
+		}
+
+		&::before {
+			position: absolute;
+		}
+	}
+}
+
+.custom-list,
+%custom-list {
+	--marker-color: var(--color-primary);
+
+	&:is(ul) {
+		@extend %list-base;
+		--pl: 16px;
+
+		li {
+			&::before {
+				--size: 0.3125em;
+				content: "";
+				width: var(--size);
+				height: var(--size);
+				border-radius: 999px;
+				background-color: var(--marker-color);
+				left: 0;
+				top: 0.5em;
+			}
+		}
+	}
+
+	&:is(ol) {
+		@extend %list-base;
+		counter-reset: list;
+		--pl: calc(2.5ch + 8px);
+
+		li {
+			counter-increment: list;
+
+			&::before {
+				font-size: inherit;
+				font-weight: 500;
+				color: var(--marker-color);
+				content: counter(list) ".";
+				text-align: right;
+				width: 2.5ch;
+				left: 0;
+			}
+		}
+	}
+
+	&--light {
+		--marker-color: var(--color-text-alt);
+	}
+
+	&--blue {
+		color: var(--color-primary);
+	}
+
+	li:not(:first-child) {
+		// margin-top: gap-scale(0.25);
+	}
+
+	a {
+		@include hoverType2;
+	}
+}

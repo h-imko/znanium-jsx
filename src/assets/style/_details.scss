@@ -1,0 +1,27 @@
+.details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	details {
+		display: contents;
+	}
+
+	details[open] &__summary {
+		&__collapsed {
+			display: none;
+		}
+	}
+
+	details:not([open]) &__summary {
+		&__expanded {
+			display: none;
+		}
+	}
+
+	&__summary {
+		display: grid;
+		cursor: pointer;
+		user-select: none;
+	}
+}

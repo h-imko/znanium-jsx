@@ -1,0 +1,49 @@
+@use "font" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.catalog-nav {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: gap-scale(1);
+
+	@media (max-width: $laptop) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: $mobile) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		@include transition;
+		transition-property: background-color;
+		--streak-img-size: 180px;
+		padding: gap-scale(1.5) gap-scale(1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		@extend %h4;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius);
+		color: var(--color-primary);
+
+		@media (max-width: $laptop) {
+			--streak-img-size: 140px;
+		}
+
+		@media (max-width: $tablet) {
+			--streak-img-size: max(120px, 50%);
+		}
+
+		@media (max-width: $mobile) {
+			flex: 1 1 250px;
+		}
+
+		&:is(:hover, :focus-within) {
+			background-color: var(--color-primary-lighter);
+		}
+	}
+}

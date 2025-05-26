@@ -1,0 +1,16 @@
+@use "mixins" as *;
+@use "font" as *;
+
+.webinar-calendar {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(0.5);
+
+	&__title {
+		color: var(--color-primary);
+	}
+
+	&__caption {
+		@extend %font-4;
+	}
+}

@@ -1,0 +1,90 @@
+@use "font" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.news-card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&:is(:hover, :focus-within) &__title {
+		color: var(--color-accent);
+	}
+
+	&:is(:hover, :focus-within) &__body {
+		border-color: var(--color-primary);
+	}
+
+	&__img {
+		height: 230px;
+		display: grid;
+		overflow: hidden;
+		border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+
+		@media (max-width: $mobile) {
+			height: 160px;
+		}
+
+		img {
+			grid-row: 1;
+			grid-column: 1;
+			height: 0;
+			min-height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+
+		&::before {
+			grid-row: 1;
+			grid-column: 1;
+			content: "";
+			background-image: var(--img);
+			background-position: center;
+			background-size: cover;
+			z-index: -2;
+			filter: blur(10px);
+		}
+
+		&::after {
+			content: "";
+			background-color: color-mix(in srgb, var(--color-primary) 20%, #0000);
+			grid-row: 1;
+			grid-column: 1;
+			z-index: -1;
+		}
+	}
+
+	&__body {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(.75);
+		padding: gap-scale(1.5);
+		border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+		border-style: solid;
+		border-width: 0 var(--default-border-width) var(--default-border-width) var(--default-border-width);
+		border-color: var(--default-border-color);
+		@include transition;
+		transition-property: border-color
+	}
+
+	&__text {
+		@include text-line-clip(3);
+
+		@media (max-width: $mobile) {
+			@include text-line-clip(2);
+		}
+	}
+
+	&__title {
+		@extend %h4;
+		color: var(--color-primary);
+		@include transition;
+		transition-property: color
+	}
+
+	&__date {
+		color: var(--color-primary);
+		margin-top: auto;
+	}
+}

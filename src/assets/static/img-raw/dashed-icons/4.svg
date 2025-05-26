@@ -1,0 +1,8 @@
+<svg id="self" preserveAspectRatio="xMidYMid meet" viewBox="0 0 173 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M130.66 53H43.0002C42.389 53 41.9208 53.5435 42.0112 54.148L51.8904 120.148C51.9637 120.638 52.3843 121 52.8794 121H119.741C120.23 121 120.648 120.646 120.727 120.163L131.647 54.1632C131.747 53.554 131.277 53 130.66 53Z" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M59.8398 84H89.8398" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M58.8398 78H101.84" stroke="var(--accent-color, #F58220)" stroke-width="1.5" />
+	<path d="M62.3398 94H100.84" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M49.5442 53L48.0179 43.1532C47.924 42.5471 48.3928 42 49.0061 42H125.611C126.245 42 126.719 42.5818 126.59 43.2024L124.566 53" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+	<path d="M56.2422 42L54.9991 33.1389C54.9147 32.5373 55.3818 32 55.9894 32H118.635C119.261 32 119.733 32.5686 119.618 33.1839L117.968 42" stroke="var(--main-color, #377CB5)" stroke-width="1.5" />
+</svg>

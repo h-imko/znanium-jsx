@@ -1,0 +1,139 @@
+@use "mixins" as *;
+@use "font" as *;
+@use "breakpoint" as *;
+@use "icon" as *;
+@use "splide" as *;
+@use "documents-slider" as *;
+@use "custom-list" as *;
+
+.showcase {
+	@extend %splide--float-arrows-block;
+
+	&__content {
+		display: grid;
+	}
+
+	&__item {
+		grid-row: 1;
+		grid-column: 1;
+		display: grid;
+		border: var(--default-border);
+		position: relative;
+
+		&:not(.is-active) {
+			opacity: 0;
+			pointer-events: none;
+			visibility: hidden;
+		}
+
+		&__main,
+		&__extra {
+			grid-row: 1;
+			grid-column: 1;
+			min-width: 0;
+			padding: gap-scale(1.5) gap-scale(1);
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			&:not(.is-active) {
+				opacity: 0;
+				pointer-events: none;
+				visibility: hidden;
+
+				.splide {
+					visibility: hidden;
+				}
+			}
+		}
+
+		&__main {
+			color: var(--color-primary);
+		}
+
+		&__extra {
+			height: 0;
+			min-height: 100%;
+			overflow: auto;
+			overscroll-behavior: none;
+		}
+
+		&__title {
+			a {
+				@include hoverType3;
+			}
+		}
+	}
+
+	&__slider {
+		.splide {
+			position: static;
+		}
+	}
+
+	&__list {
+		@extend %custom-list;
+		@extend %font-2;
+		columns: 3;
+		column-gap: var(--column-gap);
+		max-width: max-content;
+
+		@media (max-width: $tablet) {
+			columns: 2;
+		}
+
+		@media (max-width: $mobile) {
+			columns: 1;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: calc(var(--default-border-width) * -1);
+		overflow: auto;
+
+		@media (max-width: $laptop) {
+			@include removeContainerPaddig;
+			@include addContainerPaddig;
+		}
+	}
+
+	&__tab {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: gap-scale(1);
+		cursor: pointer;
+		border: var(--default-border-width) solid #0000;
+		z-index: 1;
+		white-space: nowrap;
+
+		&.is-active {
+			border-bottom-color: var(--color-text-alt);
+			border-top-color: var(--default-border-color);
+			border-left-color: var(--default-border-color);
+			border-right-color: var(--default-border-color);
+			color: var(--color-primary);
+		}
+
+		&:is(:hover, :focus-within):not(.is-active) {
+			background-color: var(--default-border-color);
+		}
+
+		&__extra {
+			@include hoverType2;
+
+			&.is-active {
+				&::before {
+					@extend %icon--close;
+				}
+			}
+
+			&::before {
+				content: "";
+				@extend %icon, %icon--menu;
+			}
+		}
+	}
+}

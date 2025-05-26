@@ -1,0 +1,135 @@
+@use "date" as *;
+@use "mixins" as *;
+@use "button" as *;
+@use "breakpoint" as *;
+
+.fpl {
+	border: var(--default-border);
+	border-radius: var(--default-border-radius-small);
+	--px: #{gap-scale(0.75)};
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: var(--default-border);
+		}
+
+		&__doc {
+			display: flex;
+			gap: 8px 16px;
+			align-items: center;
+			background-color: var(--color-primary-lighter);
+			padding: 16px var(--px);
+
+			@media (max-width: $mobile) {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				align-items: flex-start;
+			}
+
+			&__author {
+				color: var(--color-accent);
+			}
+
+			&__name {
+				@include hoverType1;
+			}
+
+			&__img {
+				width: 48px;
+				flex-shrink: 0;
+
+				img {
+					border-radius: calc(var(--default-border-radius-small) / 2);
+				}
+			}
+
+			&__info {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px 12px;
+
+				@media (max-width: $mobile) {
+					grid-column: 2;
+					grid-row: span 2;
+				}
+			}
+
+			&__label {
+				flex-shrink: 0;
+			}
+		}
+
+		&__links {}
+
+		&__link {
+			display: flex;
+			flex-direction: column;
+			gap: gap-scale(0.75);
+			padding: 16px var(--px);
+
+			&:not(:last-child) {
+				border-bottom: var(--default-border-width) dashed var(--default-border-color);
+			}
+
+			&__header {
+				display: flex;
+				align-items: flex-start;
+				gap: 16px;
+			}
+
+			&__controls {
+				display: flex;
+				margin-left: auto;
+				gap: 8px;
+				flex-shrink: 0;
+			}
+
+			&__control {
+				@include hoverType2;
+			}
+
+			&__comment {
+				&::before {
+					content: "";
+					@extend %icon, %icon--comment;
+					float: left;
+					--icon-width: calc(2em - #{gap-scale(0.25)});
+					margin: 0 gap-scale(0.25) gap-scale(0.25) 0;
+
+					@supports (height: 1lh) {
+						--icon-width: calc(2lh - #{gap-scale(0.25)});
+					}
+
+					@media (max-width: $mobile) {
+						--icon-size: 24;
+					}
+				}
+			}
+
+			&__footer {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 8px 24px;
+
+				@media (max-width: $mobile) {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+
+			&__pages {
+				@extend %button-text;
+
+				&::before {
+					content: "";
+					@extend %icon, %icon--description;
+				}
+			}
+
+			&__date {
+				@extend %date;
+			}
+		}
+	}
+}

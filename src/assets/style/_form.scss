@@ -1,0 +1,74 @@
+@use "select-simple" as *;
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(0.75);
+
+	&--slim {
+		max-width: 500px;
+	}
+
+	&__row {
+		display: grid;
+		grid-auto-columns: 1fr;
+		grid-auto-flow: column;
+		gap: inherit;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			grid-auto-flow: row;
+		}
+	}
+
+	&__item {
+		align-self: flex-end;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		&__caption {
+			@extend %font-2;
+		}
+	}
+
+	&__element-group {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(0.5);
+		padding: 8px 12px;
+		border: var(--default-border);
+		border-radius: var(--default-border-radius-small);
+
+		&:not(:has(legend)) {
+			border: none;
+			padding: 0;
+		}
+
+		legend {
+			padding: 0 8px;
+		}
+
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+			gap: gap-scale(0.75);
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__controls {
+		display: flex;
+		gap: gap-scale(0.5);
+		flex-wrap: wrap;
+	}
+
+	.select-simple {
+		@extend %select-simple--big;
+	}
+}

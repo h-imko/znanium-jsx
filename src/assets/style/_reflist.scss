@@ -1,0 +1,127 @@
+@use "font" as *;
+@use "icon" as *;
+@use "button" as *;
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+.reflist {
+	&__item {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: gap-scale(1);
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+
+		&:has(&__text) {
+			grid-template-columns: 1fr 1fr auto;
+
+			@media (max-width: $mobile) {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&--pack &__title {
+			&::before {
+				@extend %icon--folder;
+			}
+		}
+
+		&--author &__title {
+			&::before {
+				@extend %icon--person;
+			}
+		}
+
+		&:not(:first-child) {
+			padding-top: 24px;
+		}
+
+		&:not(:last-child) {
+			padding-bottom: 24px;
+			border-bottom: var(--default-border);
+		}
+
+		&__title {
+			@extend %button-text;
+			align-items: flex-start;
+
+			&:is(a) {}
+
+			&::before {
+				content: "";
+				@extend %icon;
+			}
+		}
+
+		&__links {
+			display: flex;
+			flex-wrap: wrap;
+			// flex-direction: column;
+			flex-shrink: 0;
+		}
+
+		&__link {
+			@extend %font-2;
+			width: 17ch;
+			@include hoverType1;
+
+			&:not(:is(a)) {
+				color: var(--color-text2);
+			}
+		}
+
+		&__books {
+			grid-column: 1 / -1;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			align-items: flex-end;
+			gap: 20px;
+
+			@media (max-width: $mobile) {
+				grid-template-columns: repeat(3, 1fr);
+				max-width: 450px;
+				// display: flex;
+				// flex-wrap: wrap;
+				// align-items: stretch;
+			}
+
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				flex-direction: column;
+				border: var(--default-border);
+				border-radius: var(--default-border-radius-small);
+				height: 100%;
+				padding: 8px;
+				@extend %font-4;
+				color: var(--color-primary);
+				@include hoverTypeBorder;
+
+				&::after {
+					content: "";
+					@extend %icon, %icon--arrow_forward;
+				}
+			}
+		}
+
+		&__book {
+			@media (max-width: $mobile) {
+				flex: 1 1 0;
+				max-width: 150px;
+			}
+
+			a {
+				display: block;
+			}
+
+			img {
+				box-shadow: 0 4px 15px rgba(0, 0, 0, .12);
+				border-radius: var(--default-border-radius-small);
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+@use "container" as *;
+
+.page {
+	&:has(&__aside) {
+		@extend %container-fluid;
+	}
+
+	&__inner {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		align-items: flex-start;
+		column-gap: var(--column-gap);
+		row-gap: calc(var(--page-gap) / 4 * 3);
+
+		@media (max-width: $tablet) {
+			grid-auto-flow: row;
+		}
+	}
+
+	&__aside {
+		display: flex;
+		flex-direction: column;
+		gap: gap-scale(2);
+
+		@media (min-width: $tablet) {
+			grid-column: span 3;
+		}
+
+		&__sticky {
+			position: sticky;
+			top: 32px;
+			bottom: 32px;
+		}
+	}
+
+	&__aside + &__content {
+		gap: calc(var(--page-gap) / 4 * 3);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--page-gap);
+		min-width: 0;
+
+		@media (min-width: $tablet) {
+			grid-column: span 9;
+		}
+	}
+}

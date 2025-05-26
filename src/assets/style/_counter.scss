@@ -1,6 +1,22 @@
+@use "button" as *;
+
 .counter {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
 	&__control {
+		@extend %button-text;
 		user-select: none;
 		cursor: pointer;
+	}
+
+	&__input {
+		height: var(--input-height-small);
+		text-align: center;
+		border: var(--default-border);
+		background-color: var(--color-text-alt);
+		border-radius: var(--default-border-radius-small);
+		color: inherit;
 	}
 }

@@ -1,0 +1,23 @@
+@use "mixins" as *;
+@use "breakpoint" as *;
+
+.icon-buttons {
+	display: flex;
+	gap: gap-scale(0.25);
+	--icon-size: 24;
+
+	@media (max-width: $mobile) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: max-content;
+	}
+
+	&__item {
+		border: var(--default-border);
+		display: flex;
+		align-items: center;
+		border-radius: var(--default-border-radius-small);
+		@include hoverTypeBorder;
+		color: var(--color-primary);
+	}
+}

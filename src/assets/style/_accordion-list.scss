@@ -1,0 +1,19 @@
+@use "icon" as *;
+@use "button" as *;
+@use "accordion" as *;
+@use "mixins" as *;
+
+.accordion-list {
+	display: flex;
+	flex-direction: column;
+	gap: gap-scale(1);
+
+	&__header {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__item {
+		@include accordion;
+	}
+}
