@@ -1,13 +1,23 @@
 import Splide from "./Splide/Splide"
 import Labels from "./Labels"
 
+const items = [
+	{
+		img: 6,
+		author: "Постников В.М.",
+		title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt suscipit ipsam dolor aut."
+	},
+	{
+		img: 7,
+		author: "Постников В.М.",
+		title: "Записки горного института, 2024, № 5"
+	}
+]
+
 function slide({ img, author, title }) {
 	<a href="" class="documents-slider__slide">
 		<img class="documents-slider__slide__img" src={ `/src/assets/static/img/${img}.webp` } alt="Книга такая-то" />
 		<span class="documents-slider__slide__labels">
-			{/* <%- include("/labels", {
-					single: true
-									}) %> */}
 		</span>
 		<Labels />
 		<span class="documents-slider__slide__author">{ author }</span>
@@ -17,6 +27,15 @@ function slide({ img, author, title }) {
 
 export default function ({ title }) {
 	return (
-		1
+		<div className="documents-slider">
+			<div className="container-fluid">
+				<div className="documents-slider__inner">
+					<div className="documents-slider__header">
+						{ title && <h2>{ title }</h2> }
+					</div>
+
+				</div>
+			</div>
+		</div>
 	)
 }
