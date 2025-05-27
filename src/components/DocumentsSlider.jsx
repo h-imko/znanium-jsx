@@ -15,14 +15,16 @@ const items = [
 ]
 
 function slide({ img, author, title }) {
-	<a href="" class="documents-slider__slide">
-		<img class="documents-slider__slide__img" src={ `/src/assets/static/img/${img}.webp` } alt="Книга такая-то" />
-		<span class="documents-slider__slide__labels">
-		</span>
-		<Labels />
-		<span class="documents-slider__slide__author">{ author }</span>
-		<span class="documents-slider__slide__title">{ title }</span>
-	</a>
+	return (
+		<a href="" class="documents-slider__slide">
+			<img class="documents-slider__slide__img" src={ `/src/assets/static/img/${img}.webp` } alt="Книга такая-то" />
+			<span class="documents-slider__slide__labels">
+			</span>
+			<Labels />
+			<span class="documents-slider__slide__author">{ author }</span>
+			<span class="documents-slider__slide__title">{ title }</span>
+		</a>
+	)
 }
 
 export default function ({ title }) {
@@ -33,7 +35,7 @@ export default function ({ title }) {
 					<div className="documents-slider__header">
 						{ title && <h2>{ title }</h2> }
 					</div>
-
+					<Splide arrows={ true } slides={ [...items, ...items, ...items, ...items].map(slide) } />
 				</div>
 			</div>
 		</div>

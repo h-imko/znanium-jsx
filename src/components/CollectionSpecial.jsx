@@ -40,11 +40,9 @@ const cardsData = [
 			</>
 		)
 	}
-].reduce((res, current) => {
-	return res.concat([current, current])
-}, [])
+]
 
-const items = cardsData.map(cardData => card(cardData))
+const items = [...cardsData, ...cardsData].map(cardData => card(cardData))
 
 function card({ img, title, text }) {
 	return (
