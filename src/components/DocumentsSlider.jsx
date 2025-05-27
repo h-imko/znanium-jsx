@@ -9,11 +9,7 @@ function slide({ img, author, title }) {
 					single: true
 									}) %> */}
 		</span>
-		<Labels items={ [
-			{
-
-			}
-		] }></Labels>
+		<Labels />
 		<span class="documents-slider__slide__author">{ author }</span>
 		<span class="documents-slider__slide__title">{ title }</span>
 	</a>

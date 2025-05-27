@@ -11,7 +11,7 @@ import clsx from "clsx"
 /**
  * @param {labelArgs} param0
  */
-export function label({ text, title, img, color }) {
+function label({ text, title, img, color }) {
 	return (
 		<span className={
 			clsx({
@@ -25,8 +25,8 @@ export function label({ text, title, img, color }) {
 }
 
 /**
- * @param {object} param0 
- * @param {labelArgs[]} param0.items 
+ * @param {object} [param0] 
+ * @param {labelArgs[]} [param0.items] 
  */
 export default function ({ items }) {
 	return (
