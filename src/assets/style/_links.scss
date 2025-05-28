@@ -4,6 +4,7 @@
 
 .links {
 	display: flex;
+	flex-wrap: wrap;
 	gap: gap-scale(0.5) gap-scale(0.75);
 
 	&__item {
