@@ -48,7 +48,7 @@ function card({ img, title, text }) {
 	return (
 		<div className="collections-special__card">
 			<div className="collections-special__card__img">
-				<StreakImg img={ `/src/assets/static/img/dashed-icons/${img}.svg` } />
+				<StreakImg img={ img } />
 			</div>
 			<div className="collections-special__card__body">
 				<h3 className="collections-special__card__title">{ title }</h3>

@@ -4,6 +4,8 @@ import M31 from "../components/M31"
 import Banners from "../components/Banners"
 import Singleform from "../components/Singleform"
 import Showcase from "../components/Showcase"
+import Advantages from "../components/Advantages"
+import Tariffs from "../components/Tariffs"
 
 export default function index() {
 	return (
@@ -15,6 +17,10 @@ export default function index() {
 			</M31>
 			<Showcase />
 			<Showcase empty={ true } />
+			<M31>
+				<Advantages />
+			</M31>
+			<Tariffs />
 		</Page>
 	)
 }
