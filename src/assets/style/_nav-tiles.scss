@@ -2,7 +2,7 @@
 @use "breakpoint" as *;
 @use "mixins" as *;
 
-.catalog-nav {
+.nav-tiles {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: gap-scale(1);

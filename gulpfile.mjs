@@ -91,19 +91,19 @@ function html() {
 			this.emit("end")
 		})
 		.pipe(transform((chunk, encoding, callback) => {
-			const transformed = esbuildd.buildSync({
-				jsx: "automatic",
-				bundle: true,
-				jsxFactory: 'h',
-				jsxFragment: 'Fragment',
-				jsxImportSource: 'preact',
-				jsxDev: true,
-				entryPoints: [chunk.path],
-				write: false,
-				format: "esm",
-			})
-
 			try {
+				const transformed = esbuildd.buildSync({
+					jsx: "automatic",
+					bundle: true,
+					jsxFactory: 'h',
+					jsxFragment: 'Fragment',
+					jsxImportSource: 'preact',
+					jsxDev: true,
+					entryPoints: [chunk.path],
+					write: false,
+					format: "esm",
+				})
+
 				const script = transformed.outputFiles.at(0).text.replace(/export {[\d\D]*/gm, "")
 				const evaluated = eval(`${script} \n index()`)
 				const rendered = `<!DOCTYPE html>${render(evaluated).replaceAll(".scss", ".css")}`
@@ -113,12 +113,11 @@ function html() {
 			} catch (error) {
 				callback(error, chunk)
 			}
-		})
-			.on("error", function (error) {
-				printPaintedMessage(error.message, "HTML")
-				bs.notify("HTML Error")
-				this.emit("end")
-			}))
+		}).on("error", function (error) {
+			printPaintedMessage(error.message, "HTML")
+			bs.notify("HTML Error")
+			this.emit("end")
+		}))
 		.pipe(ext(".html"))
 		.pipe(replaceSrc())
 		.pipe(destGulp.dest(getDestPath()))
