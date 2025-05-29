@@ -428,15 +428,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			const wrapper = accordion.querySelector("[data-accordion-wrapper]")
 			const toggler = accordion.querySelector("[data-accordion-toggler]")
 			const content = accordion.querySelector("[data-accordion-content]")
-			const accordionId = content.id || `accordion-content-${index}`
 
-			if (!content.id) {
-				content.id = accordionId
+			if (content) {
+				content.id = content.getAttribute("id") ?? `accordion-content-${index}`
+				toggler.ariaExpanded = false
+				toggler.setAttribute("aria-controls", content.id)
 			}
-
-			toggler.ariaExpanded = false
-			toggler.setAttribute("aria-controls", accordionId)
-
 
 			function toggle(force) {
 				wrapper?.classList.toggle("is-active", force)

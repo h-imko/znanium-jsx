@@ -132,3 +132,7 @@
 		@extend %icon--collapse;
 	}
 }
+
+.accordion {
+	@include accordion;
+}
