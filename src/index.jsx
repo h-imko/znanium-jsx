@@ -6,6 +6,9 @@ export default function index() {
 			<a href="/src/pages/index.html">
 				<h1>Главная</h1>
 			</a>
+			<a href="/src/pages/catalog/novelty.html">
+				<h1>Новинки</h1>
+			</a>
 		</Page>
 	)
 }

@@ -2,6 +2,7 @@ import Head from "./Head"
 import Footer from "./Footer"
 import Header from "./Header"
 import Breadcrumbs from "./Breadcrumbs"
+import Singleform from "./Singleform"
 import AccordionNav from "./Accordion-nav"
 
 function Aside() {
@@ -23,7 +24,7 @@ export default function ({ children, aside, breadcrumbs, search }) {
 					<div className="page__inner">
 						{ aside && Aside() }
 						<main className="page__content">
-							{ search && 123 }
+							{ search && <Singleform /> }
 							{ children }
 						</main>
 					</div>
