@@ -55,8 +55,8 @@ function tab(index = 0, _, __, empty) {
 				"is-active": !index
 			})
 		}>
-			{ empty ? "" : <button type="button" class="showcase__tab__extra" title="Переключить"></button> }
-			<button type="button" class="showcase__tab__main">Вкладка{ index } </button>
+			{ empty ? "" : <button type="button" className="showcase__tab__extra" title="Переключить"></button> }
+			<button type="button" className="showcase__tab__main">Вкладка{ index } </button>
 		</div>
 	)
 }

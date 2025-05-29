@@ -6,6 +6,8 @@ import Singleform from "../components/Singleform"
 import Showcase from "../components/Showcase"
 import Advantages from "../components/Advantages"
 import Tariffs from "../components/Tariffs"
+import CardsSliderNews from "../components/Cards-slider-news"
+import CardsSliderWebinars from "../components/Cards-slider-webinars"
 
 export default function index() {
 	return (
@@ -21,6 +23,8 @@ export default function index() {
 				<Advantages />
 			</M31>
 			<Tariffs />
+			<CardsSliderNews />
+			<CardsSliderWebinars />
 		</Page>
 	)
 }

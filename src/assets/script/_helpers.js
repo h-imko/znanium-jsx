@@ -4,6 +4,13 @@ import Splide from "@splidejs/splide"
 import { childGalleryPropertyName } from "./_gallery"
 
 /**
+ * @param {number} num 
+ */
+export function times(num) {
+	return Array(num).fill(null)
+}
+
+/**
  *
  * @param {Event} event
  * @param {Array.<Element>} targets

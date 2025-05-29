@@ -83,8 +83,7 @@
 		transition-property: color
 	}
 
-	&__date {
-		color: var(--color-primary);
+	.date {
 		margin-top: auto;
 	}
 }

@@ -16,13 +16,13 @@ const items = [
 
 function slide({ img, author, title }) {
 	return (
-		<a href="" class="documents-slider__slide">
-			<img class="documents-slider__slide__img" src={ `/src/assets/static/img/${img}.webp` } alt="Книга такая-то" />
-			<span class="documents-slider__slide__labels">
+		<a href="" className="documents-slider__slide">
+			<img className="documents-slider__slide__img" src={ `/src/assets/static/img/${img}.webp` } alt="Книга такая-то" />
+			<span className="documents-slider__slide__labels">
 			</span>
 			<Labels />
-			<span class="documents-slider__slide__author">{ author }</span>
-			<span class="documents-slider__slide__title">{ title }</span>
+			<span className="documents-slider__slide__author">{ author }</span>
+			<span className="documents-slider__slide__title">{ title }</span>
 		</a>
 	)
 }
