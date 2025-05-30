@@ -121,3 +121,9 @@
 @view-transition {
 	navigation: auto;
 }
+
+.dev-nav {
+	ul {
+		padding: revert;
+	}
+}

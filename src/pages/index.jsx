@@ -6,8 +6,8 @@ import Singleform from "../components/Singleform"
 import Showcase from "../components/Showcase"
 import Advantages from "../components/Advantages"
 import Tariffs from "../components/Tariffs"
-import CardsSliderNews from "../components/Cards-slider-news"
-import CardsSliderWebinars from "../components/Cards-slider-webinars"
+import CardsSliderNews from "../components/CardsSliderNews"
+import CardsSliderWebinars from "../components/CardsSliderWebinars"
 
 export default function index() {
 	return (

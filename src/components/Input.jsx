@@ -17,7 +17,7 @@ function Input({ placeholder, required, maxLength, readOnly, value, type }) {
 	)
 }
 
-export default function ({ label, type, textarea, small, placeholder, required, maxLength, readOnly, value, buttonEye, customButton, customButtonLink, caption }) {
+export default function ({ label, type, textarea, small, required, maxLength, readOnly, value, buttonEye, customButton, customButtonLink, caption, placeholder = " " }) {
 	return (
 		<>
 			<div className={ clsx({

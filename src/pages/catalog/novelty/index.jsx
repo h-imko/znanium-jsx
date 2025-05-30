@@ -1,12 +1,13 @@
 import Page from "../../../components/Page"
+import Novelty from "../../../components/Novelty"
 import Generic from "../../../components/Generic"
-import AccordionList from "../../../components/Accordion-list"
+import Help from "../../../components/Help"
 
 export default function index() {
 	return (
 		<Page aside={ true } breadcrumbs={ true } search={ true }>
-			<Generic title="Тематический рубрикатор ЭБС Znanium">
-				<AccordionList />
+			<Generic title="Новинки и новые поступления" p={ <Help /> }>
+				<Novelty />
 			</Generic>
 		</Page>
 	)

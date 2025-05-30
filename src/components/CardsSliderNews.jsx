@@ -1,5 +1,5 @@
-import CardsSlider from "./Cards-slider"
-import NewsCard from "./News-card"
+import CardsSlider from "./CardsSlider"
+import NewsCard from "./NewsCard"
 
 const cardsData = [
 	{
@@ -15,8 +15,6 @@ const cardsData = [
 		title: "Тоже короткая новость"
 	},
 ]
-
-
 
 export default function () {
 	return (

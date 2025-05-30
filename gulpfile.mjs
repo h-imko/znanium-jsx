@@ -106,7 +106,7 @@ function html() {
 
 				const script = transformed.outputFiles.at(0).text.replace(/export {[\d\D]*/gm, "")
 				const evaluated = eval(`${script} \n index()`)
-				const rendered = `<!DOCTYPE html>${render(evaluated).replaceAll(".scss", ".css")}`
+				const rendered = `<!DOCTYPE html>${render(evaluated).replaceAll(".scss", ".css").replaceAll(".jsx", ".html")}`
 				chunk.contents = Buffer.from(rendered)
 
 				callback(null, chunk)

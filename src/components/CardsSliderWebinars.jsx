@@ -1,5 +1,5 @@
-import CardsSlider from "./Cards-slider"
-import WebinarCard from "./Webinar-card"
+import CardsSlider from "./CardsSlider"
+import WebinarCard from "./WebinarCard"
 
 const cardsData = [
 	{

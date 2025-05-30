@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	accessibility()
 	testToasts()
 	fpl()
+	form()
 
 	function testToasts() {
 		document.querySelector(".test-toast")?.addEventListener("click", () => {
@@ -334,16 +335,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	function filter() {
 		document.querySelectorAll(".filter").forEach(filter => {
 			const toggler = filter.querySelector(".filter__toggler")
-			const extra = filter.querySelector(".filter__form__extra")
-			const extraToggler = filter.querySelector(".filter__form__extra__toggler")
+
 
 			toggler?.addEventListener("click", () => {
 				filter.classList.toggle("is-active")
 			})
 
-			extraToggler?.addEventListener("click", () => {
-				extra.classList.toggle("is-active")
-			})
+		})
+	}
+
+	function form() {
+		const extra = document.querySelector(".form__extra")
+		const extraToggler = extra.querySelector(".form__extra__toggler")
+
+		extraToggler?.addEventListener("click", () => {
+			extra.classList.toggle("is-active")
 		})
 	}
 
