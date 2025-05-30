@@ -4,7 +4,7 @@ import AccordionList from "../../../../components/AccordionList"
 
 export default function index() {
 	return (
-		<Page aside={ true } breadcrumbs={ true } search={ true } >
+		<Page aside breadcrumbs search >
 			<Generic title="Тематический рубрикатор ЭБС Znanium">
 				<AccordionList />
 			</Generic>

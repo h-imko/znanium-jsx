@@ -5,7 +5,7 @@ import Help from "../../../components/Help"
 
 export default function index() {
 	return (
-		<Page aside={ true } breadcrumbs={ true } search={ true }>
+		<Page aside breadcrumbs search>
 			<Generic title="Новинки и новые поступления" p={ <Help /> }>
 				<Novelty />
 			</Generic>

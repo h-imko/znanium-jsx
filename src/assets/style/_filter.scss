@@ -90,44 +90,4 @@
 	&:not(.is-active) &__form {
 		display: none;
 	}
-
-	&__form {
-		padding: gap-scale(1);
-		border: var(--default-border);
-		border-radius: var(--default-border-radius-small);
-
-		&__extra {
-			display: flex;
-			flex-direction: column;
-			gap: 24px;
-			padding: 24px 0;
-
-			&.is-active &__toggler {
-				&::after {
-					transform: scaleY(-1);
-				}
-			}
-
-			&__toggler {
-				display: flex;
-				align-items: center;
-				gap: 8px;
-				color: var(--color-primary);
-
-				&:is(:hover, :focus-within) {
-					color: var(--color-accent);
-				}
-
-				&::after {
-					content: "";
-					@extend %icon, %icon--chevron_down;
-					transition: transform ease var(--default-duration);
-				}
-			}
-
-			&:not(.is-active) &__content {
-				display: none;
-			}
-		}
-	}
 }

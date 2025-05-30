@@ -4,7 +4,7 @@ import NavTiles from "../../components/NavTiles"
 
 export default function index() {
 	return (
-		<Page aside={ true } breadcrumbs={ true } search={ true }>
+		<Page aside breadcrumbs search>
 			<Generic>
 				<NavTiles />
 			</Generic>

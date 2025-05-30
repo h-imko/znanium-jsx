@@ -35,7 +35,7 @@ export default function ({ title }) {
 					<div className="documents-slider__header">
 						{ title && <h2>{ title }</h2> }
 					</div>
-					<Splide arrows={ true } slides={ [...items, ...items, ...items, ...items].map(slide) } />
+					<Splide arrows slides={ [...items, ...items, ...items, ...items].map(slide) } />
 				</div>
 			</div>
 		</div>

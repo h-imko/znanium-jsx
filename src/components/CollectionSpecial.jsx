@@ -70,7 +70,7 @@ export default function () {
 				<div className="collections-special__inner">
 					<h2 className="collections-special__title">Специальные коллекции</h2>
 					<div className="collections-special__slider">
-						<Splide slides={ items } arrows={ true } />
+						<Splide slides={ items } arrows />
 					</div>
 				</div>
 			</div>

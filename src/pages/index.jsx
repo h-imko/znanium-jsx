@@ -18,7 +18,7 @@ export default function index() {
 				<CollectionSpecial />
 			</M31>
 			<Showcase />
-			<Showcase empty={ true } />
+			<Showcase empty />
 			<M31>
 				<Advantages />
 			</M31>

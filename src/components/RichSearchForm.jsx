@@ -20,10 +20,10 @@ const items = [[
 	<Checkbox label={ "Строгий поиск по названию" } />
 ],
 [
-	<Select multiple={ true } hasDialog={ true } />
+	<Select multiple hasDialog />
 ],
 [
-	<Select multiple={ true } />
+	<Select multiple />
 ],
 [
 	<Checkbox label={ "Собственная литература ГК ИНФРА-М" } />
@@ -32,13 +32,13 @@ const items = [[
 	<Input label={ "Год выпуска" } />
 ],
 [
-	<Select multiple={ true } />
+	<Select multiple />
 ],
 [
-	<Select multiple={ true } />
+	<Select multiple />
 ],
 [
-	<Select multiple={ true } />
+	<Select multiple />
 ],
 [
 	<Select />
@@ -51,20 +51,14 @@ const items = [[
 		<Radio label={ "статьи" } name={ "test1" } />
 		<Radio label={ "ЭФУ" } name={ "test1" } />
 	</Fieldset>
-],
-[
-	<div class="form__controls">
-		<button type="submit" class="button">Найти</button>
-		<button type="reset" class="button button--secondary"><span>Очистить</span> </button>
-	</div>
 ]]
 
 const extraItems = [
 	[
-		<Select multiple={ true } />
+		<Select multiple />
 	],
 	[
-		<Select multiple={ true } hasDialog={ true } />
+		<Select multiple hasDialog />
 	],
 	[
 		<Select />
@@ -93,9 +87,9 @@ const extraForm = <Form items={ extraItems } />
 
 export default function () {
 	return (
-		<Form items={ items } extra={ {
+		<Form bordered items={ items } extra={ {
 			label: "Специальные условия поиска",
 			content: extraForm
-		} } />
+		} } controls={ { submit: "Найти", reset: "Очистить" } } />
 	)
 } 

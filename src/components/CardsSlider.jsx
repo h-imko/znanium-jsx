@@ -9,7 +9,7 @@ export default function ({ title, cards }) {
 						<h2> { title } </h2>
 					</a>
 					<div className="cards-slider__slider">
-						<Splide slides={ cards } arrows={ true } />
+						<Splide slides={ cards } arrows />
 					</div>
 				</div>
 			</div>

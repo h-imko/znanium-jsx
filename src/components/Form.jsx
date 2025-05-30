@@ -4,6 +4,8 @@
  * @property {import("react").JSX.Element} content
  */
 
+import clsx from "clsx"
+
 /**
  * @typedef {object} controls
  * @property {boolean} [submit]
@@ -53,10 +55,16 @@ function Controls({ submit, reset }) {
  * @param {import("react").JSX.Element[][]} param0.items
  * @param {extra} param0.extra
  * @param {controls} param0.controls
+ * @param {boolean} param0.bordered
  */
-export default function ({ items, extra, controls }) {
+export default function ({ items, extra, controls, bordered }) {
 	return (
-		<div className="form">
+		<div className={
+			clsx({
+				form: true,
+				"form--bordered": bordered
+			})
+		}>
 			{ items.map(Row) }
 			{ extra && Row([<Extra { ...extra } />]) }
 			{ controls && <Controls { ...controls } /> }

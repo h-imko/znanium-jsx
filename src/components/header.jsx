@@ -56,7 +56,7 @@ export default function () {
 										<Logo />
 									</div>
 									<div className="header__logo__mobile">
-										<Logo compact={ true } />
+										<Logo compact />
 									</div>
 								</a>
 							</div>
