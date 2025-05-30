@@ -4,6 +4,12 @@
  * @property {import("react").JSX.Element} content
  */
 
+/**
+ * @typedef {object} controls
+ * @property {boolean} [submit]
+ * @property {boolean} [reset]
+ */
+
 function Item(item) {
 	return (
 		<div className="form__item"> { item } </div>
@@ -29,15 +35,31 @@ function Extra({ label, content }) {
 }
 
 /**
+ * @param {controls} param0
+ */
+function Controls({ submit, reset }) {
+	return (
+		Row([
+			<div class="form__controls">
+				{ submit && <button type="submit" class="button">{ submit }</button> }
+				{ reset && <button type="reset" class="button button--secondary">{ reset }</button> }
+			</div>
+		])
+	)
+}
+
+/**
  * @param {Object} param0 
  * @param {import("react").JSX.Element[][]} param0.items
  * @param {extra} param0.extra
+ * @param {controls} param0.controls
  */
-export default function ({ items, extra }) {
+export default function ({ items, extra, controls }) {
 	return (
 		<div className="form">
 			{ items.map(Row) }
 			{ extra && Row([<Extra { ...extra } />]) }
+			{ controls && <Controls { ...controls } /> }
 		</div>
 	)
 }

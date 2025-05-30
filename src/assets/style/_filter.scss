@@ -1,7 +1,6 @@
 @use "font" as *;
 @use "button" as *;
 @use "icon" as *;
-@use "accordion" as *;
 @use "mixins" as *;
 @use "breakpoint" as *;
 
@@ -68,7 +67,7 @@
 				align-items: center;
 				justify-content: center;
 				gap: 4px;
-				padding: 0 10px;
+				padding: 0 4px 0 10px;
 				border: var(--default-border);
 				border-radius: var(--default-border-radius-small);
 				--icon-size: 20;
