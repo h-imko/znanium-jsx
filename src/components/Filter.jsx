@@ -22,15 +22,15 @@ const appliedItemsData = [
 function AppliedItem({ caption, values }) {
 	function Value(value) {
 		return (
-			<div class="filter__applied__item__value">
+			<div className="filter__applied__item__value">
 				<span>{ value }</span>
-				<button type="button" class="filter__applied__item__remove" title="Отменить условие"></button>
+				<button type="button" className="filter__applied__item__remove" title="Отменить условие"></button>
 			</div>
 		)
 	}
 	return (
-		<div class="filter__applied__item">
-			<span class="filter__applied__item__caption">{ caption }: </span>
+		<div className="filter__applied__item">
+			<span className="filter__applied__item__caption">{ caption }: </span>
 			{ values.map(Value) }
 		</div>
 	)
@@ -38,14 +38,14 @@ function AppliedItem({ caption, values }) {
 
 export default function () {
 	return (
-		<div class="filter">
-			<div class="filter__panel">
-				<button type="button" class="filter__toggler">Изменить условия поиска</button>
-				<div class="filter__applied">
+		<div className="filter">
+			<div className="filter__panel">
+				<button type="button" className="filter__toggler">Изменить условия поиска</button>
+				<div className="filter__applied">
 					{ appliedItemsData.map(AppliedItem) }
 				</div>
 			</div>
-			<div class="filter__form">
+			<div className="filter__form">
 				<RichSearchForm />
 			</div>
 		</div>

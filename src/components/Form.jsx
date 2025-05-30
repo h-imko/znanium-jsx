@@ -30,7 +30,7 @@ function Row(items) {
 function Extra({ label, content }) {
 	return (
 		<div className="form__extra">
-			<button type="button" class="form__extra__toggler">{ label }</button>
+			<button type="button" className="form__extra__toggler">{ label }</button>
 			<div className="form__extra__content"> { content } </div>
 		</div>
 	)
@@ -42,9 +42,9 @@ function Extra({ label, content }) {
 function Controls({ submit, reset }) {
 	return (
 		Row([
-			<div class="form__controls">
-				{ submit && <button type="submit" class="button">{ submit }</button> }
-				{ reset && <button type="reset" class="button button--secondary">{ reset }</button> }
+			<div className="form__controls">
+				{ submit && <button type="submit" className="button">{ submit }</button> }
+				{ reset && <button type="reset" className="button button--secondary">{ reset }</button> }
 			</div>
 		])
 	)

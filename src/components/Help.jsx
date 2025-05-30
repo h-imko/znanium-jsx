@@ -1,5 +1,5 @@
 export default function () {
 	return (
-		<a href="" class="help" title="Смотреть справку"></a>
+		<a href="" className="help" title="Смотреть справку"></a>
 	)
 }

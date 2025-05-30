@@ -1,5 +1,5 @@
 import StreakImg from "./StreakImg"
-import Splide from "./Splide/Splide"
+import Splide from "./Splide"
 
 const cardsData = [
 	{

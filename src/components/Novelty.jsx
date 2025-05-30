@@ -1,6 +1,6 @@
 export default function () {
 	return (
-		<div class="novelty">
+		<div className="novelty">
 			<h2>Новинки Основной коллекции</h2>
 			<p>
 				Январь 2025: <a href="">весь фонд — 1</a>, <a href="">в подписке — 0</a> <br />
@@ -17,7 +17,7 @@ export default function () {
 			</p>
 			<h2>Новинки коллекций издательств</h2>
 			<h3>Декабрь 2024</h3>
-			<p class="novelty__links">
+			<p className="novelty__links">
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
@@ -37,7 +37,7 @@ export default function () {
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
 			</p>
 			<h3>Декабрь 2024</h3>
-			<p class="novelty__links">
+			<p className="novelty__links">
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />
 				<a href="">Аспект Пресс. Журналистика и медиабизнес (1)</a> <br />

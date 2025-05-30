@@ -7,7 +7,7 @@ import AccordionNav from "./AccordionNav"
 
 function Aside() {
 	return (
-		<aside class="page__aside">
+		<aside className="page__aside">
 			<AccordionNav />
 		</aside>
 	)

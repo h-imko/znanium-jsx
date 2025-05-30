@@ -1,4 +1,4 @@
-import Splide from "./Splide/Splide"
+import Splide from "./Splide"
 
 export default function ({ title, cards }) {
 	return (
