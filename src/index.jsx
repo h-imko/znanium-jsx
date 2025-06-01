@@ -39,6 +39,11 @@ export default function index() {
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="/src/pages/catalog/document/index.jsx">
+									<h1> документ </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
