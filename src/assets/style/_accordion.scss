@@ -136,3 +136,19 @@
 .accordion {
 	@include accordion;
 }
+
+.accordion-simple {
+	@extend %accordion-base;
+
+	&__toggler {
+		@extend %accordion-base__toggler;
+	}
+
+	&__wrapper {
+		@extend %accordion-base__wrapper;
+	}
+
+	&__content {
+		@extend %accordion-base__content;
+	}
+}
