@@ -40,6 +40,18 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
+								<a>
+									<h1> журналы </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/catalog/magazines/issues.jsx">
+											<h1> журнал </h1>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
 								<a href="/src/pages/catalog/document/index.jsx">
 									<h1> документ </h1>
 								</a>

@@ -419,22 +419,22 @@
 
 		&__nav {
 			display: flex;
-			// flex-wrap: wrap;
 			flex-direction: column;
 
-			// margin-bottom: calc(var(--default-border-width) * -1);
 			@media (max-width: $tablet) {
 				flex-direction: row;
 				overflow: auto;
+				@include removeContainerPaddig;
+				@include addContainerPaddig;
 			}
 		}
 
 		&__tab {
-			// flex: 0 0 20%;
 			padding: gap-scale(0.5) gap-scale(1);
 			border-bottom: var(--default-border);
 			color: var(--color-primary-alt);
 			text-align: center;
+			overflow-wrap: normal;
 
 			@media (max-width: $tablet) {
 				flex: 1 1 0;

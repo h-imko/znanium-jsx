@@ -4,7 +4,7 @@ import Document from "../../../components/Document"
 export default function index() {
 	return (
 		<Page breadcrumbs>
-			<Document isDetail />
+			<Document isDetail isMagazine />
 		</Page>
 	)
 }

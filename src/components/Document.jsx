@@ -6,7 +6,7 @@ import DocumentsSlider from "../components/DocumentsSlider"
 import clsx from "clsx"
 
 
-export default function ({ isDetail }) {
+export default function ({ isDetail, isMagazine }) {
 
 	function Tabs() {
 
@@ -304,63 +304,78 @@ export default function ({ isDetail }) {
 	}
 
 	function ColInfo() {
+		function InfoItems() {
+			return (
+				<>
+					<div class="document__info__item">
+						<dt>Издательство:</dt>
+						<dd><a href="">СОЛОН-Пресс</a></dd>
+					</div>
+					<div class="document__info__item">
+						<dt>Год издания: </dt>
+						<dd>2023</dd>
+					</div>
+					<div class="document__info__item">
+						<dt>Авторы: </dt>
+						<dd>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<button type="button" class="rest-toggler" title="Показать остальное"></button>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+						</dd>
+					</div>
+				</>
+			)
+		}
 
 		function InfoMain() {
 			return (
 				<div class="document__info__block">
 					<dl className="document__info__list">
-						<div class="document__info__item">
-							<dt>Издательство:</dt>
-							<dd><a href="">СОЛОН-Пресс</a></dd>
-						</div>
-						<div class="document__info__item">
-							<dt>Год издания: </dt>
-							<dd>2023</dd>
-						</div>
-						<div class="document__info__item">
-							<dt>Авторы: </dt>
-							<dd>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-								<button type="button" class="rest-toggler" title="Показать остальное"></button>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-							</dd>
-						</div>
+						<InfoItems />
 					</dl>
 				</div>
 			)
 		}
 
-		function InfoExtra() {
+		function InfoExtra({ isMobile, magazineItem, title = "Дополнительно" }) {
+			function ItemVak() {
+				return (
+					<div class="document__info__item">
+						<dt> </dt>
+						<dd>
+							<p><a href="/catalog/magazines/vak?ref=69df0b2d-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология (в том числе бионанотехнологии)</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb3-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология обработки, хранения и переработки злаковых, бобовых культур, крупяных продуктов, плодоовощной продукции и виноградарства</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb4-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология мясных, молочных и рыбных продуктов и холодильных производств</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb7-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология пищевых продуктов и биологических активных веществ</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb8-84d2-11e8-b668-90b11c31de4c&amp;products=1">Процессы и аппараты пищевых производств</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb9-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология и товароведение пищевых продуктов и функционального и специализированного назначения и общественного питания</a></p>
+							<p><a href="/catalog/magazines/vak?ref=6fdec1ea-84d2-11e8-b668-90b11c31de4c&amp;products=1">"Экономика и управление народным хозяйством (по отраслям и сферам деятельности, в т.ч.: экономика, организация и управление предприятиями, отраслями, </a></p>
+							<p><a href="/catalog/magazines/vak?ref=6fdec1ec-84d2-11e8-b668-90b11c31de4c&amp;products=1">Бухгалтерский учет, статистика</a></p>
+						</dd>
+					</div>
+				)
+			}
+
 			return (
-				<div className="document__info__block document__info__block--mobile">
-					<AccordionSimple toggler={ <span class="document__info__block__toggler"> Дополнительно </span> }>
+				<div className={
+					clsx({
+						"document__info__block": true,
+						"document__info__block--mobile": isMobile
+					})
+				}>
+					<AccordionSimple toggler={ <span class="document__info__block__toggler"> { title } </span> }>
 						<dl className="document__info__list">
-							<div class="document__info__item">
-								<dt>Издательство:</dt>
-								<dd><a href="">СОЛОН-Пресс</a></dd>
-							</div>
-							<div class="document__info__item">
-								<dt>Год издания: </dt>
-								<dd>2023</dd>
-							</div>
-							<div class="document__info__item">
-								<dt>Авторы: </dt>
-								<dd>
-									<a href="">Курушин Александр Александрович, </a>
-									<a href="">Нефедов Евгений Иванович,</a>
-									<a href=""> Смольский Сергей Михайлович</a>
-								</dd>
-							</div>
+							{ magazineItem ? <ItemVak /> : <InfoItems /> }
 						</dl>
 					</AccordionSimple>
 				</div>
@@ -393,7 +408,8 @@ export default function ({ isDetail }) {
 				</div>
 				<div class="document__info">
 					<InfoMain />
-					<InfoExtra />
+					<InfoExtra isMobile />
+					{ isMagazine && <InfoExtra title={ " Номенклатура ВАК " } magazineItem /> }
 				</div>
 			</div>
 		)
@@ -427,7 +443,7 @@ export default function ({ isDetail }) {
 					<div className="document__inner">
 						<ColMain />
 						<ColInfo />
-						<ColAccess />
+						{ isMagazine || <ColAccess /> }
 						<Tabs />
 					</div>
 				</div>
