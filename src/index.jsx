@@ -12,7 +12,7 @@ export default function index() {
 					</li>
 					<li>
 						<a href="/src/pages/catalog/index.jsx">
-							<h1>Каталог </h1>
+							<h1> Каталог </h1>
 						</a>
 						<ul>
 							<li>
@@ -81,6 +81,27 @@ export default function index() {
 							<li>
 								<a href="/src/pages/catalog/document/index.jsx">
 									<h1> документ </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/src/pages/collections/index.jsx">
+							<h1> Коллекции </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/collections/basic/index.jsx">
+									<h1> Основная коллекция и её сегменты </h1>
+								</a>
+								<a href="/src/pages/collections/partners/index.jsx">
+									<h1> Коллекции партнёров </h1>
+								</a>
+								<a href="/src/pages/collections/special/index.jsx">
+									<h1> Специализированные коллекции</h1>
+								</a>
+								<a href="/src/pages/collections/open-access/index.jsx">
+									<h1> Коллекция Open Access </h1>
 								</a>
 							</li>
 						</ul>

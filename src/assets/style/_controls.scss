@@ -58,6 +58,17 @@
 		margin-left: auto;
 	}
 
+	&__item:first-child:nth-last-child(2) + &__item,
+	&__item:first-child:nth-last-child(2) {
+		border: none;
+		padding: 0;
+		flex-grow: 0;
+	}
+
+	&__item:first-child:nth-last-child(2) {
+		margin-right: auto;
+	}
+
 	&__item:has(&__item__popover) &__button {
 		&::after {
 			content: "";

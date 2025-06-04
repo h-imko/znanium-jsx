@@ -47,9 +47,15 @@ function Button({ isActive, children, title, popovertarget }) {
 	)
 }
 
-export default function ({ price, excel, showBy, showType, sortBy }) {
+export default function ({ total, price, excel, showBy, showType, sortBy }) {
 	return (
 		<div className="controls">
+			{ total && (
+				<Item>
+					<span>Наименований — 332, документов — 334 </span>
+					<Help />
+				</Item>
+			) }
 			{ price && (
 				<Item>
 					<span>Наименований — 332, документов — 334 </span>

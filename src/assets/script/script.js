@@ -5,6 +5,7 @@ import dialog from "./_dialog"
 import counter from "./_counter"
 import dropzone from "./_Dropzone"
 import initToasts from "./_toast"
+import { v7 as uuid } from "uuid"
 
 document.addEventListener("DOMContentLoaded", () => {
 	const { makeToast } = initToasts()
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	accessibility()
 	testToasts()
 	fpl()
-	form()
 
 	function testToasts() {
 		document.querySelector(".test-toast")?.addEventListener("click", () => {
@@ -344,15 +344,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	}
 
-	function form() {
-		const extra = document.querySelector(".form__extra")
-		const extraToggler = extra.querySelector(".form__extra__toggler")
-
-		extraToggler?.addEventListener("click", () => {
-			extra.classList.toggle("is-active")
-		})
-	}
-
 	function table() {
 		document.querySelectorAll("table").forEach(table => {
 			const masterCheck = table.querySelector("thead input[type=checkbox]")
@@ -436,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const content = accordion.querySelector("[data-accordion-content]")
 
 			if (content) {
-				content.id = content.getAttribute("id") ?? `accordion-content-${index}`
+				content.id = content.getAttribute("id") ?? uuid()
 				toggler.ariaExpanded = false
 				toggler.setAttribute("aria-controls", content.id)
 			}
