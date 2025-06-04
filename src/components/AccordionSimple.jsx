@@ -1,4 +1,4 @@
-export default function ({ toggler, children }) {
+export default function ({ toggler, children, headerOther }) {
 	function Wrapper() {
 		return (
 			<div className="accordion-simple__wrapper" data-accordion-wrapper>
@@ -13,6 +13,7 @@ export default function ({ toggler, children }) {
 		<div className="accordion-simple" data-accordion>
 			<div className="accordion-simple__header">
 				{ children && <button className="accordion-simple__toggler" title="Развернуть/свернуть" type="button" data-accordion-toggler>{ toggler }</button> }
+				{ headerOther }
 			</div>
 			{ children && <Wrapper /> }
 		</div>

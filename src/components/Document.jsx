@@ -6,7 +6,270 @@ import DocumentsSlider from "../components/DocumentsSlider"
 import clsx from "clsx"
 
 
-export default function ({ isDetail, isMagazine }) {
+export default function Document({ isDetail, isMagazine, isSub }) {
+
+	function Actions() {
+		return (
+			<div class="document__actions">
+				<a href="" class="document__action" title="Ознакомиться">
+					<span class="icon icon--read"></span>
+				</a>
+				<button type="button" class="document__action" title="Рекомендовать для студентов">
+					<span class="icon icon--thumb_up"></span>
+				</button>
+				<button type="button" class="document__action" title="Поместить на полку">
+					<span class="icon icon--newsstand"></span>
+				</button>
+			</div>
+		)
+	}
+
+	function ColAccess() {
+		function Exrta() {
+			return (
+				<div class="document__accesses__extra" data-accordion="">
+					<button type="button" class="document__accesses__extra__toggler" data-accordion-toggler="" aria-expanded="false" aria-controls="accordion-content-1">Как еще получить доступ?</button>
+					<div class="document__accesses__extra__wrapper" data-accordion-wrapper="">
+						<div class="document__accesses__extra__list" data-accordion-content="" id="accordion-content-1">
+							<div class="document__offer">
+								<div class="block-arrow-border">
+									<div class="block-arrow-border__top">
+										<div class="block-arrow-border__top__content">
+											<div class="document__offer__title">Студенту или преподавателю</div>
+										</div>
+									</div>
+									<div class="block-arrow-border__bottom">
+										<div class="document__offer__body">
+											<span>
+												Отправьте <a href="">заявку на&nbsp;подключение к&nbsp;Znanium</a> по&nbsp;договору
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="document__offer">
+								<div class="document__offer__body">
+									<a href="" class="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			)
+		}
+
+		return (
+			<div className="document__col document__col--access">
+				<div class="document__accesses">
+					<div class="document__offer">
+						<div class="document__offer__body">
+							<span class="document__offer__name">Доступ онлайн</span>
+							<span class="document__offer__price">3 000 ₽</span>
+							<button type="button" class="document__offer__button" title="Добавить в корзину">В корзину</button>
+						</div>
+					</div>
+					<div class="document__offer">
+						<div class="document__offer__body">
+							<span class="document__offer__name">Бумажная книга</span>
+							<span class="document__offer__price">1&nbsp;590&nbsp;₽ <a href="" class="help" title="Смотреть справку"></a></span>
+							<a href="" class="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
+						</div>
+					</div>
+					{ isDetail && <Exrta /> }
+				</div>
+			</div>
+		)
+	}
+
+	function ColInfo() {
+
+		function InfoItems() {
+			return (
+				<>
+					<div class="document__info__item">
+						<dt>Издательство:</dt>
+						<dd><a href="">СОЛОН-Пресс</a></dd>
+					</div>
+					<div class="document__info__item">
+						<dt>Год издания: </dt>
+						<dd>2023</dd>
+					</div>
+					<div class="document__info__item">
+						<dt>Авторы: </dt>
+						<dd>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<button type="button" class="rest-toggler" title="Показать остальное"></button>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+							<a href="">Курушин Александр Александрович, </a>
+							<a href="">Нефедов Евгений Иванович,</a>
+							<a href=""> Смольский Сергей Михайлович</a>
+						</dd>
+					</div>
+				</>
+			)
+		}
+
+		function InfoMain() {
+			return (
+				<div class="document__info__block">
+					<dl className="document__info__list">
+						<InfoItems />
+					</dl>
+				</div>
+			)
+		}
+
+		function InfoExtra({ isMobile, magazineItem, title = "Дополнительно" }) {
+			function ItemVak() {
+				return (
+					<div class="document__info__item">
+						<dt> </dt>
+						<dd>
+							<p><a href="/catalog/magazines/vak?ref=69df0b2d-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология (в том числе бионанотехнологии)</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb3-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология обработки, хранения и переработки злаковых, бобовых культур, крупяных продуктов, плодоовощной продукции и виноградарства</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb4-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология мясных, молочных и рыбных продуктов и холодильных производств</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb7-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология пищевых продуктов и биологических активных веществ</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb8-84d2-11e8-b668-90b11c31de4c&amp;products=1">Процессы и аппараты пищевых производств</a></p>
+							<p><a href="/catalog/magazines/vak?ref=69df0bb9-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология и товароведение пищевых продуктов и функционального и специализированного назначения и общественного питания</a></p>
+							<p><a href="/catalog/magazines/vak?ref=6fdec1ea-84d2-11e8-b668-90b11c31de4c&amp;products=1">"Экономика и управление народным хозяйством (по отраслям и сферам деятельности, в т.ч.: экономика, организация и управление предприятиями, отраслями, </a></p>
+							<p><a href="/catalog/magazines/vak?ref=6fdec1ec-84d2-11e8-b668-90b11c31de4c&amp;products=1">Бухгалтерский учет, статистика</a></p>
+						</dd>
+					</div>
+				)
+			}
+
+			return (
+				<div className={
+					clsx({
+						"document__info__block": true,
+						"document__info__block--mobile": isMobile
+					})
+				}>
+					<AccordionSimple toggler={ <span class="document__info__block__toggler"> { title } </span> }>
+						<dl className="document__info__list">
+							{ magazineItem ? <ItemVak /> : <InfoItems /> }
+						</dl>
+					</AccordionSimple>
+				</div>
+			)
+		}
+
+		function Info() {
+			return (
+				<div class="document__info">
+					<InfoMain />
+					<InfoExtra isMobile />
+					{ isMagazine && <InfoExtra title={ " Номенклатура ВАК " } magazineItem /> }
+				</div>
+			)
+		}
+
+		function Header() {
+			if (!isDetail || isSub) {
+				return (
+					<a href="" class="document__header">
+						<span class="document__title"> Современный русский язык. Лексикология. Фразеология </span>
+						<span class="document__subtitle"> Учебное пособие </span>
+					</a>
+				)
+			} else {
+				return (
+					<div class="document__header">
+						<h1 class="document__title">Современный русский язык. Лексикология. Фразеология</h1>
+						<span class="document__subtitle">Учебное пособие</span>
+					</div>
+				)
+			}
+		}
+
+		function DocumentLabels() {
+			return (
+				<div class="document__labels">
+					<LabelsAll />
+				</div>
+			)
+		}
+		return (
+			<div className="document__col document__col--info">
+				<Header />
+				{ isSub && <Actions /> }
+				{ isSub || <DocumentLabels /> }
+				{ isSub || <Info /> }
+			</div>
+		)
+	}
+
+	function ColMain() {
+		return (
+			<div className="document__col document__col--main">
+				<a href="" className="document__cover" title="Перейти к документу">
+					<img src="/assets/static/img/12.webp" alt="Обложка" />
+				</a>
+				{ isSub || <Actions /> }
+			</div>
+		)
+	}
+
+	function Other() {
+		function Group() {
+			function Access({ isEmpty }) {
+				if (isEmpty) {
+					return (
+						<div className="document__other__group__access"></div>
+					)
+				} else {
+					return (
+						<div class="document__other__group__access">
+							<em>8 000 ₽</em>
+							<a href="" class="document__other__button">В корзину</a>
+						</div>
+					)
+				}
+			}
+
+			function OtherDocument() {
+				return (
+					<div className="document__other__document">
+						<Document isSub />
+					</div>
+				)
+			}
+
+			return (
+				<div className="document__other__group" data-accordion>
+					<div class="document__other__group__header">
+						<button type="button" class="document__other__group__title" data-accordion-toggler>2023 год</button>
+						<Access isEmpty />
+						<Access />
+					</div>
+					<div className="document__other__group__wrapper" data-accordion-wrapper>
+						<div className="document__other__group__inner" data-accordion-content>
+							<OtherDocument />
+							<OtherDocument />
+							<OtherDocument />
+							<OtherDocument />
+						</div>
+					</div>
+				</div>
+			)
+		}
+
+		return (
+			<div className="document__other">
+				<Group />
+				<Group />
+				<Group />
+				<Group />
+			</div>
+		)
+	}
 
 	function Tabs() {
 
@@ -246,196 +509,6 @@ export default function ({ isDetail, isMagazine }) {
 		)
 	}
 
-	function ColAccess() {
-		function Exrta() {
-			return (
-				<div class="document__accesses__extra" data-accordion="">
-					<button type="button" class="document__accesses__extra__toggler" data-accordion-toggler="" aria-expanded="false" aria-controls="accordion-content-1">Как еще получить доступ?</button>
-					<div class="document__accesses__extra__wrapper" data-accordion-wrapper="">
-						<div class="document__accesses__extra__list" data-accordion-content="" id="accordion-content-1">
-							<div class="document__offer">
-								<div class="block-arrow-border">
-									<div class="block-arrow-border__top">
-										<div class="block-arrow-border__top__content">
-											<div class="document__offer__title">Студенту или преподавателю</div>
-										</div>
-									</div>
-									<div class="block-arrow-border__bottom">
-										<div class="document__offer__body">
-											<span>
-												Отправьте <a href="">заявку на&nbsp;подключение к&nbsp;Znanium</a> по&nbsp;договору
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="document__offer">
-								<div class="document__offer__body">
-									<a href="" class="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			)
-		}
-
-		return (
-			<div className="document__col document__col--access">
-				<div class="document__accesses">
-					<div class="document__offer">
-						<div class="document__offer__body">
-							<span class="document__offer__name">Доступ онлайн</span>
-							<span class="document__offer__price">3 000 ₽</span>
-							<button type="button" class="document__offer__button" title="Добавить в корзину">В корзину</button>
-						</div>
-					</div>
-					<div class="document__offer">
-						<div class="document__offer__body">
-							<span class="document__offer__name">Бумажная книга</span>
-							<span class="document__offer__price">1&nbsp;590&nbsp;₽ <a href="" class="help" title="Смотреть справку"></a></span>
-							<a href="" class="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
-						</div>
-					</div>
-					{ isDetail && <Exrta /> }
-				</div>
-			</div>
-		)
-	}
-
-	function ColInfo() {
-		function InfoItems() {
-			return (
-				<>
-					<div class="document__info__item">
-						<dt>Издательство:</dt>
-						<dd><a href="">СОЛОН-Пресс</a></dd>
-					</div>
-					<div class="document__info__item">
-						<dt>Год издания: </dt>
-						<dd>2023</dd>
-					</div>
-					<div class="document__info__item">
-						<dt>Авторы: </dt>
-						<dd>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<button type="button" class="rest-toggler" title="Показать остальное"></button>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-						</dd>
-					</div>
-				</>
-			)
-		}
-
-		function InfoMain() {
-			return (
-				<div class="document__info__block">
-					<dl className="document__info__list">
-						<InfoItems />
-					</dl>
-				</div>
-			)
-		}
-
-		function InfoExtra({ isMobile, magazineItem, title = "Дополнительно" }) {
-			function ItemVak() {
-				return (
-					<div class="document__info__item">
-						<dt> </dt>
-						<dd>
-							<p><a href="/catalog/magazines/vak?ref=69df0b2d-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология (в том числе бионанотехнологии)</a></p>
-							<p><a href="/catalog/magazines/vak?ref=69df0bb3-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология обработки, хранения и переработки злаковых, бобовых культур, крупяных продуктов, плодоовощной продукции и виноградарства</a></p>
-							<p><a href="/catalog/magazines/vak?ref=69df0bb4-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология мясных, молочных и рыбных продуктов и холодильных производств</a></p>
-							<p><a href="/catalog/magazines/vak?ref=69df0bb7-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология пищевых продуктов и биологических активных веществ</a></p>
-							<p><a href="/catalog/magazines/vak?ref=69df0bb8-84d2-11e8-b668-90b11c31de4c&amp;products=1">Процессы и аппараты пищевых производств</a></p>
-							<p><a href="/catalog/magazines/vak?ref=69df0bb9-84d2-11e8-b668-90b11c31de4c&amp;products=1">Технология и товароведение пищевых продуктов и функционального и специализированного назначения и общественного питания</a></p>
-							<p><a href="/catalog/magazines/vak?ref=6fdec1ea-84d2-11e8-b668-90b11c31de4c&amp;products=1">"Экономика и управление народным хозяйством (по отраслям и сферам деятельности, в т.ч.: экономика, организация и управление предприятиями, отраслями, </a></p>
-							<p><a href="/catalog/magazines/vak?ref=6fdec1ec-84d2-11e8-b668-90b11c31de4c&amp;products=1">Бухгалтерский учет, статистика</a></p>
-						</dd>
-					</div>
-				)
-			}
-
-			return (
-				<div className={
-					clsx({
-						"document__info__block": true,
-						"document__info__block--mobile": isMobile
-					})
-				}>
-					<AccordionSimple toggler={ <span class="document__info__block__toggler"> { title } </span> }>
-						<dl className="document__info__list">
-							{ magazineItem ? <ItemVak /> : <InfoItems /> }
-						</dl>
-					</AccordionSimple>
-				</div>
-			)
-		}
-
-		function Header() {
-			return (
-				<a href="" class="document__header">
-					<span class="document__title"> Современный русский язык. Лексикология. Фразеология </span>
-					<span class="document__subtitle"> Учебное пособие </span>
-				</a>
-			)
-		}
-
-		function HeaderDetail() {
-			return (
-				<div class="document__header">
-					<h1 class="document__title">Современный русский язык. Лексикология. Фразеология</h1>
-					<span class="document__subtitle">Учебное пособие</span>
-				</div>
-			)
-		}
-
-		return (
-			<div className="document__col document__col--info">
-				{ isDetail ? <HeaderDetail /> : <Header /> }
-				<div class="document__labels">
-					<LabelsAll />
-				</div>
-				<div class="document__info">
-					<InfoMain />
-					<InfoExtra isMobile />
-					{ isMagazine && <InfoExtra title={ " Номенклатура ВАК " } magazineItem /> }
-				</div>
-			</div>
-		)
-	}
-
-	function ColMain() {
-		return (
-			<div className="document__col document__col--main">
-				<a href="" className="document__cover" title="Перейти к документу">
-					<img src="/assets/static/img/12.webp" alt="Обложка" />
-				</a>
-				<div class="document__actions">
-					<a href="" class="document__action" title="Ознакомиться">
-						<span class="icon icon--read"></span>
-					</a>
-					<button type="button" class="document__action" title="Рекомендовать для студентов">
-						<span class="icon icon--thumb_up"></span>
-					</button>
-					<button type="button" class="document__action" title="Поместить на полку">
-						<span class="icon icon--newsstand"></span>
-					</button>
-				</div>
-			</div>
-		)
-	}
-
 	return (
 		<>
 			<div className="document">
@@ -444,12 +517,12 @@ export default function ({ isDetail, isMagazine }) {
 						<ColMain />
 						<ColInfo />
 						{ isMagazine || <ColAccess /> }
-						<Tabs />
+						{ isMagazine || isSub || !isDetail || <Tabs /> }
+						{ isMagazine && !isSub && isDetail && <Other /> }
 					</div>
 				</div>
 			</div>
-
-			<DocumentsSlider title={ "Похожие" } />
+			{ isMagazine || isSub || !isDetail || <DocumentsSlider title={ "Похожие" } /> }
 		</>
 	)
 } 
