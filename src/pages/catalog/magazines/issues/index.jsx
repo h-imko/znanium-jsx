@@ -1,5 +1,5 @@
-import Page from "../../../components/Page"
-import Document from "../../../components/Document"
+import Page from "../../../../components/Page"
+import Document from "../../../../components/Document"
 
 export default function index() {
 	return (

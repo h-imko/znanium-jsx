@@ -40,14 +40,41 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
-								<a>
+								<a href="/src/pages/catalog/magazines/index.jsx">
 									<h1> журналы </h1>
 								</a>
 								<ul>
 									<li>
-										<a href="/src/pages/catalog/magazines/issues.jsx">
+										<a href="/src/pages/catalog/magazines/issues/index.jsx">
 											<h1> журнал </h1>
 										</a>
+									</li>
+									<li>
+										<a href="/src/pages/catalog/magazines/all/index.jsx">
+											<h1> все </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/catalog/magazines/alphabet/index.jsx">
+											<h1> альфавитный указатель </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/catalog/magazines/infram/index.jsx">
+											<h1> инфра м </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/catalog/magazines/vak/index.jsx">
+											<h1> вак </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/catalog/magazines/vak/ref/index.jsx">
+													<h1> список </h1>
+												</a>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</li>
