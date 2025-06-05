@@ -85,7 +85,7 @@
 	&__button {
 		@extend %button-text;
 
-		&__collapse {
+		&--collapse {
 			&::after {
 				content: "";
 				@extend %icon, %icon--expand;

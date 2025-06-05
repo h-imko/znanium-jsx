@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelectorAll(`.${selector}`).forEach(shelves => {
 			const items = shelves.querySelectorAll(".shelf")
 			const controls = document.querySelectorAll(".controls")
-			const buttons = [...controls].map(item => [...item.querySelectorAll(`.controls__button__collapse[data-for="${selector}"]`)]).flat()
+			const buttons = [...controls].map(item => [...item.querySelectorAll(`.controls__button--collapse[data-for="${selector}"]`)]).flat()
 
 			function updateButtons() {
 				const hasOpened = shelves.matches(":has([data-accordion].is-active)")

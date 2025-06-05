@@ -136,6 +136,23 @@ export default function index() {
 							</li>
 						</ul>
 					</li>
+					<li>
+						<a href="/src/pages/my/index.jsx">
+							<h1> мой знаниум </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/my/documents/index.jsx">
+									<h1> В подписках </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/my/shelves/index.jsx">
+									<h1> Книжные полки </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</Page>

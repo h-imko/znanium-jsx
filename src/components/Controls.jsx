@@ -29,13 +29,14 @@ function Item({ children, popover }) {
 	)
 }
 
-function Button({ isActive, children, title, popovertarget }) {
+function Button({ isActive, children, title, popovertarget, isCollapse }) {
 	return (
 		<button
 			type="button"
 			className={
 				clsx({
 					"controls__button": true,
+					"controls__button--collapse": isCollapse,
 					"is-active": isActive
 				})
 			}
@@ -47,13 +48,18 @@ function Button({ isActive, children, title, popovertarget }) {
 	)
 }
 
-export default function ({ total, price, excel, showBy, showType, sortBy }) {
+export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType }) {
 	return (
 		<div className="controls">
 			{ total && (
 				<Item>
 					<span>Наименований — 332, документов — 334 </span>
 					<Help />
+				</Item>
+			) }
+			{ createShelf && (
+				<Item>
+					<Button><span class="icon icon--view_grid"></span>создать полку</Button>
 				</Item>
 			) }
 			{ price && (
@@ -81,10 +87,22 @@ export default function ({ total, price, excel, showBy, showType, sortBy }) {
 					<Button><span class="icon icon--view_list"></span></Button>
 				</Item>
 			) }
+			{ sortType && (
+				<Item>
+					<span>Сортировка</span>
+					<Button><span class="icon icon--tune"></span></Button>
+					<Button><span class="icon icon--match_case"></span></Button>
+				</Item>
+			) }
 			{ sortBy && (
 				<Item>
 					<span>Сортировка по</span>
 					<SelectSimple />
+				</Item>
+			) }
+			{ expand && (
+				<Item>
+					<Button isCollapse />
 				</Item>
 			) }
 		</div>
