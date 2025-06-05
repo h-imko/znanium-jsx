@@ -124,6 +124,18 @@ export default function index() {
 							</li>
 						</ul>
 					</li>
+					<li>
+						<a href="/src/pages/news/index.jsx">
+							<h1> новости </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/news/item/index.jsx">
+									<h1> новость </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</Page>

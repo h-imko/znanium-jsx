@@ -1,5 +1,5 @@
 import CardsSlider from "./CardsSlider"
-import NewsCard from "./NewsCard"
+import NewsCard from "./News/NewsCard"
 
 const cardsData = [
 	{
