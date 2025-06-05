@@ -4,16 +4,18 @@ import Header from "./Header"
 import Breadcrumbs from "./Breadcrumbs"
 import Singleform from "./Singleform"
 import AccordionNav from "./AccordionNav"
+import Calendar from "./Webinar/Calendar"
 
-function Aside() {
-	return (
-		<aside className="page__aside">
-			<AccordionNav />
-		</aside>
-	)
-}
+export default function ({ children, aside, breadcrumbs, search, calendar }) {
+	function Aside() {
+		return (
+			<aside className="page__aside">
+				<AccordionNav />
+				{ calendar && <Calendar /> }
+			</aside>
+		)
+	}
 
-export default function ({ children, aside, breadcrumbs, search }) {
 	return (
 		<html lang="ru">
 			<Head />
@@ -22,7 +24,7 @@ export default function ({ children, aside, breadcrumbs, search }) {
 				{ breadcrumbs && <Breadcrumbs /> }
 				<div className="page">
 					<div className="page__inner">
-						{ aside && Aside() }
+						{ aside && <Aside /> }
 						<main className="page__content">
 							{ search && <Singleform /> }
 							{ children }

@@ -59,7 +59,7 @@ function Controls({ submit, reset }) {
  */
 export default function ({ items, extra, controls, bordered }) {
 	return (
-		<div className={
+		<form className={
 			clsx({
 				form: true,
 				"form--bordered": bordered
@@ -68,6 +68,6 @@ export default function ({ items, extra, controls, bordered }) {
 			{ items.map(Row) }
 			{ extra && Row([<Extra { ...extra } />]) }
 			{ controls && <Controls { ...controls } /> }
-		</div>
+		</form>
 	)
 }

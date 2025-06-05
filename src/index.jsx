@@ -94,14 +94,32 @@ export default function index() {
 								<a href="/src/pages/collections/basic/index.jsx">
 									<h1> Основная коллекция и её сегменты </h1>
 								</a>
+							</li>
+							<li>
 								<a href="/src/pages/collections/partners/index.jsx">
 									<h1> Коллекции партнёров </h1>
 								</a>
+							</li>
+							<li>
 								<a href="/src/pages/collections/special/index.jsx">
 									<h1> Специализированные коллекции</h1>
 								</a>
+							</li>
+							<li>
 								<a href="/src/pages/collections/open-access/index.jsx">
 									<h1> Коллекция Open Access </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/src/pages/webinars/index.jsx">
+							<h1> вебинары </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/webinars/webinar/index.jsx">
+									<h1> вебинар </h1>
 								</a>
 							</li>
 						</ul>
