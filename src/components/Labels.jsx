@@ -3,23 +3,33 @@ import clsx from "clsx"
 /**
  * @typedef {object} labelArgs
  * @property {string} [text]
+ * @property {string} [extraClass]
  * @property {string} [title]
  * @property {string} [img]
- * @property {"primary" | "primary-alt" | "alt" | "alt1" | "alt2" | "alt3" | "alt4" | "alt5"} [color]
+ * @property {"primary" | "primary-alt" | "accent" | "alt" | "alt1" | "alt2" | "alt3" | "alt4" | "alt5"} [color]
  */
 
 /**
  * @param {labelArgs} param0
  */
-function Label({ text = "somelabel", title, img, color }) {
+function Label({ text = "somelabel", title, img, color, extraClass }) {
+	function Text() {
+		if (typeof text == "string") {
+			return <span>{ text }</span>
+		} else {
+			return <>{ text }</>
+		}
+	}
+
 	return (
 		<span className={
 			clsx({
 				label: true,
-				...(color && { [`label--${color}`]: true })
+				...(color && { [`label--${color}`]: true }),
+				[extraClass]: extraClass
 			})
 		} title={ title ?? "Я лейбл" }>
-			{ img ? <img src={ `/src/assets/static/img/${img}` } /> : <span>{ text }</span> }
+			{ img ? <img src={ `/src/assets/static/img/${img}` } /> : <Text /> }
 		</span>
 	)
 }
@@ -29,6 +39,10 @@ export function LabelsAll() {
 	 * @type {labelArgs[]}
 	 */
 	const items = [
+		{
+			color: "accent",
+			text: "покупка"
+		},
 		{
 			color: "alt",
 			text: "покупка"
