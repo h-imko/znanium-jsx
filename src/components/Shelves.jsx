@@ -1,6 +1,7 @@
+import clsx from "clsx"
 import Simplebook from "./Simplebook"
 
-export default function () {
+export default function ({ isAlt }) {
 
   function Shelf() {
 
@@ -45,7 +46,12 @@ export default function () {
   }
 
   return (
-    <div className="shelves">
+    <div className={
+      clsx({
+        shelves: true,
+        "is-alt": isAlt,
+      })
+    }>
       <Shelf />
       <Shelf />
       <Shelf />

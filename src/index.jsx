@@ -147,8 +147,28 @@ export default function index() {
 								</a>
 							</li>
 							<li>
+								<a href="/src/pages/my/empty/index.jsx">
+									<h1> Страница с пустым списком чего угодно</h1>
+								</a>
+							</li>
+							<li>
 								<a href="/src/pages/my/shelves/index.jsx">
 									<h1> Книжные полки </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/my/shelves/index.1.jsx">
+									<h1> Книжные полки cписок </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/my/history/index.jsx">
+									<h1> История </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/my/bookmarks/index.jsx">
+									<h1> Закладки </h1>
 								</a>
 							</li>
 						</ul>

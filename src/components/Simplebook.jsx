@@ -40,7 +40,7 @@ export default function ({ time, bookmarks }) {
   function Bookmarks() {
     return (
       <div className="simplebook__bookmarks">
-        { [...Array(Math.floor(Math.random() * 5 + 1))].map(() =>
+        { [...Array(Math.floor(Math.random() * 4 + 1))].map(() =>
           <Bookmark />
         ) }
       </div>
@@ -66,9 +66,12 @@ export default function ({ time, bookmarks }) {
       <div className="simplebook__labels">
         <Labels items={ [
           {
+            color: "alt"
+          },
+          {
             color: "accent",
             ...(Boolean(Math.round(Math.random())) && { text: <span class="icon icon--cached"> </span>, extraClass: "simplebook__updated" })
-          }
+          },
         ] } />
       </div>
       { bookmarks && <Bookmarks /> }
