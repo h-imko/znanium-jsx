@@ -171,6 +171,16 @@ export default function index() {
 									<h1> Закладки </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/my/free-pages-links/index.jsx">
+									<h1> LMS-ссылки </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/my/quotations/index.jsx">
+									<h1> Цитаты </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 				</ul>

@@ -27,8 +27,8 @@ export default function ({ label, type, textarea, small, required, maxLength, re
 				{ label && (<label className={ `input__label` } htmlFor={ id }>{ label }</label>) }
 				{ textarea ? <Textarea { ...{ placeholder, required, maxLength, readOnly, value } } /> : <Input { ...{ placeholder, required, maxLength, readOnly, value, type } } /> }
 				{ buttonEye && (<button type="button" className="input__button input__button--eye" data-input-button="toggleType" title="Показать/скрыть пароль"></button>) }
-				{ customButton && (<button type="button" className="input__button" title="Какое-то действие"> { customButton } </button>) }
-				{ customButtonLink && (<a href="" className="input__button">{ customButtonLink }</a>) }
+				{ customButton && (<button type="button" className="input__button" title="Какое-то действие" dangerouslySetInnerHTML={ { __html: customButton } }>  </button>) }
+				{ customButtonLink && (<a href="" className="input__button" dangerouslySetInnerHTML={ { __html: customButtonLink } }></a>) }
 			</div>
 			{ caption && (<div className="form__item__caption"> { caption } </div>) }
 		</>
