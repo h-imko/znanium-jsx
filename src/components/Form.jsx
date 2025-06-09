@@ -56,13 +56,15 @@ function Controls({ submit, reset }) {
  * @param {extra} param0.extra
  * @param {controls} param0.controls
  * @param {boolean} param0.bordered
+ * @param {boolean} param0.slim
  */
-export default function ({ items, extra, controls, bordered }) {
+export default function ({ items, extra, controls, bordered, slim }) {
 	return (
 		<form className={
 			clsx({
 				form: true,
-				"form--bordered": bordered
+				"form--bordered": bordered,
+				"form--slim": slim,
 			})
 		}>
 			{ items.map(Row) }

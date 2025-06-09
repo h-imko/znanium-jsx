@@ -183,6 +183,38 @@ export default function index() {
 							</li>
 						</ul>
 					</li>
+					<li>
+						<a href="/src/pages/help/index.jsx">
+							<h1> мой знаниум </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/help/faq/index.jsx">
+									<h1> FAQ </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/help/feedback/index.jsx">
+									<h1> Обратная связь </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/help/manuals/index.jsx">
+									<h1> Руководства </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/help/manual-reader/index.jsx">
+									<h1> Руководства для читателя </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/help/firstvisit/index.jsx">
+									<h1> Впервые на сайте </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</Page>
