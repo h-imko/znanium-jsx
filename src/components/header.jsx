@@ -1,7 +1,6 @@
 import Accessibility from "./Accessibility"
 import Logo from "./Logo"
 
-
 function LoginBlock() {
 	const randLogin = Math.floor(Math.random() * 3 + 1)
 

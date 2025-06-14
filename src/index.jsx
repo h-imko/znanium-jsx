@@ -113,6 +113,23 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
+						<a href="">
+							<h1> Цены </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/price/organizations/index.jsx">
+									<h1> Организациям </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/price/individuals/index.jsx">
+									<h1> Физическм лицам </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
 						<a href="/src/pages/webinars/index.jsx">
 							<h1> вебинары </h1>
 						</a>
@@ -120,6 +137,30 @@ export default function index() {
 							<li>
 								<a href="/src/pages/webinars/webinar/index.jsx">
 									<h1> вебинар </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							<h1> кабинет </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/admin/webinar/index.jsx">
+									<h1> заказы </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							<h1> О проекте </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/about/contacts/index.jsx">
+									<h1> Контакты </h1>
 								</a>
 							</li>
 						</ul>
