@@ -47,7 +47,22 @@ export default function index() {
             [
               <a href="#">86102</a>,
               "",
-              ">01.07.2024<br>30.06.2025<br>Дней&nbsp;ост.:&nbsp;147",
+              "01.07.2024<br>30.06.2025<br>Дней&nbsp;ост.:&nbsp;147",
+              "Подписка",
+              "3&nbsp;496&nbsp;700&nbsp;₽",
+              <a href="#">95039</a>,
+              <a href="#">55192</a>,
+              <IconButtons items={ [
+                {
+                  icon: "monitoring",
+                  title: "Перейти к статистике"
+                }
+              ] } />,
+            ],
+            [
+              <a href="#">86102</a>,
+              "",
+              "01.07.2024<br>30.06.2025<br>Дней&nbsp;ост.:&nbsp;147",
               "Подписка",
               "3&nbsp;496&nbsp;700&nbsp;₽",
               <a href="#">95039</a>,
