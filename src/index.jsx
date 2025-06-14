@@ -147,7 +147,7 @@ export default function index() {
 						</a>
 						<ul>
 							<li>
-								<a href="/src/pages/admin/webinar/index.jsx">
+								<a href="/src/pages/admin/orders/index.jsx">
 									<h1> заказы </h1>
 								</a>
 							</li>

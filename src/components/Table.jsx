@@ -1,10 +1,7 @@
-import clsx from "clsx"
-
 /**
  * @typedef {object} data
  * @property {th[]} [headers]
- * @property {td[]} [rows]
- * @property {boolean} [reset]
+ * @property {(string|import("react").JSX.Element)[]} rows
  */
 
 /**
@@ -12,11 +9,6 @@ import clsx from "clsx"
  * @property {string} [title]
  * @property {boolean} [sortable]
  * @property {"asc"|"desc"} [sorted]
- */
-
-/**
- * @typedef {object} td
- * @property {string|import("react").JSX.Element} [content] 
  */
 
 /**
@@ -44,12 +36,18 @@ export default function ({ data }) {
   }
 
   /**
-   * @param {td[]} tdData 
+   * @param {(string|import("react").JSX.Element)[]} tdData 
    */
   function Tr(tdData) {
     return (
       <tr>
-        { tdData.map(content => <td dangerouslySetInnerHTML={ { __html: content } }></td>) }
+        { tdData.map(content => {
+          if (typeof content === "string") {
+            return <td dangerouslySetInnerHTML={ { __html: content } }></td>
+          } else {
+            return <td> { content }</td>
+          }
+        }) }
       </tr>
     )
   }
