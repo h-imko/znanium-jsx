@@ -1,17 +1,17 @@
 export default function () {
   return (
-    <div class="news">
-      <div class="container-fluid">
-        <div class="news__inner">
-          <div class="news__content">
-            <div class="news__header">
-              <h1 class="news__title">ИНФРА-М получил награду за наибольший вклад в цифровизацию СПО</h1>
-              <time datetime="" class="news__date">13 декабря 2024</time>
+    <div className="news">
+      <div className="container-fluid">
+        <div className="news__inner">
+          <div className="news__content">
+            <div className="news__header">
+              <h1 className="news__title">ИНФРА-М получил награду за наибольший вклад в цифровизацию СПО</h1>
+              <time datetime="" className="news__date">13 декабря 2024</time>
             </div>
-            <div class="news__cover">
+            <div className="news__cover">
               <img src="/assets/static/img/20.webp" alt="Заполните меня" />
             </div>
-            <div class="news__text">
+            <div className="news__text">
               <p>2 декабря 2024 года подвели итоги Всероссийского конкурса книжных выставок в онлайн и офлайн форматах «Выставка книг в библиотеке образовательной организации высшего образования».</p>
               <p>Конкурсные работы были представлены в двух номинациях: «Офлайн выставка» и «Онлайн выставка». Эксперты отметили, что оценивать работы было довольно сложно, так как каждая работа хороша по-своему.</p>
               <p>На вебинаре по итогам конкурса <a href="https://mgppu.ru/people/65/386">Олеся Валентиновна Вихристюк</a>, проректор по воспитательной и социально-психологической работе ФГБОУ ВО МГППУ поблагодарила все вузовские библиотеки, принимавшие участие в конкурсе, за работу по воспитанию молодежи, сохранению культурного, научного и исторического наследия.</p>
@@ -222,46 +222,46 @@ export default function () {
               <p></p>
               <p>Также не забывайте, что мы проводим конкурсы для авторов! Узнайте подробнее о каждом из них в наших <a href="https://vk.com/wall-38772636_3220">соцсетях</a>.</p>
             </div>
-            <div class="news__tags">
+            <div className="news__tags">
               <a href="">Библиотека </a>
               <a href="">ЭБС Znanium </a>
               <a href="">Книги </a>
               <a href="">Библиотекарь </a>
             </div>
-            <div class="news__socials">
-              <div class="socials">
-                <a href="" class="socials__item" title="YouTube"><span class="icon icon--play"></span></a>
-                <a href="" class="socials__item" title="Вконтакте"><span class="icon icon--vk"></span></a>
-                <a href="" class="socials__item" title="Телеграм"><span class="icon icon--tg"></span></a>
-                <a href="" class="socials__item" title="Одноклассники"><span class="icon icon--ok"></span></a>
-                <a href="" class="socials__item socials__item--bald" title="RSS"><span class="icon icon--rss"></span></a>
+            <div className="news__socials">
+              <div className="socials">
+                <a href="" className="socials__item" title="YouTube"><span className="icon icon--play"></span></a>
+                <a href="" className="socials__item" title="Вконтакте"><span className="icon icon--vk"></span></a>
+                <a href="" className="socials__item" title="Телеграм"><span className="icon icon--tg"></span></a>
+                <a href="" className="socials__item" title="Одноклассники"><span className="icon icon--ok"></span></a>
+                <a href="" className="socials__item socials__item--bald" title="RSS"><span className="icon icon--rss"></span></a>
               </div>
             </div>
           </div>
-          <div class="news__aside">
-            <a href="" class="news-card">
-              <div class="news-card__img" style="--img: url(/assets/static/img/10.webp)">
+          <div className="news__aside">
+            <a href="" className="news-card">
+              <div className="news-card__img" style="--img: url(/assets/static/img/10.webp)">
                 <img src="/assets/static/img/10.webp" alt="Заполните меня" />
               </div>
-              <div class="news-card__body">
-                <span class="news-card__title">Подписано соглашение о сотрудничестве между факультетом права НИУ ВШЭ и издательским холдингом ИНФРА-М</span>
-                <span class="news-card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius a vero recusandae? Officiis animi totam ad voluptate non, sequi et. Quibusdam eaque odio eligendi dolores ullam minus, modi nesciunt alias.</span>
-                <span class="date"> 6 декабря 2024 </span>
+              <div className="news-card__body">
+                <span className="news-card__title">Подписано соглашение о сотрудничестве между факультетом права НИУ ВШЭ и издательским холдингом ИНФРА-М</span>
+                <span className="news-card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius a vero recusandae? Officiis animi totam ad voluptate non, sequi et. Quibusdam eaque odio eligendi dolores ullam minus, modi nesciunt alias.</span>
+                <span className="date"> 6 декабря 2024 </span>
               </div>
             </a>
-            <a href="" class="news__banner">
+            <a href="" className="news__banner">
               <img src="/assets/static/img/19.webp" alt="Заполните меня" />
             </a>
-            <div class="webinar-card webinar-card--pattern-1 webinar-card--color-1">
-              <div class="webinar-card__body">
-                <div class="webinar-card__title">Оптимизация комплектоваия библиотеки в течение учебного года</div>
-                <span class="webinar-card__date">17 декабря 2024 , 11:00, 20 минут</span>
-                <div class="webinar-card__presenters">
+            <div className="webinar-card webinar-card--pattern-1 webinar-card--color-1">
+              <div className="webinar-card__body">
+                <div className="webinar-card__title">Оптимизация комплектоваия библиотеки в течение учебного года</div>
+                <span className="webinar-card__date">17 декабря 2024 , 11:00, 20 минут</span>
+                <div className="webinar-card__presenters">
                   <strong>Ведущие:</strong>
                   <span>Еманов Алексей Леонидович</span>
                   <span>Нестерова Альбина Николаевна</span>
                 </div>
-                <a href="" class="webinar-card__link ">Записаться</a>
+                <a href="" className="webinar-card__link ">Записаться</a>
               </div>
             </div>
           </div>

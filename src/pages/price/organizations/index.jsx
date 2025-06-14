@@ -5,15 +5,15 @@ export default function index() {
   return (
     <Page aside breadcrumbs search>
       <Generic title="Цены на электронные продукты для частных лиц">
-        <div class="text">
+        <div className="text">
           <p></p>
           <p>Научно-образовательный портал Znanium&nbsp;— на&nbsp;службе у&nbsp;студентов, преподавателей, аспирантов, магистрантов, специалистов!</p>
           <h2>О&nbsp;Znanium</h2>
           <p>Задача нашего проекта&nbsp;— предоставление оперативного современного онлайн-доступа к&nbsp;учебной и&nbsp;научной информации для всех, кто связан с&nbsp;обучением и&nbsp;наукой, кто хочет получать достоверную профессиональную информацию.<br />
             Мы&nbsp;создаем новые электронные издания, но&nbsp;не&nbsp;забываем о&nbsp;традициях. С&nbsp;нами сотрудничают тысячи педагогов, ученых и&nbsp;специалистов. Наши пользователи учатся в&nbsp;сотнях учебных заведений по&nbsp;всей стране. Мы&nbsp;участвуем в&nbsp;формировании информационного профессионального пространства.</p>
           <h2>Мы предлагаем</h2>
-          <div class="table-wrapper">
-            <table class="table table--slim">
+          <div className="table-wrapper">
+            <table className="table table--slim">
               <tbody>
                 <tr>
                   <td>
@@ -57,8 +57,8 @@ export default function index() {
           <p>Цены указаны рядом с&nbsp;каждой книгой или выпуском журнала и&nbsp;зависят от&nbsp;периода доступа: 6&nbsp;месяцев, 12&nbsp;месяцев, бессрочно. Период подписки выбираете в&nbsp;Корзине.</p>
           <h3>Печатные книги</h3>
           <p>На&nbsp;сайте ЭБС есть возможность ознакомиться и&nbsp;купить печатные книги, выходящие в&nbsp;издательской группе ИНФРА-М, а&nbsp;это более 7000&nbsp;наименований.</p>
-          <div class="table-wrapper">
-            <table class="table">
+          <div className="table-wrapper">
+            <table className="table">
               <thead>
                 <tr>
                   <th><strong>Продукт</strong></th>

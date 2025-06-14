@@ -22,14 +22,14 @@ const data = [
 export default function () {
   function Item({ img, text }) {
     return (
-      <a href="" class="news-list__item">
-        <div class="news-list__item__img" style={ `--img: url(/src/assets/static/img/${img}.webp)` }>
+      <a href="" className="news-list__item">
+        <div className="news-list__item__img" style={ `--img: url(/src/assets/static/img/${img}.webp)` }>
           <img src={ `/src/assets/static/img/${img}.webp` } alt="Заполните меня" />
         </div>
-        <div class="news-list__item__content">
-          <h3 class="news-list__item__title">Новинка: учебное пособие «Основы безопасности и защиты Родины» для ссузов и вузов</h3>
-          <span class="news-list__item__text">{ text } </span>
-          <time class="news-list__item__date">22 августа 2024</time>
+        <div className="news-list__item__content">
+          <h3 className="news-list__item__title">Новинка: учебное пособие «Основы безопасности и защиты Родины» для ссузов и вузов</h3>
+          <span className="news-list__item__text">{ text } </span>
+          <time className="news-list__item__date">22 августа 2024</time>
         </div>
       </a>
     )

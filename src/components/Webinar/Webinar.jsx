@@ -1,32 +1,32 @@
 export default function ({ content }) {
   function Header() {
     return (
-      <div class={ `webinar__header webinar__header--color-${Math.floor(Math.random() * 3 + 1)} webinar__header--pattern-${Math.floor(Math.random() * 3 + 1)}` }>
-        <div class="webinar__header__content">
-          <h1 class="webinar__title">Издательский холдинг ИНФРА-М: подводим итоги 2024 года</h1>
-          <div class="webinar__info">
-            <div class="date"><em>24 декабря 2024</em> </div>
-            <div class="time">11:00, 30 минут</div>
+      <div className={ `webinar__header webinar__header--color-${Math.floor(Math.random() * 3 + 1)} webinar__header--pattern-${Math.floor(Math.random() * 3 + 1)}` }>
+        <div className="webinar__header__content">
+          <h1 className="webinar__title">Издательский холдинг ИНФРА-М: подводим итоги 2024 года</h1>
+          <div className="webinar__info">
+            <div className="date"><em>24 декабря 2024</em> </div>
+            <div className="time">11:00, 30 минут</div>
           </div>
-          <div class="webinar__presenters">
-            <div class="webinar__presenter">
-              <img src="/src/assets/static/img/15.webp" alt="Заполните меня" class="webinar__presenter__img" />
-              <div class="webinar__presenter__info">
-                <div class="webinar__presenter__caption">Ведущий</div>
-                <div class="webinar__presenter__name">Еманов Алексей Леонидович</div>
-                <div class="webinar__presenter__post">Методист образовательных мероприятий</div>
+          <div className="webinar__presenters">
+            <div className="webinar__presenter">
+              <img src="/src/assets/static/img/15.webp" alt="Заполните меня" className="webinar__presenter__img" />
+              <div className="webinar__presenter__info">
+                <div className="webinar__presenter__caption">Ведущий</div>
+                <div className="webinar__presenter__name">Еманов Алексей Леонидович</div>
+                <div className="webinar__presenter__post">Методист образовательных мероприятий</div>
               </div>
             </div>
-            <div class="webinar__presenter">
-              <img src="/src/assets/static/img/16.webp" alt="Заполните меня" class="webinar__presenter__img" />
-              <div class="webinar__presenter__info">
-                <div class="webinar__presenter__caption">Ведущий</div>
-                <div class="webinar__presenter__name">Нестерова Альбина Николаевна</div>
-                <div class="webinar__presenter__post">Методист образовательных мероприятий</div>
+            <div className="webinar__presenter">
+              <img src="/src/assets/static/img/16.webp" alt="Заполните меня" className="webinar__presenter__img" />
+              <div className="webinar__presenter__info">
+                <div className="webinar__presenter__caption">Ведущий</div>
+                <div className="webinar__presenter__name">Нестерова Альбина Николаевна</div>
+                <div className="webinar__presenter__post">Методист образовательных мероприятий</div>
               </div>
             </div>
           </div>
-          <a href="" class="webinar__button"> Смотреть</a>
+          <a href="" className="webinar__button"> Смотреть</a>
         </div>
       </div>
     )
@@ -34,22 +34,22 @@ export default function ({ content }) {
 
   function Aside() {
     return (
-      <div class="webinar__aside">
-        <div class="webinar__presenters">
-          <div class="webinar__presenter">
-            <img src="/assets/static/img/15.webp" alt="Заполните меня" class="webinar__presenter__img" />
-            <div class="webinar__presenter__info">
-              <div class="webinar__presenter__caption">Ведущий</div>
-              <div class="webinar__presenter__name">Еманов Алексей Леонидович</div>
-              <div class="webinar__presenter__post">Методист образовательных мероприятий</div>
+      <div className="webinar__aside">
+        <div className="webinar__presenters">
+          <div className="webinar__presenter">
+            <img src="/assets/static/img/15.webp" alt="Заполните меня" className="webinar__presenter__img" />
+            <div className="webinar__presenter__info">
+              <div className="webinar__presenter__caption">Ведущий</div>
+              <div className="webinar__presenter__name">Еманов Алексей Леонидович</div>
+              <div className="webinar__presenter__post">Методист образовательных мероприятий</div>
             </div>
           </div>
-          <div class="webinar__presenter">
-            <img src="/assets/static/img/16.webp" alt="Заполните меня" class="webinar__presenter__img" />
-            <div class="webinar__presenter__info">
-              <div class="webinar__presenter__caption">Ведущий</div>
-              <div class="webinar__presenter__name">Нестерова Альбина Николаевна</div>
-              <div class="webinar__presenter__post">Методист образовательных мероприятий</div>
+          <div className="webinar__presenter">
+            <img src="/assets/static/img/16.webp" alt="Заполните меня" className="webinar__presenter__img" />
+            <div className="webinar__presenter__info">
+              <div className="webinar__presenter__caption">Ведущий</div>
+              <div className="webinar__presenter__name">Нестерова Альбина Николаевна</div>
+              <div className="webinar__presenter__post">Методист образовательных мероприятий</div>
             </div>
           </div>
         </div>
@@ -59,11 +59,11 @@ export default function ({ content }) {
 
   function Content() {
     return (
-      <div class="webinar__content">
-        <div class="webinar__video">
+      <div className="webinar__content">
+        <div className="webinar__video">
           <iframe src="https://vkvideo.ru/video_ext.php?oid=-38772636&amp;id=456239672&amp;hd=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen=""></iframe>
         </div>
-        <div class="webinar__main">
+        <div className="webinar__main">
           <p>В издательском холдинге ИНФРА-М большое значение придается работе с авторами не только на этапе создания своих произведений, но и после выхода их в свет. Мы расскажем о программах лояльности и поддержки авторов, а также представлении их научно-образовательных школ на различных площадках ИНФРА-М.</p>
           <p>В этом и кроется особенность того, как мотивировать взрослых людей на обучение, как бороться за их внимание в мире, перенасыщенном информацией. </p>
           <h4>На вебинаре мы разберем темы:</h4>
@@ -78,7 +78,7 @@ export default function ({ content }) {
           <ul>
             <li>Авторам учебной и научной литературы, которые заинтересованы в продвижении в сообществе своих произведений и научно-образовательных школ, которые они представляют.</li>
           </ul>
-          <div class="webinar__main__extra">
+          <div className="webinar__main__extra">
             <h4>Дополнительные материалы</h4>
             <p><a href="">Проекты ИНФРА.М по поддержке научного просвещения.pdf</a></p>
             <p>
@@ -87,7 +87,7 @@ export default function ({ content }) {
             </p>
           </div>
         </div>
-        <div class="webinar__text">
+        <div className="webinar__text">
           <p>Обратите внимание! </p>
           <ol>
             <li>
@@ -119,7 +119,7 @@ export default function ({ content }) {
             </li>
           </ol>
           <p>Подключайтесь к нашим вебинарам «<a href="https://znanium.ru/webinars">CoZnanium по вторникам</a>»! Записи прошедших вебинаров смотрите в «Видеотеке знаний» в&nbsp;<a href="https://www.youtube.com/channel/UC8lr8z9q-gDQbTXcrxsRasQ" target="_blank">Youtube&nbsp;</a>или&nbsp;<a href="https://vk.com/video/playlist/-38772636_7" target="_blank">Вконтакте</a>.</p>
-          <div class="webinar__button is-disabled">Зарегистрироваться</div>
+          <div className="webinar__button is-disabled">Зарегистрироваться</div>
           <p>Для регистрации на вебинар <a href="">авторизуйтесь</a> или <a href="">зарегистрируйтесь</a> в ЭБС.</p>
         </div>
       </div>

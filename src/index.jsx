@@ -147,6 +147,11 @@ export default function index() {
 						</a>
 						<ul>
 							<li>
+								<a href="/src/pages/admin/subscribes/index.jsx">
+									<h1> подписки </h1>
+								</a>
+							</li>
+							<li>
 								<a href="/src/pages/admin/orders/index.jsx">
 									<h1> заказы </h1>
 								</a>

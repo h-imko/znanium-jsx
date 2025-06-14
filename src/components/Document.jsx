@@ -10,15 +10,15 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 	function Actions() {
 		return (
-			<div class="document__actions">
-				<a href="" class="document__action" title="Ознакомиться">
-					<span class="icon icon--read"></span>
+			<div className="document__actions">
+				<a href="" className="document__action" title="Ознакомиться">
+					<span className="icon icon--read"></span>
 				</a>
-				<button type="button" class="document__action" title="Рекомендовать для студентов">
-					<span class="icon icon--thumb_up"></span>
+				<button type="button" className="document__action" title="Рекомендовать для студентов">
+					<span className="icon icon--thumb_up"></span>
 				</button>
-				<button type="button" class="document__action" title="Поместить на полку">
-					<span class="icon icon--newsstand"></span>
+				<button type="button" className="document__action" title="Поместить на полку">
+					<span className="icon icon--newsstand"></span>
 				</button>
 			</div>
 		)
@@ -27,19 +27,19 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 	function ColAccess() {
 		function Exrta() {
 			return (
-				<div class="document__accesses__extra" data-accordion="">
-					<button type="button" class="document__accesses__extra__toggler" data-accordion-toggler="" aria-expanded="false" aria-controls="accordion-content-1">Как еще получить доступ?</button>
-					<div class="document__accesses__extra__wrapper" data-accordion-wrapper="">
-						<div class="document__accesses__extra__list" data-accordion-content="" id="accordion-content-1">
-							<div class="document__offer">
-								<div class="block-arrow-border">
-									<div class="block-arrow-border__top">
-										<div class="block-arrow-border__top__content">
-											<div class="document__offer__title">Студенту или преподавателю</div>
+				<div className="document__accesses__extra" data-accordion="">
+					<button type="button" className="document__accesses__extra__toggler" data-accordion-toggler="" aria-expanded="false" aria-controls="accordion-content-1">Как еще получить доступ?</button>
+					<div className="document__accesses__extra__wrapper" data-accordion-wrapper="">
+						<div className="document__accesses__extra__list" data-accordion-content="" id="accordion-content-1">
+							<div className="document__offer">
+								<div className="block-arrow-border">
+									<div className="block-arrow-border__top">
+										<div className="block-arrow-border__top__content">
+											<div className="document__offer__title">Студенту или преподавателю</div>
 										</div>
 									</div>
-									<div class="block-arrow-border__bottom">
-										<div class="document__offer__body">
+									<div className="block-arrow-border__bottom">
+										<div className="document__offer__body">
 											<span>
 												Отправьте <a href="">заявку на&nbsp;подключение к&nbsp;Znanium</a> по&nbsp;договору
 											</span>
@@ -47,9 +47,9 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 									</div>
 								</div>
 							</div>
-							<div class="document__offer">
-								<div class="document__offer__body">
-									<a href="" class="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
+							<div className="document__offer">
+								<div className="document__offer__body">
+									<a href="" className="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
 								</div>
 							</div>
 						</div>
@@ -60,19 +60,19 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		return (
 			<div className="document__col document__col--access">
-				<div class="document__accesses">
-					<div class="document__offer">
-						<div class="document__offer__body">
-							<span class="document__offer__name">Доступ онлайн</span>
-							<span class="document__offer__price">3 000 ₽</span>
-							<button type="button" class="document__offer__button" title="Добавить в корзину">В корзину</button>
+				<div className="document__accesses">
+					<div className="document__offer">
+						<div className="document__offer__body">
+							<span className="document__offer__name">Доступ онлайн</span>
+							<span className="document__offer__price">3 000 ₽</span>
+							<button type="button" className="document__offer__button" title="Добавить в корзину">В корзину</button>
 						</div>
 					</div>
-					<div class="document__offer">
-						<div class="document__offer__body">
-							<span class="document__offer__name">Бумажная книга</span>
-							<span class="document__offer__price">1&nbsp;590&nbsp;₽ <a href="" class="help" title="Смотреть справку"></a></span>
-							<a href="" class="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
+					<div className="document__offer">
+						<div className="document__offer__body">
+							<span className="document__offer__name">Бумажная книга</span>
+							<span className="document__offer__price">1&nbsp;590&nbsp;₽ <a href="" className="help" title="Смотреть справку"></a></span>
+							<a href="" className="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
 						</div>
 					</div>
 					{ isDetail && <Exrta /> }
@@ -86,21 +86,21 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function InfoItems() {
 			return (
 				<>
-					<div class="document__info__item">
+					<div className="document__info__item">
 						<dt>Издательство:</dt>
 						<dd><a href="">СОЛОН-Пресс</a></dd>
 					</div>
-					<div class="document__info__item">
+					<div className="document__info__item">
 						<dt>Год издания: </dt>
 						<dd>2023</dd>
 					</div>
-					<div class="document__info__item">
+					<div className="document__info__item">
 						<dt>Авторы: </dt>
 						<dd>
 							<a href="">Курушин Александр Александрович, </a>
 							<a href="">Нефедов Евгений Иванович,</a>
 							<a href=""> Смольский Сергей Михайлович</a>
-							<button type="button" class="rest-toggler" title="Показать остальное"></button>
+							<button type="button" className="rest-toggler" title="Показать остальное"></button>
 							<a href="">Курушин Александр Александрович, </a>
 							<a href="">Нефедов Евгений Иванович,</a>
 							<a href=""> Смольский Сергей Михайлович</a>
@@ -118,7 +118,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function InfoMain() {
 			return (
-				<div class="document__info__block">
+				<div className="document__info__block">
 					<dl className="document__info__list">
 						<InfoItems />
 					</dl>
@@ -129,7 +129,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function InfoExtra({ isMobile, magazineItem, title = "Дополнительно" }) {
 			function ItemVak() {
 				return (
-					<div class="document__info__item">
+					<div className="document__info__item">
 						<dt> </dt>
 						<dd>
 							<p><a href="/catalog/magazines/vak?ref=69df0b2d-84d2-11e8-b668-90b11c31de4c&amp;products=1">Биотехнология (в том числе бионанотехнологии)</a></p>
@@ -152,7 +152,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 						"document__info__block--mobile": isMobile
 					})
 				}>
-					<AccordionSimple toggler={ <span class="document__info__block__toggler"> { title } </span> }>
+					<AccordionSimple toggler={ <span className="document__info__block__toggler"> { title } </span> }>
 						<dl className="document__info__list">
 							{ magazineItem ? <ItemVak /> : <InfoItems /> }
 						</dl>
@@ -163,7 +163,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function Info() {
 			return (
-				<div class="document__info">
+				<div className="document__info">
 					<InfoMain />
 					<InfoExtra isMobile />
 					{ isMagazine && <InfoExtra title={ " Номенклатура ВАК " } magazineItem /> }
@@ -174,16 +174,16 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function Header() {
 			if (!isDetail || isSub) {
 				return (
-					<a href="" class="document__header">
-						<span class="document__title"> Современный русский язык. Лексикология. Фразеология </span>
-						<span class="document__subtitle"> Учебное пособие </span>
+					<a href="" className="document__header">
+						<span className="document__title"> Современный русский язык. Лексикология. Фразеология </span>
+						<span className="document__subtitle"> Учебное пособие </span>
 					</a>
 				)
 			} else {
 				return (
-					<div class="document__header">
-						<h1 class="document__title">Современный русский язык. Лексикология. Фразеология</h1>
-						<span class="document__subtitle">Учебное пособие</span>
+					<div className="document__header">
+						<h1 className="document__title">Современный русский язык. Лексикология. Фразеология</h1>
+						<span className="document__subtitle">Учебное пособие</span>
 					</div>
 				)
 			}
@@ -191,7 +191,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function DocumentLabels() {
 			return (
-				<div class="document__labels">
+				<div className="document__labels">
 					<LabelsAll />
 				</div>
 			)
@@ -226,9 +226,9 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					)
 				} else {
 					return (
-						<div class="document__other__group__access">
+						<div className="document__other__group__access">
 							<em>8 000 ₽</em>
-							<a href="" class="document__other__button">В корзину</a>
+							<a href="" className="document__other__button">В корзину</a>
 						</div>
 					)
 				}
@@ -244,8 +244,8 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 			return (
 				<div className="document__other__group" data-accordion>
-					<div class="document__other__group__header">
-						<button type="button" class="document__other__group__title" data-accordion-toggler>2023 год</button>
+					<div className="document__other__group__header">
+						<button type="button" className="document__other__group__title" data-accordion-toggler>2023 год</button>
 						<Access isEmpty />
 						<Access />
 					</div>
@@ -275,7 +275,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function Annotation() {
 			return (
-				<div class="document__annotation">
+				<div className="document__annotation">
 					В монографии исследуются социокультурные проблемы, возникающие при все большем и весьма агрессивном проникновении в нашу жизнь информационно-компьютерных технологий. Процесс цифровизации разных областей нашей жизни не только вытесняет определенные профессии, но меняет всю систему управления, начинает выполнять не только рутинные процессы, но и замещать человека в тех областях, которые казались собственно человеческими. Действительно, происходит цифровая революция, и нужно понимать происходящее. Как принимать цифровизацию, чтобы польза от ее прихода в наш мир не привела к необратимым потерям? Авторов книги объединяет глубокое чувство социальной ответственности. Настоящая работа является продолжением коллективной монографии «Современное российское образование: вызовы и ответы». Книга адресована всем, кого интересуют процессы, связанные с растущим влиянием новых цифровых технологий и кого волнуют проблемы цифровой трансформации нашего общества.
 				</div>
 			)
@@ -283,7 +283,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function Collections() {
 			return (
-				<div class="document__collections">
+				<div className="document__collections">
 					<a href="">Основная коллекция ЭБС</a>
 					<a href="">Основная коллекция ЭБС</a>
 					<a href="">Основная коллекция ЭБС</a>
@@ -294,55 +294,55 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function Classifiers() {
 			return (
-				<div class="document__classifiers">
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>Тематика:</span></div>
-						<div class="document__classifiers__item__value">
+				<div className="document__classifiers">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
+						<div className="document__classifiers__item__value">
 							<a href="">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>ОКСО:</span></div>
-						<div class="document__classifiers__item__value">
-							<div class="document__classifiers__item">
-								<div class="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
-								<div class="document__classifiers__item__value">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>ОКСО:</span></div>
+						<div className="document__classifiers__item__value">
+							<div className="document__classifiers__item">
+								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
+								<div className="document__classifiers__item__value">
 									<a href="">38.04.06: Торговое дело</a>
 									<a href="">38.04.07: Товароведение</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>Тематика:</span></div>
-						<div class="document__classifiers__item__value">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
+						<div className="document__classifiers__item__value">
 							<a href="">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>ОКСО:</span></div>
-						<div class="document__classifiers__item__value">
-							<div class="document__classifiers__item">
-								<div class="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
-								<div class="document__classifiers__item__value">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>ОКСО:</span></div>
+						<div className="document__classifiers__item__value">
+							<div className="document__classifiers__item">
+								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
+								<div className="document__classifiers__item__value">
 									<a href="">38.04.06: Торговое дело</a>
 									<a href="">38.04.07: Товароведение</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>Тематика:</span></div>
-						<div class="document__classifiers__item__value">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
+						<div className="document__classifiers__item__value">
 							<a href="">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
-					<div class="document__classifiers__item">
-						<div class="document__classifiers__item__name"><span>ОКСО:</span></div>
-						<div class="document__classifiers__item__value">
-							<div class="document__classifiers__item">
-								<div class="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
-								<div class="document__classifiers__item__value">
+					<div className="document__classifiers__item">
+						<div className="document__classifiers__item__name"><span>ОКСО:</span></div>
+						<div className="document__classifiers__item__value">
+							<div className="document__classifiers__item">
+								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
+								<div className="document__classifiers__item__value">
 									<a href="">38.04.06: Торговое дело</a>
 									<a href="">38.04.07: Товароведение</a>
 								</div>
@@ -355,16 +355,16 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function Affiliation() {
 			return (
-				<div class="document__affiliation">
-					<div class="document__affiliation__item">
+				<div className="document__affiliation">
+					<div className="document__affiliation__item">
 						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
 						<a href=""><span>Донецкий Государственный Университет</span></a>
 					</div>
-					<div class="document__affiliation__item">
+					<div className="document__affiliation__item">
 						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
 						<a href=""><span>Донецкий Государственный Университет</span></a>
 					</div>
-					<div class="document__affiliation__item">
+					<div className="document__affiliation__item">
 						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
 						<a href=""><span>Донецкий Государственный Университет</span></a>
 					</div>
@@ -375,9 +375,9 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 		function BiblioCard() {
 			return (
-				<div class="document__biblio-card">
-					<p class="document__biblio-card__text">Дмитриченко, Л. И. Государственное регулирование торговой деятельности : учебное пособие / Л.И. Дмитриченко, О.Н. Головинов, Л.А. Дмитриченко. — Москва : ИНФРА-М, 2025. — 174 с. — (Высшее образование). — DOI 10.12737/2158057. - ISBN 978-5-16-020107-8. - Текст : электронный. - URL: https://znanium.ru/catalog/product/2158057 (дата обращения: 21.12.2024). – Режим доступа: по подписке.</p>
-					<button type="button" class="document__biblio-card__button"> Скопировать запись </button>
+				<div className="document__biblio-card">
+					<p className="document__biblio-card__text">Дмитриченко, Л. И. Государственное регулирование торговой деятельности : учебное пособие / Л.И. Дмитриченко, О.Н. Головинов, Л.А. Дмитриченко. — Москва : ИНФРА-М, 2025. — 174 с. — (Высшее образование). — DOI 10.12737/2158057. - ISBN 978-5-16-020107-8. - Текст : электронный. - URL: https://znanium.ru/catalog/product/2158057 (дата обращения: 21.12.2024). – Режим доступа: по подписке.</p>
+					<button type="button" className="document__biblio-card__button"> Скопировать запись </button>
 				</div>
 			)
 		}
@@ -385,7 +385,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function Fragments() {
 			function Item() {
 				return (
-					<div class="document__fragments__item">
+					<div className="document__fragments__item">
 						<pre>УДК 130.2
 							ББК 60.524
 							Ц75
@@ -422,7 +422,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							© Новосибирский государственный университет
 							экономики и управления «НИНХ», 2023
 						</pre>
-						<div class="document__fragments__item__caption"><a href="">стр. 2</a></div>
+						<div className="document__fragments__item__caption"><a href="">стр. 2</a></div>
 					</div>
 				)
 			}

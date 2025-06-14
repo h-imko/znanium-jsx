@@ -6,16 +6,16 @@ export default function index() {
   return (
     <Page aside breadcrumbs search>
       <Generic title="Контакты">
-        <div class="contacts">
+        <div className="contacts">
           <p></p>
-          <p><a class="sidebar-submenu__link" href="#sales">Продажи ЭБС</a></p>
-          <p><a class="sidebar-submenu__link" href="#support">Методическое и техническое сопровождение ЭБС</a></p>
-          <p><a class="sidebar-submenu__link" href="#books">Комплектование печатными изданиями</a></p>
-          <p><a class="sidebar-submenu__link" href="#izdat">Публикация книг, учебников, монографий</a></p>
-          <p><a class="sidebar-submenu__link" href="#article">Публикация статей</a></p>
-          <p><a class="sidebar-submenu__link" href="#group">Размещение контента в ЭБС</a></p>
-          <p><a class="sidebar-submenu__link" href="#requisits">Реквизиты</a></p>
-          <p><a class="sidebar-submenu__link" href="#map">Схема проезда</a></p>
+          <p><a className="sidebar-submenu__link" href="#sales">Продажи ЭБС</a></p>
+          <p><a className="sidebar-submenu__link" href="#support">Методическое и техническое сопровождение ЭБС</a></p>
+          <p><a className="sidebar-submenu__link" href="#books">Комплектование печатными изданиями</a></p>
+          <p><a className="sidebar-submenu__link" href="#izdat">Публикация книг, учебников, монографий</a></p>
+          <p><a className="sidebar-submenu__link" href="#article">Публикация статей</a></p>
+          <p><a className="sidebar-submenu__link" href="#group">Размещение контента в ЭБС</a></p>
+          <p><a className="sidebar-submenu__link" href="#requisits">Реквизиты</a></p>
+          <p><a className="sidebar-submenu__link" href="#map">Схема проезда</a></p>
           <p><a name="sales"></a></p>
           <h2>Продажи ЭБС</h2>
           <p>Консультация по вариантам подписки, ценовым условиям и заключение договора ЭБС:<br />
@@ -77,8 +77,8 @@ export default function index() {
 		h170.667c5.891,0,10.667,4.776,10.667,10.667C469.334,389.935,464.558,394.71,458.667,394.71z" style="fill:#428bca;"></path>
             </g>
           </svg></p>
-          <div class="table-wrapper">
-            <table class="table">
+          <div className="table-wrapper">
+            <table className="table">
               <tbody>
                 <tr>
                   <td style="width:250px">Полное&nbsp;наименование</td>
@@ -207,7 +207,7 @@ export default function index() {
               </tbody>
             </table>
           </div>
-          <p><a class="sidebar-submenu__link" name="map"></a></p>
+          <p><a className="sidebar-submenu__link" name="map"></a></p>
           <h2>Схема проезда</h2>
           <p>Адрес: Москва, Полярная ул., д.31В, стр.1&nbsp;<br />
             тел: <a href="tel:88003334861">8 800 333-48-61</a></p>

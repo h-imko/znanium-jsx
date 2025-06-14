@@ -11,10 +11,10 @@ function Item({ children, popover }) {
 		return (
 			<>
 				<Button popovertarget={ popoverId }>
-					<span class="icon icon--download"></span>
+					<span className="icon icon--download"></span>
 					<span>Экспорт в Excel</span>
 				</Button>
-				<div class="controls__item__popover" data-popover="" id={ popoverId }>
+				<div className="controls__item__popover" data-popover="" id={ popoverId }>
 					<ExportList />
 				</div>
 			</>
@@ -59,7 +59,7 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 			) }
 			{ createShelf && (
 				<Item>
-					<Button><span class="icon icon--view_grid"></span>создать полку</Button>
+					<Button><span className="icon icon--view_grid"></span>создать полку</Button>
 				</Item>
 			) }
 			{ price && (
@@ -83,15 +83,15 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 			{ showType && (
 				<Item>
 					<span>Отображение</span>
-					<Button><span class="icon icon--view_grid"></span></Button>
-					<Button><span class="icon icon--view_list"></span></Button>
+					<Button><span className="icon icon--view_grid"></span></Button>
+					<Button><span className="icon icon--view_list"></span></Button>
 				</Item>
 			) }
 			{ sortType && (
 				<Item>
 					<span>Сортировка</span>
-					<Button><span class="icon icon--tune"></span></Button>
-					<Button><span class="icon icon--match_case"></span></Button>
+					<Button><span className="icon icon--tune"></span></Button>
+					<Button><span className="icon icon--match_case"></span></Button>
 				</Item>
 			) }
 			{ sortBy && (

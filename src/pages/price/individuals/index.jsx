@@ -6,7 +6,7 @@ export default function index() {
   return (
     <Page aside breadcrumbs search>
       <Generic title="Цены на электронные продукты для юридических лиц">
-        <div class="text">
+        <div className="text">
           <p></p>
           <p>Мы создали Znanium, чтобы предоставить пользователям:</p>
           <ul>
@@ -43,8 +43,8 @@ export default function index() {
           <p>&nbsp;</p>
           <h2>Прайс-лист на электронные продукты в ЭБС Znanium для юридических лиц</h2>
           <p>(цены действуют с 01 июля 2024 г.)</p>
-          <div class="table-wrapper">
-            <table class="table">
+          <div className="table-wrapper">
+            <table className="table">
               <thead>
                 <tr>
                   <th>Продукт</th>
