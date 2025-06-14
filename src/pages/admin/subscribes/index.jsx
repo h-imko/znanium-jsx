@@ -41,8 +41,7 @@ export default function index() {
               sortable: true,
               title: "Док-тов"
             },
-            {
-            },
+            {},
           ],
           rows: [
             [
