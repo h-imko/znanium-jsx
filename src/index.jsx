@@ -130,6 +130,18 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
+						<a href="">
+							<h1> Корзина </h1>
+						</a>
+						<ul>
+							<li>
+								<a href="/src/pages/cart/documents/index.jsx">
+									<h1> документы </h1>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
 						<a href="/src/pages/webinars/index.jsx">
 							<h1> вебинары </h1>
 						</a>

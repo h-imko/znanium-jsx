@@ -5,19 +5,12 @@
 @use "input" as *;
 
 .cart {
-	&__inner {
-		display: grid;
-		grid-template-columns: 9fr 3fr;
-		gap: calc(var(--column-gap) * 2) var(--column-gap);
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: calc(var(--column-gap) * 2) var(--column-gap);
 
-		@media (max-width: $tablet) {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	&__header {
-		grid-column: 1 / -1;
-		color: var(--color-primary);
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr;
 	}
 
 	&__main {
