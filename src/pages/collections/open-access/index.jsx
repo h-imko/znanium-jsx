@@ -8,7 +8,7 @@ import Bookslist from "../../../components/Bookslist"
 export default function index() {
 	return (
 		<Page aside breadcrumbs search >
-			<Filter />
+			<Filter applied togglerText="Изменить условия поиска" />
 			<Generic title="Основная коллекция ЭБС. Коллекция Open Access">
 				<Controls total excel showBy showType sortBy />
 				<Bookslist>

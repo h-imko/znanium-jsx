@@ -48,7 +48,7 @@ function Button({ isActive, children, title, popovertarget, isCollapse }) {
 	)
 }
 
-export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType }) {
+export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType, addReader }) {
 	return (
 		<div className="controls">
 			{ total && (
@@ -78,6 +78,11 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 					<span>Показывать по</span>
 					<SelectSimple />
 					<span>Показано <em>1-10</em> из <em> 10 </em> </span>
+				</Item>
+			) }
+			{ addReader && (
+				<Item>
+					<Button><span className="icon icon--add_box"></span>добавить читателя</Button>
 				</Item>
 			) }
 			{ showType && (

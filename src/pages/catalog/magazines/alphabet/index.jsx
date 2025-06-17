@@ -9,7 +9,7 @@ import Alphabetical from "../../../../components/Alphabetical"
 export default function index() {
 	return (
 		<Page aside breadcrumbs search >
-			<Filter />
+			<Filter applied togglerText="Изменить условия поиска" />
 			<Generic title="Алфавитный указатель">
 				<Alphabetical />
 				<Controls showBy />

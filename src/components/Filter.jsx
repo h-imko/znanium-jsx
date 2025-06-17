@@ -36,17 +36,28 @@ function AppliedItem({ caption, values }) {
 	)
 }
 
-export default function () {
+/**
+ * @param {Object} param0 
+ * @param {import("react").JSX.Element} param0.form 
+ * @param {string} param0.togglerText 
+ * @param {boolean} param0.applied 
+ */
+export default function ({ form, togglerText, applied }) {
+	function Applied() {
+		return (
+			<div className="filter__applied">
+				{ appliedItemsData.map(AppliedItem) }
+			</div>
+		)
+	}
 	return (
 		<div className="filter">
 			<div className="filter__panel">
-				<button type="button" className="filter__toggler">Изменить условия поиска</button>
-				<div className="filter__applied">
-					{ appliedItemsData.map(AppliedItem) }
-				</div>
+				<button type="button" className="filter__toggler">{ togglerText }</button>
+				{ applied && <Applied /> }
 			</div>
 			<div className="filter__form">
-				<RichSearchForm />
+				{ form || <RichSearchForm /> }
 			</div>
 		</div>
 	)
