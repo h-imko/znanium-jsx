@@ -139,6 +139,21 @@ export default function index() {
 									<h1> документы </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/cart/collections/index.jsx">
+									<h1> коллекции </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/cart/pereodicals/index.jsx">
+									<h1> журналы </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/cart/printed-books/index.jsx">
+									<h1> печатные издания </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>
