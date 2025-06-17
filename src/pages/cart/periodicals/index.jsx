@@ -2,8 +2,6 @@ import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Cart from "../../../components/Cart"
 import Table from "../../../components/Table"
-import SelectSimple from "../../../components/SelectSimple"
-import Input from "../../../components/Input"
 
 export default function index() {
 	return (
@@ -14,15 +12,9 @@ export default function index() {
 						headers: [
 							{},
 							{
-								title: "Название",
+								title: " Журнал ",
 								sortable: true,
 								sorted: "asc"
-							},
-							{
-								title: "Издательство"
-							},
-							{
-								title: "Тип"
 							},
 							{
 								title: "Цена"
@@ -31,37 +23,23 @@ export default function index() {
 						],
 						rows: [
 							[
-								<SelectSimple />,
-								<Input placeholder="Поиск по наименованию" />,
-								<Input placeholder="Поиск по издательству" />,
-								"",
-								"",
-								<button type="button" className="cart__table__button" title="Сбросить фильтры"><span className="icon icon--filter_alt_off"></span></button>
-							],
-							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
-								"Логос",
-								"Книга",
+								<a href="">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
-								"Логос",
-								"Книга",
+								<a href="">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
-								"Логос",
-								"Книга",
+								<a href="">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
-							]
+							],
 						]
 					} } />
 				</Cart>
