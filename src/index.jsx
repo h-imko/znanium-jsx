@@ -179,6 +179,11 @@ export default function index() {
 								</a>
 							</li>
 							<li>
+								<a href="/src/pages/admin/subscribe/index.jsx">
+									<h1> подписка </h1>
+								</a>
+							</li>
+							<li>
 								<a href="/src/pages/admin/orders/index.jsx">
 									<h1> заказы </h1>
 								</a>
@@ -196,6 +201,11 @@ export default function index() {
 							<li>
 								<a href="/src/pages/admin/edit-email/index.jsx">
 									<h1> смена email </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/user-groups/index.jsx">
+									<h1> группы </h1>
 								</a>
 							</li>
 						</ul>
