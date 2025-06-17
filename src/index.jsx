@@ -183,6 +183,21 @@ export default function index() {
 									<h1> заказы </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/my-profile/index.jsx">
+									<h1> профиль </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/edit-password/index.jsx">
+									<h1> смена пароля </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/edit-email/index.jsx">
+									<h1> смена email </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>

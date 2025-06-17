@@ -368,11 +368,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function customInput() {
-		document.querySelectorAll(".custom-input").forEach(inputBlock => {
+		document.querySelectorAll(".input").forEach(inputBlock => {
 			const input = inputBlock.querySelector("input, textarea")
 			const typeTogglers = inputBlock.querySelectorAll(`[data-input-button="toggleType"]`)
-			const characterCounters = inputBlock.querySelectorAll(".custom-input__count")
-			const clearButtons = inputBlock.querySelectorAll(".custom-input__clear")
+			const characterCounters = inputBlock.querySelectorAll(".input__count")
+			const clearButtons = inputBlock.querySelectorAll(".input__clear")
 
 			typeTogglers.forEach(toggler => {
 				const originalType = input.getAttribute("type")
@@ -389,8 +389,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 
 			characterCounters.forEach(counter => {
-				const current = counter.querySelector(".custom-input__count__current")
-				const max = counter.querySelector(".custom-input__count__max")
+				const current = counter.querySelector(".input__count__current")
+				const max = counter.querySelector(".input__count__max")
 
 				function setLenght() {
 					current.textContent = input.value.length
