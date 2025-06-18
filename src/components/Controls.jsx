@@ -4,16 +4,13 @@ import ExportList from "./ExportList"
 import SelectSimple from "./SelectSimple"
 import { v4 as uuid } from "uuid"
 
-function Item({ children, popover }) {
+export function Item({ children, popover }) {
 	const popoverId = uuid()
 
 	function Popover() {
 		return (
 			<>
-				<Button popovertarget={ popoverId }>
-					<span className="icon icon--download"></span>
-					<span>Экспорт в Excel</span>
-				</Button>
+				<Button popovertarget={ popoverId } icon={ "download" } text={ "Экспорт в Excel" } />
 				<div className="controls__item__popover" data-popover="" id={ popoverId }>
 					<ExportList />
 				</div>
@@ -29,7 +26,7 @@ function Item({ children, popover }) {
 	)
 }
 
-function Button({ isActive, children, title, popovertarget, isCollapse }) {
+export function Button({ isActive, children, title, popovertarget, isCollapse, icon, text }) {
 	return (
 		<button
 			type="button"
@@ -43,12 +40,13 @@ function Button({ isActive, children, title, popovertarget, isCollapse }) {
 			title={ title }
 			data-popovertarget={ popovertarget }
 		>
-			{ children }
+			{ icon && <span className={ `icon icon--${icon}` }></span> }
+			{ text }
 		</button>
 	)
 }
 
-export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType, addReader }) {
+export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType, addReader, children }) {
 	return (
 		<div className="controls">
 			{ total && (
@@ -59,7 +57,7 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 			) }
 			{ createShelf && (
 				<Item>
-					<Button><span className="icon icon--view_grid"></span>создать полку</Button>
+					<Button icon={ "view_grid" } text={ "создать полку" } />
 				</Item>
 			) }
 			{ price && (
@@ -70,9 +68,6 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 					<Help />
 				</Item>
 			) }
-			{ excel && (
-				<Item popover />
-			) }
 			{ showBy && (
 				<Item>
 					<span>Показывать по</span>
@@ -80,23 +75,27 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 					<span>Показано <em>1-10</em> из <em> 10 </em> </span>
 				</Item>
 			) }
+			{ excel && (
+				<Item popover />
+			) }
 			{ addReader && (
 				<Item>
-					<Button><span className="icon icon--add_box"></span>добавить читателя</Button>
+					<Button icon={ "add_box" } text={ "добавить читателя" } />
 				</Item>
 			) }
 			{ showType && (
 				<Item>
+
 					<span>Отображение</span>
-					<Button><span className="icon icon--view_grid"></span></Button>
-					<Button><span className="icon icon--view_list"></span></Button>
+					<Button icon={ "view_grid" } />
+					<Button icon={ "view_list" } />
 				</Item>
 			) }
 			{ sortType && (
 				<Item>
 					<span>Сортировка</span>
-					<Button><span className="icon icon--tune"></span></Button>
-					<Button><span className="icon icon--match_case"></span></Button>
+					<Button icon={ "tune" } />
+					<Button icon={ "match_case" } />
 				</Item>
 			) }
 			{ sortBy && (
@@ -110,6 +109,7 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 					<Button isCollapse />
 				</Item>
 			) }
+			{ children }
 		</div>
 	)
 }

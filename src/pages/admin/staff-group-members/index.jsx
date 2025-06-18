@@ -29,8 +29,8 @@ export default function index() {
                 <Input label={ "ФИО" } type={ "email" } />,
               ],
               [
-                <Input label={ "ФИО" } />,
-                <Input label={ "ФИО" } />,
+                <Input label={ "Логин" } />,
+                <Input label={ "Комментарий" } />,
                 <Input label={ "ФИО" } />,
               ],
               [

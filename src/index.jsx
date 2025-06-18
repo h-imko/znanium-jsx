@@ -213,6 +213,16 @@ export default function index() {
 									<h1> группа </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/portal-users/index.jsx">
+									<h1> С моего портала  </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/teachers/index.jsx">
+									<h1> Преподаватели </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>
