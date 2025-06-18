@@ -13,7 +13,7 @@ import Fieldset from "../../../components/Fieldset"
 export default function index() {
   return (
     <Page aside breadcrumbs>
-      <Generic title="Все пользователи">
+      <Generic title={<>\<a href="#">Все пользователи</a>\<a href="">Базовая кафедра торговой политики</a></>}>
         <button type="button" class="button">Выдать ключи всем, учитывая фильтры</button>
         <Filter togglerText="Фильтр" form={
           <Form bordered items={
@@ -82,14 +82,14 @@ export default function index() {
               "-",
               <IconButtons items={ [
                 {
-                  icon: "add",
+                  icon: "edit",
                   isButton: true,
-                  title: "Добавить подгруппу"
+                  title: "Изменить"
                 },
                 {
                   icon: "delete",
                   isButton: true,
-                  title: "Переименовать группу"
+                  title: "Переименовать"
                 },
               ] } />
             ]

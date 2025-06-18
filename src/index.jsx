@@ -208,6 +208,11 @@ export default function index() {
 									<h1> группы </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/staff-group-members/index.jsx">
+									<h1> группа </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>
