@@ -334,6 +334,11 @@ export default function index() {
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="/src/pages/admin/my-tickets/index.jsx">
+									<h1> Мои ключи доступа </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>

@@ -6,7 +6,7 @@ import Controls from "../../../components/Controls"
 export default function index() {
   return (
     <Page aside breadcrumbs>
-      <Generic title="Обновлённые книги" p={ "Обновлённые книги" }>
+      <Generic title="Обновлённые книги"  >
         <Controls showBy excel />
         <Table small data={ {
           headers: [
