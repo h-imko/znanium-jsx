@@ -339,6 +339,16 @@ export default function index() {
 									<h1> Мои ключи доступа </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/certificates/index.jsx">
+									<h1> Мои сертификаты </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/settings/index.jsx">
+									<h1> Настройки </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>
