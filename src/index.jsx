@@ -268,6 +268,26 @@ export default function index() {
 											<h1> Документы - чтение </h1>
 										</a>
 									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/denied/index.jsx">
+											<h1> Отказы </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/deniers/index.jsx">
+											<h1> Пользователи </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/deny-list/index.jsx">
+											<h1> Список отказов </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/denied-docs/index.jsx">
+											<h1> Документы - отказы </h1>
+										</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
