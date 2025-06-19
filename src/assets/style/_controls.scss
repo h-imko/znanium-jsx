@@ -19,7 +19,7 @@
 		position: relative;
 		flex: 1 1 content;
 		@extend %font-2;
-		border: var(--default-border);
+		border: var(--default-border-width) dashed var(--default-border-color);
 		border-radius: var(--default-border-radius-small);
 		padding: 8px 16px;
 

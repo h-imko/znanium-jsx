@@ -258,6 +258,11 @@ export default function index() {
 											<h1> Читатели </h1>
 										</a>
 									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/activity-browsed-docs/index.jsx">
+											<h1> Книговыдачи </h1>
+										</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
