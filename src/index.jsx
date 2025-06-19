@@ -312,6 +312,28 @@ export default function index() {
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="/src/pages/admin/updated-books/index.jsx">
+									<h1> Обновлённые книги </h1>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<h1> Изъятые документы </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/withdrawn-documents/already/index.jsx">
+											<h1> Уже изъяты </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/withdrawn-documents/soon/index.jsx">
+											<h1> Будут изъяты </h1>
+										</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li>
