@@ -4,6 +4,8 @@
  * @property {(string|import("react").JSX.Element)[]} rows
  */
 
+import clsx from "clsx"
+
 /**
  * @typedef {object} th
  * @property {string} [title]
@@ -14,8 +16,11 @@
 /**
  * @param {Object} param0
  * @param {data} param0.data
+ * @param {boolean} param0.small
+ * @param {boolean} param0.slim
+ * @param {boolean} param0.bordered
  */
-export default function ({ data }) {
+export default function ({ data, small, slim, bordered, }) {
 
   /**
    * @param {th} thData
@@ -54,7 +59,14 @@ export default function ({ data }) {
 
   return (
     <div className="table-wrapper">
-      <table className="table">
+      <table className={
+        clsx({
+          table: true,
+          "table--small": small,
+          "table--slim": slim,
+          "table--bordered": bordered
+        })
+      }>
         <thead>
           <tr>
             { data.headers.map(Th) }

@@ -223,6 +223,21 @@ export default function index() {
 									<h1> Преподаватели </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/statistic-fund/index.jsx">
+									<h1>Фонд все</h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/statistic-ebs/index.jsx">
+									<h1> Тематика </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/admin/statistic-publication-type-vpo/index.jsx">
+									<h1> ВПО </h1>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li>

@@ -1,0 +1,62 @@
+import Page from "../../../components/Page"
+import Generic from "../../../components/Generic"
+import Links from "../../../components/Links"
+import Controls from "../../../components/Controls"
+import { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
+import Table from "../../../components/Table"
+import SelectSimple from "../../../components/SelectSimple"
+import Text from "../../../components/Text"
+
+export default function index() {
+  return (
+    <Page aside breadcrumbs>
+      <Generic title={ "Фонд" }>
+        <Links items={ ["Документы", "Тематика", "УДК", "ГРНТИ", "ББК", "УГС (ОКСО)", "Вид изд.", "Тип публикации"] } />
+        <Text>
+          <p>В отчете отображается распределение документов из активных подписок по тематикам ЭБС. Данные по демоподпискам в отчет не включаются. Данные — на текущий момент времени.</p>
+        </Text>
+        <Controls excel />
+        <Table small data={ {
+          headers: [
+            {
+              title: "Вид издания	",
+            },
+            {
+              title: "Поступило экземпляров за отчетный год	",
+            },
+            {
+              title: "Выбыло экземпляров за отчетный год	",
+            },
+            {
+              title: "Состоит экземпляров на конец отчетного года	",
+            },
+            {
+              title: "Выдано экземпляров за отчетный год",
+            },
+          ],
+          rows: [
+            [
+              "Учебные",
+              "3854",
+              "2214",
+              "25570",
+              "118831",
+            ],
+            [
+              <b>Всего</b>,
+              <b>8339</b>,
+              <b>3242</b>,
+              <b>60926</b>,
+              <b>138953</b>,
+            ]
+          ]
+        } } />
+      </Generic >
+      <Text>
+        <h4>По филиалам</h4>
+        <p>Данные по филиалам не включены в верхний отчет по головному подразделению.</p>
+        <ul><li><a href="/admin/statistic-fund?cid=66&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, Смоленский ф-л</a></li><li><a href="/admin/statistic-fund?cid=502&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, Краснодарский ф-л</a></li><li><a href="/admin/statistic-fund?cid=12573&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, ф-л Московский Приборостроительный Техникум</a></li><li><a href="/admin/statistic-fund?cid=12576&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, ф-л Московский технологический колледж питания</a></li><li><a href="/admin/statistic-fund?cid=49&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, Брянский ф-л</a></li><li><a href="/admin/statistic-fund?cid=69&amp;year=2025&amp;type=all" style="">Российский экономический университет им. Г.В. Плеханова, Тульский ф-л</a></li></ul>
+      </Text>
+    </Page>
+  )
+}
