@@ -238,6 +238,28 @@ export default function index() {
 									<h1> ВПО </h1>
 								</a>
 							</li>
+							<li>
+								<a href="/src/pages/admin/statistic-users/index.jsx">
+									<h1> Пользователи </h1>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<h1> активность </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/browsing/index.jsx">
+											<h1> чтение </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/statistic-activity/activity-readers/index.jsx">
+											<h1> Читатели </h1>
+										</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li>
