@@ -290,6 +290,28 @@ export default function index() {
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="">
+									<h1> Статистика COUNTER R5 </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/counter-reports/index.jsx">
+											<h1> Отчеты в формате Excel </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/counter-info/index.jsx">
+											<h1> Особенности COUNTER в Znanium </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/counter-sushi/index.jsx">
+											<h1> COUNTER SUSHI </h1>
+										</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li>
