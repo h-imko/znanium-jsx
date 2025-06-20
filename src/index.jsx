@@ -349,6 +349,30 @@ export default function index() {
 									<h1> Настройки </h1>
 								</a>
 							</li>
+							<li>
+								<a href="">
+									<h1> Моё учебное заведение </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/my-university-authors/index.jsx">
+											<h1> Аффилированные авторы </h1>
+										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/recommended-collections/index.jsx">
+											<h1> Рекомендованная литература </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/recommended-collection-documents/index.jsx">
+													<h1> Детальная </h1>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li>
