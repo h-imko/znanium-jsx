@@ -12,7 +12,7 @@ import IconButtons from "./IconButtons"
  */
 export default function ({ titleLink, actions, pack, text, books, links }) {
 
-  function Item({ title, textString }) {
+  function Item({ title, textString, manyBooks }) {
     const itemClassName = clsx({
       reflist__item: true,
       "reflist__item--pack": pack,
@@ -53,18 +53,54 @@ export default function ({ titleLink, actions, pack, text, books, links }) {
         </div>)
     }
 
+    function Links() {
+      return (
+        <div class="reflist__item__links">
+          <a href="" class="reflist__item__link">Наименований — 33</a>
+          <div class="reflist__item__link">Нет Аффилиаций</div>
+        </div>
+      )
+    }
+
+    function Books() {
+      return (
+        <div class="reflist__item__books">
+          <a href="" class="reflist__item__book">
+            <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
+          </a>
+          { manyBooks && <>
+            <a href="" class="reflist__item__book">
+              <img src="/src/assets/static/img/7.webp" alt="Книга такая-то" />
+            </a>
+            <a href="" class="reflist__item__book">
+              <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
+            </a>
+            <a href="" class="reflist__item__book">
+              <img src="/src/assets/static/img/7.webp" alt="Книга такая-то" />
+            </a>
+            <a href="" class="reflist__item__book">
+              <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
+            </a>
+            <a href="" class="reflist__item__books__link">Перейти к списку</a>
+          </> }
+        </div>
+      )
+    }
+
     return (
       <div className={ itemClassName }>
         <Title />
-        <Text />
+        { text && <Text /> }
         { actions && <Actions /> }
+        { links && <Links /> }
+        { books && <Books /> }
       </div>
     )
   }
   return (
     <div className="reflist">
       <Item title={ "Голованов Николай Николаевич" } textString={ "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempore sint aspernatur adipisci nesciunt eaque tempora dicta odio amet, fugit minima quas aliquid, repudiandae ad sapiente nihil laudantium expedita et?" } />
-      <Item title={ "12 Центральный научно-исследовательский институт Министерства обороны Российской Федерации" } textString={ "" } />
+      <Item title={ "12 Центральный научно-исследовательский институт Министерства обороны Российской Федерации" } manyBooks />
     </div>
   )
 }

@@ -22,7 +22,7 @@ export default function index() {
 							</li>
 							<li>
 								<a href="/src/pages/catalog/books/index.jsx">
-									<h1> книги </h1>
+									<h1> книги/статьи/Публичным библиотекам/Книги с доп. материалами </h1>
 								</a>
 								<ul>
 									<li>
@@ -41,7 +41,7 @@ export default function index() {
 							</li>
 							<li>
 								<a href="/src/pages/catalog/magazines/index.jsx">
-									<h1> журналы </h1>
+									<h1> журналы/Подборки Znanium/ </h1>
 								</a>
 								<ul>
 									<li>
@@ -81,6 +81,21 @@ export default function index() {
 							<li>
 								<a href="/src/pages/catalog/document/index.jsx">
 									<h1> документ </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/catalog/authors/index.jsx">
+									<h1> Авторы </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/catalog/publishers/index.jsx">
+									<h1> Издательства </h1>
+								</a>
+							</li>
+							<li>
+								<a href="/src/pages/catalog/universities/index.jsx">
+									<h1> Аффилиация авторов </h1>
 								</a>
 							</li>
 						</ul>
@@ -318,15 +333,10 @@ export default function index() {
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="/src/pages/admin/withdrawn-documents/index.jsx">
 									<h1> Изъятые документы </h1>
 								</a>
 								<ul>
-									<li>
-										<a href="/src/pages/admin/withdrawn-documents/already/index.jsx">
-											<h1> Уже изъяты </h1>
-										</a>
-									</li>
 									<li>
 										<a href="/src/pages/admin/withdrawn-documents/soon/index.jsx">
 											<h1> Будут изъяты </h1>
@@ -339,7 +349,7 @@ export default function index() {
 									<h1> Мои ключи доступа </h1>
 								</a>
 							</li>
-							<li>
+							<li> 
 								<a href="/src/pages/admin/certificates/index.jsx">
 									<h1> Мои сертификаты </h1>
 								</a>
@@ -375,6 +385,45 @@ export default function index() {
 										<a href="/src/pages/admin/my-recommended-collections/index.jsx">
 											<h1> Рекомендую студентам </h1>
 										</a>
+									</li>
+									<li>
+										<a href="/src/pages/admin/key-requests/index.jsx">
+											<h1> Заявки на выдачу ключей </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/key-requests/approved/index.jsx">
+													<h1> Выполненные </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/key-requests/declined/index.jsx">
+													<h1> Отклоненные </h1>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/src/pages/admin/teachers-requests/index.jsx">
+											<h1> Заявки на преподавателей </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/teachers-requests/ordered/index.jsx">
+													<h1> В заказах </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/teachers-requests/subscribed/index.jsx">
+													<h1> В подписках </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/teachers-requests/declined/index.jsx">
+													<h1> Отклонено библиотекой </h1>
+												</a>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</li>

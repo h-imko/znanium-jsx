@@ -12,7 +12,7 @@ export default function index() {
             <ControlsButton icon={ "add_box" } text={ "Создать новый список" } />
           </ControlsItem>
         </Controls>
-        <Reflist actions pack titleLink />
+        <Reflist actions pack titleLink text />
       </Generic >
     </Page>
   )

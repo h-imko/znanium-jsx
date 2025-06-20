@@ -1,9 +1,9 @@
-import Page from "../../../../components/Page"
-import Generic from "../../../../components/Generic"
-import Table from "../../../../components/Table"
-import Controls from "../../../../components/Controls"
-import Text from "../../../../components/Text"
-import Links from "../../../../components/Links"
+import Page from "../../../components/Page"
+import Generic from "../../../components/Generic"
+import Table from "../../../components/Table"
+import Controls from "../../../components/Controls"
+import Text from "../../../components/Text"
+import Links from "../../../components/Links"
 
 export default function index() {
   return (
