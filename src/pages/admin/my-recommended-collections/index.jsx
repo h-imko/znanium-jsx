@@ -1,5 +1,6 @@
 import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
+import Reflist from "../../../components/Reflist"
 import Controls, { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
 
 export default function index() {
@@ -11,6 +12,7 @@ export default function index() {
             <ControlsButton icon={ "add_box" } text={ "Создать новый список" } />
           </ControlsItem>
         </Controls>
+        <Reflist actions pack titleLink />
       </Generic >
     </Page>
   )
