@@ -124,7 +124,17 @@
 
 .dev-nav {
 	ul {
+		position: relative;
 		padding: revert;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -16px;
+			border-left: var(--default-border-width) dashed var(--color-accent);
+		}
 	}
 
 	a {
