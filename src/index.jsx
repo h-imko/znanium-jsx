@@ -192,11 +192,13 @@ export default function index() {
 								<a href="/src/pages/admin/subscribes/index.jsx">
 									<h1> подписки </h1>
 								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/subscribe/index.jsx">
-									<h1> подписка </h1>
-								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/subscribe/index.jsx">
+											<h1> подписка </h1>
+										</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="/src/pages/admin/orders/index.jsx">
@@ -204,104 +206,134 @@ export default function index() {
 								</a>
 							</li>
 							<li>
-								<a href="/src/pages/admin/my-profile/index.jsx">
-									<h1> профиль </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/edit-password/index.jsx">
-									<h1> смена пароля </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/edit-email/index.jsx">
-									<h1> смена email </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/user-groups/index.jsx">
-									<h1> группы </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/staff-group-members/index.jsx">
-									<h1> группа </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/portal-users/index.jsx">
-									<h1> С моего портала  </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/teachers/index.jsx">
-									<h1> Преподаватели </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/statistic-fund/index.jsx">
-									<h1>Фонд все</h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/statistic-ebs/index.jsx">
-									<h1> Тематика </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/statistic-publication-type-vpo/index.jsx">
-									<h1> ВПО </h1>
-								</a>
-							</li>
-							<li>
-								<a href="/src/pages/admin/statistic-users/index.jsx">
-									<h1> Пользователи </h1>
-								</a>
-							</li>
-							<li>
 								<a href="">
-									<h1> активность </h1>
+									<h1> Мой профиль </h1>
 								</a>
 								<ul>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/browsing/index.jsx">
-											<h1> чтение </h1>
+										<a href="/src/pages/admin/my-profile/index.jsx">
+											<h1> профиль </h1>
 										</a>
 									</li>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/activity-readers/index.jsx">
-											<h1> Читатели </h1>
+										<a href="/src/pages/admin/edit-password/index.jsx">
+											<h1> смена пароля </h1>
 										</a>
 									</li>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/activity-browsed-docs/index.jsx">
-											<h1> Книговыдачи </h1>
+										<a href="/src/pages/admin/edit-email/index.jsx">
+											<h1> смена email </h1>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">
+									<h1> пользователи </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/user-groups/index.jsx">
+											<h1> группы </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/staff-group-members/index.jsx">
+													<h1> группа </h1>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/src/pages/admin/portal-users/index.jsx">
+											<h1> С моего портала  </h1>
 										</a>
 									</li>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/activity-docs/index.jsx">
-											<h1> Документы - чтение </h1>
+										<a href="/src/pages/admin/teachers/index.jsx">
+											<h1> Преподаватели </h1>
 										</a>
 									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">
+									<h1>Статистика</h1>
+								</a>
+								<ul>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/denied/index.jsx">
-											<h1> Отказы </h1>
+										<a href="">
+											<h1>Фонд</h1>
 										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/statistic-fund/index.jsx">
+													<h1>Доступно</h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-ebs/index.jsx">
+													<h1> Тематика </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-publication-type-vpo/index.jsx">
+													<h1> ВПО </h1>
+												</a>
+											</li>
+										</ul>
 									</li>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/deniers/index.jsx">
+										<a href="/src/pages/admin/statistic-users/index.jsx">
 											<h1> Пользователи </h1>
 										</a>
 									</li>
 									<li>
-										<a href="/src/pages/admin/statistic-activity/deny-list/index.jsx">
-											<h1> Список отказов </h1>
+										<a href="">
+											<h1> активность </h1>
 										</a>
-									</li>
-									<li>
-										<a href="/src/pages/admin/statistic-activity/denied-docs/index.jsx">
-											<h1> Документы - отказы </h1>
-										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/browsing/index.jsx">
+													<h1> чтение </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/activity-readers/index.jsx">
+													<h1> Читатели </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/activity-browsed-docs/index.jsx">
+													<h1> Книговыдачи </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/activity-docs/index.jsx">
+													<h1> Документы - чтение </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/denied/index.jsx">
+													<h1> Отказы </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/deniers/index.jsx">
+													<h1> Пользователи </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/deny-list/index.jsx">
+													<h1> Список отказов </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/statistic-activity/denied-docs/index.jsx">
+													<h1> Документы - отказы </h1>
+												</a>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</li>
