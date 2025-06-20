@@ -1,16 +1,17 @@
+import clsx from "clsx"
+
 /**
  * @typedef {object} data
  * @property {th[]} [headers]
  * @property {(string|import("react").JSX.Element)[]} rows
  */
 
-import clsx from "clsx"
-
 /**
  * @typedef {object} th
  * @property {string} [title]
  * @property {boolean} [sortable]
  * @property {"asc"|"desc"} [sorted]
+ * @property {number} [colspan]
  */
 
 /**
@@ -33,8 +34,9 @@ export default function ({ data, small, slim, bordered, }) {
         </a>
       )
     }
+
     return (
-      <th>
+      <th colSpan={ thData.colspan }>
         { thData.sortable ? <Link /> : <>{ thData.title }</> }
       </th>
     )

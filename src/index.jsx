@@ -442,6 +442,11 @@ export default function index() {
 											</li>
 										</ul>
 									</li>
+									<li>
+										<a href="/src/pages/admin/discipline-okco/index.jsx">
+											<h1> Документы по ОКСО </h1>
+										</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
