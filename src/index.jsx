@@ -371,6 +371,11 @@ export default function index() {
 											</li>
 										</ul>
 									</li>
+									<li>
+										<a href="/src/pages/admin/my-recommended-collections/index.jsx">
+											<h1> Рекомендую студентам </h1>
+										</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
