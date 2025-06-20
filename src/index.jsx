@@ -349,7 +349,7 @@ export default function index() {
 									<h1> Мои ключи доступа </h1>
 								</a>
 							</li>
-							<li> 
+							<li>
 								<a href="/src/pages/admin/certificates/index.jsx">
 									<h1> Мои сертификаты </h1>
 								</a>
@@ -421,6 +421,23 @@ export default function index() {
 											<li>
 												<a href="/src/pages/admin/teachers-requests/declined/index.jsx">
 													<h1> Отклонено библиотекой </h1>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/src/pages/admin/branches/index.jsx">
+											<h1> Филиалы </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/assign-tickets-to-branch/index.jsx">
+													<h1> Передать ключи в филиал </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/release-tickets-from-branch/index.jsx">
+													<h1> Отозвать ключи из филиала </h1>
 												</a>
 											</li>
 										</ul>
