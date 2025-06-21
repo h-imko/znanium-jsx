@@ -2,9 +2,7 @@ import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Links from "../../../components/Links"
 import Controls from "../../../components/Controls"
-import { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
 import Table from "../../../components/Table"
-import SelectSimple from "../../../components/SelectSimple"
 import Text from "../../../components/Text"
 
 export default function index() {

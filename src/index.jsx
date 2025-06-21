@@ -360,6 +360,30 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
+								<a href="">
+									<h1> Правообладателю </h1>
+								</a>
+								<ul>
+									<li>
+										<a href="/src/pages/admin/copyholder/statistic-fund/index.jsx">
+											<h1> Фонд </h1>
+										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/admin/copyholder/statistic-ebs/index.jsx">
+													<h1> Тематика/УДК/ГРНТИ/ББК/УГС </h1>
+												</a>
+											</li>
+											<li>
+												<a href="/src/pages/admin/copyholder/statistic-publication-type/index.jsx">
+													<h1> Вид изд./Тип публикации </h1>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
 								<a href="/src/pages/admin/updated-books/index.jsx">
 									<h1> Обновлённые книги </h1>
 								</a>
