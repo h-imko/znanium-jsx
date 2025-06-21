@@ -1,0 +1,21 @@
+@use "font";
+
+.reviews {
+  &__item {
+    border-bottom: var(--default-border-width) dashed var(--default-border-color);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__author {
+      text-align: right;
+      font-style: italic;
+      color: var(--color-primary-alt);
+    }
+
+    blockquote {
+      @extend %h4;
+    }
+  }
+}

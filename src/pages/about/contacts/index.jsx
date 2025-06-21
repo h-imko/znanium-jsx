@@ -1,6 +1,5 @@
 import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
-import Manual from "../../../components/Manual"
 
 export default function index() {
   return (
