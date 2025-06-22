@@ -1,3 +1,6 @@
+import Socials from "../Socials"
+import WebinarCard from "../Webinar/WebinarCard"
+
 export default function () {
   return (
     <div className="news">
@@ -229,13 +232,7 @@ export default function () {
               <a href="">Библиотекарь </a>
             </div>
             <div className="news__socials">
-              <div className="socials">
-                <a href="" className="socials__item" title="YouTube"><span className="icon icon--play"></span></a>
-                <a href="" className="socials__item" title="Вконтакте"><span className="icon icon--vk"></span></a>
-                <a href="" className="socials__item" title="Телеграм"><span className="icon icon--tg"></span></a>
-                <a href="" className="socials__item" title="Одноклассники"><span className="icon icon--ok"></span></a>
-                <a href="" className="socials__item socials__item--bald" title="RSS"><span className="icon icon--rss"></span></a>
-              </div>
+              <Socials />
             </div>
           </div>
           <div className="news__aside">
@@ -252,18 +249,7 @@ export default function () {
             <a href="" className="news__banner">
               <img src="/assets/static/img/19.webp" alt="Заполните меня" />
             </a>
-            <div className="webinar-card webinar-card--pattern-1 webinar-card--color-1">
-              <div className="webinar-card__body">
-                <div className="webinar-card__title">Оптимизация комплектоваия библиотеки в течение учебного года</div>
-                <span className="webinar-card__date">17 декабря 2024 , 11:00, 20 минут</span>
-                <div className="webinar-card__presenters">
-                  <strong>Ведущие:</strong>
-                  <span>Еманов Алексей Леонидович</span>
-                  <span>Нестерова Альбина Николаевна</span>
-                </div>
-                <a href="" className="webinar-card__link ">Записаться</a>
-              </div>
-            </div>
+            <WebinarCard />
           </div>
         </div>
       </div>

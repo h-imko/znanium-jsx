@@ -1,5 +1,4 @@
 import { LabelsAll } from "./Labels"
-import AccordionSimple from "./AccordionSimple"
 import ExportList from "./ExportList"
 import AccordionList from "./AccordionList"
 import DocumentsSlider from "../components/DocumentsSlider"
@@ -83,51 +82,42 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 
 	function ColInfo() {
 
-		function InfoItems() {
-			return (
-				<>
-					<div className="document__info__item">
-						<dt>Издательство:</dt>
-						<dd><a href="">СОЛОН-Пресс</a></dd>
-					</div>
-					<div className="document__info__item">
-						<dt>Год издания: </dt>
-						<dd>2023</dd>
-					</div>
-					<div className="document__info__item">
-						<dt>Авторы: </dt>
-						<dd>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<button type="button" className="rest-toggler" title="Показать остальное"></button>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-							<a href="">Курушин Александр Александрович, </a>
-							<a href="">Нефедов Евгений Иванович,</a>
-							<a href=""> Смольский Сергей Михайлович</a>
-						</dd>
-					</div>
-				</>
-			)
-		}
+		function Info() {
 
-		function InfoMain() {
-			return (
-				<div className="document__info__block">
-					<dl className="document__info__list">
-						<InfoItems />
-					</dl>
-				</div>
-			)
-		}
+			function Items() {
+				return (
+					<>
+						<div className="document__info__item">
+							<dt>Издательство:</dt>
+							<dd><a href="">СОЛОН-Пресс</a></dd>
+						</div>
+						<div className="document__info__item">
+							<dt>Год издания: </dt>
+							<dd>2023</dd>
+						</div>
+						<div className="document__info__item">
+							<dt>Авторы: </dt>
+							<dd>
+								<a href="">Курушин Александр Александрович, </a>
+								<a href="">Нефедов Евгений Иванович,</a>
+								<a href=""> Смольский Сергей Михайлович</a>
+								<button type="button" className="rest-toggler" title="Показать остальное"></button>
+								<a href="">Курушин Александр Александрович, </a>
+								<a href="">Нефедов Евгений Иванович,</a>
+								<a href=""> Смольский Сергей Михайлович</a>
+								<a href="">Курушин Александр Александрович, </a>
+								<a href="">Нефедов Евгений Иванович,</a>
+								<a href=""> Смольский Сергей Михайлович</a>
+								<a href="">Курушин Александр Александрович, </a>
+								<a href="">Нефедов Евгений Иванович,</a>
+								<a href=""> Смольский Сергей Михайлович</a>
+							</dd>
+						</div>
+					</>
+				)
+			}
 
-		function InfoExtra({ isMobile, magazineItem, title = "Дополнительно" }) {
-			function ItemVak() {
+			function ItemsVak() {
 				return (
 					<div className="document__info__item">
 						<dt> </dt>
@@ -145,28 +135,45 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 				)
 			}
 
-			return (
-				<div className={
-					clsx({
-						"document__info__block": true,
-						"document__info__block--mobile": isMobile
-					})
-				}>
-					<AccordionSimple toggler={ <span className="document__info__block__toggler"> { title } </span> }>
-						<dl className="document__info__list">
-							{ magazineItem ? <ItemVak /> : <InfoItems /> }
-						</dl>
-					</AccordionSimple>
-				</div>
-			)
-		}
+			function Main() {
+				return (
+					<div className="document__info__block">
+						<div className="document__info__block__wrapper">
+							<div className="document__info__block__content">
+								<dl className="document__info__list">
+									<Items />
+								</dl>
+							</div>
+						</div>
+					</div>
+				)
+			}
 
-		function Info() {
+			function Extra({ isMobile, magazineItem, title = "Дополнительно" }) {
+				return (
+					<div className={
+						clsx({
+							"document__info__block": true,
+							"document__info__block--mobile": isMobile
+						})
+					} data-accordion>
+						<button class="document__info__block__toggler" title="Развернуть/свернуть" type="button" data-accordion-toggler> { title } </button>
+						<div className="document__info__block__wrapper" data-accordion-wrapper>
+							<div className="document__info__block__content" data-accordion-content>
+								<dl className="document__info__list">
+									{ magazineItem ? <ItemsVak /> : <Items /> }
+								</dl>
+							</div>
+						</div>
+					</div>
+				)
+			}
+
 			return (
 				<div className="document__info">
-					<InfoMain />
-					<InfoExtra isMobile />
-					{ isMagazine && <InfoExtra title={ " Номенклатура ВАК " } magazineItem /> }
+					<Main />
+					<Extra isMobile />
+					{ isMagazine && <Extra title={ " Номенклатура ВАК " } magazineItem /> }
 				</div>
 			)
 		}

@@ -1,4 +1,5 @@
 export default function ({ title, toggler, headerButton, children }) {
+
 	function Wrapper() {
 		return (
 			<div className="accordion__wrapper" data-accordion-wrapper>
@@ -8,6 +9,7 @@ export default function ({ title, toggler, headerButton, children }) {
 			</div>
 		)
 	}
+
 	return (
 		<div className="accordion" data-accordion>
 			<div className="accordion__header">
