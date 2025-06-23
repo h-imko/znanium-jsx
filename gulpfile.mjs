@@ -1,16 +1,16 @@
+import esbuildd from "esbuild"
 import fs from "fs"
 import gulp from "gulp"
-import sourcemaps from "gulp-sourcemaps"
-import { stacksvg } from "gulp-stacksvg"
-import { nothing, printPaintedMessage, transform } from "./gulp/service.mjs"
-import { reload, replaceSrc, clean, newer, ext, removeExcess, iconsToCSS, ttfToWoff, sharpWebp, getDestPath, svgOptimize } from "./gulp/custom.mjs"
-import { bs, argv, convertingImgTypes, gulpMem, destGulp } from "./gulp/env.mjs"
+import autoprefixer from 'gulp-autoprefixer'
 import { createGulpEsbuild } from "gulp-esbuild"
 import gSass from "gulp-sass"
-import * as rawsass from "sass-embedded"
-import autoprefixer from 'gulp-autoprefixer'
-import esbuildd from "esbuild"
+import sourcemaps from "gulp-sourcemaps"
+import { stacksvg } from "gulp-stacksvg"
 import render from 'preact-render-to-string'
+import * as rawsass from "sass-embedded"
+import { clean, ext, getDestPath, iconsToCSS, newer, reload, removeExcess, replaceSrc, sharpWebp, svgOptimize, ttfToWoff } from "./gulp/custom.mjs"
+import { argv, bs, convertingImgTypes, destGulp, gulpMem } from "./gulp/env.mjs"
+import { nothing, printPaintedMessage, transform } from "./gulp/service.mjs"
 
 let esbuild = createGulpEsbuild({
 	piping: true,
@@ -83,8 +83,19 @@ function js() {
 		.pipe(bs.stream())
 }
 
+function passComponents(cb) {
+	return nothing(cb)
+}
+
 function html() {
-	return gulp.src(["./src/**/*.jsx", "!./src/components/**/*.jsx"])
+	console.log(gulp.lastRun(html) > gulp.lastRun(passComponents), gulp.lastRun(html), gulp.lastRun(passComponents))
+
+	return gulp.src(["./src/**/*.jsx", "!./src/components/**/*.jsx"],
+		{
+			read: false,
+			...(gulp.lastRun(html) > gulp.lastRun(passComponents) && { since: gulp.lastRun(html) })
+		}
+	)
 		.on("error", function (error) {
 			printPaintedMessage(error.message, "HTML")
 			bs.notify("HTML Error")
@@ -202,7 +213,8 @@ function remakeEsbuild() {
 }
 
 function watch() {
-	gulp.watch(["./src/**/*.jsx", "./src/**/*.js"], html)
+	gulp.watch(["./src/components/**/*.jsx"], gulp.series(passComponents, html))
+	gulp.watch(["./src/pages/**/*.jsx"], html)
 	gulp.watch(["./src/assets/script/**/*.*"], { events: "add" }, gulp.series(remakeEsbuild, js))
 	gulp.watch(["./src/assets/script/**/*.*"], { events: "change" }, js)
 	gulp.watch(["./src/assets/style/**/*.*"], css)
@@ -219,7 +231,9 @@ export default gulp.series(
 		cleanExtraImgs,
 		makeIconsSCSS,
 		makeIconsStack
-	), gulp.parallel(
+	),
+	passComponents,
+	gulp.parallel(
 		copyStatic,
 		css,
 		js,
@@ -230,4 +244,5 @@ export default gulp.series(
 	) : nothing
 )
 
-export { imageMin, convertFont as ttfToWoff, cleanInitials }
+export { cleanInitials, imageMin, convertFont as ttfToWoff }
+
