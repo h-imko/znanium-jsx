@@ -1,47 +1,48 @@
 import Accessibility from "./Accessibility"
 import Logo from "./Logo"
 
-function LoginBlock() {
-	const randLogin = Math.floor(Math.random() * 3 + 1)
-
-	switch (randLogin) {
-		case 1:
-			return (
-				<div className="header__top__block">
-					<a href="" className="header__link">Впервые на сайте?</a>
-					<div className="header__login">
-						<a href="" className="header__login__item header__login__item--registration"> <span className="icon icon--person"></span> Регистрация</a>
-						/
-						<a href="" className="header__login__item">Вход </a>
-					</div>
-				</div>
-			)
-		case 2:
-			return (
-				<div className="header__top__block">
-					<a href="" className="header__link">234 дня до окончания доступа</a>
-					<div className="header__login">
-						<a href="" className="header__login__item header__login__item--registration"> <span className="icon icon--person"></span> Регистрация</a>
-						/
-						<a href="" className="header__login__item">Вход (IP 172.16.30.9)</a>
-					</div>
-				</div>
-			)
-		case 3:
-			return (
-				<div className="header__top__block">
-					<a href="" className="header__link">234 дня до окончания доступа </a>
-					<a href="" className="header__link">varivodin_nk <span className="icon icon--person"></span></a>
-					<a href="" className="header__link" title="Выйти"> <span className="icon icon--logout"></span></a>
-				</div>
-			)
-
-		default:
-			return ""
-	}
-}
-
 export default function () {
+
+	function LoginBlock() {
+		const randLogin = Math.floor(Math.random() * 3 + 1)
+
+		switch (randLogin) {
+			case 1:
+				return (
+					<div className="header__top__block">
+						<a href="" className="header__link">Впервые на сайте?</a>
+						<div className="header__login">
+							<a href="" className="header__login__item header__login__item--registration"> <span className="icon icon--person"></span> Регистрация</a>
+							/
+							<a href="" className="header__login__item">Вход </a>
+						</div>
+					</div>
+				)
+			case 2:
+				return (
+					<div className="header__top__block">
+						<a href="" className="header__link">234 дня до окончания доступа</a>
+						<div className="header__login">
+							<a href="" className="header__login__item header__login__item--registration"> <span className="icon icon--person"></span> Регистрация</a>
+							/
+							<a href="" className="header__login__item">Вход (IP 172.16.30.9)</a>
+						</div>
+					</div>
+				)
+			case 3:
+				return (
+					<div className="header__top__block">
+						<a href="" className="header__link">234 дня до окончания доступа </a>
+						<a href="" className="header__link">varivodin_nk <span className="icon icon--person"></span></a>
+						<a href="" className="header__link" title="Выйти"> <span className="icon icon--logout"></span></a>
+					</div>
+				)
+
+			default:
+				return ""
+		}
+	}
+
 	return (
 		<>
 			<Accessibility />

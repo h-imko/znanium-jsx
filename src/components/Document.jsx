@@ -4,7 +4,6 @@ import AccordionList from "./AccordionList"
 import DocumentsSlider from "../components/DocumentsSlider"
 import clsx from "clsx"
 
-
 export default function Document({ isDetail, isMagazine, isSub }) {
 
 	function Actions() {
@@ -24,6 +23,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 	}
 
 	function ColAccess() {
+		
 		function Exrta() {
 			return (
 				<div className="document__accesses__extra" data-accordion="">

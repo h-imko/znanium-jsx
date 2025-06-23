@@ -17,6 +17,7 @@ export default function ({ label, type, textarea, small, required, maxLength, re
 			<input { ...{ type: type ?? "text", id, placeholder, required, maxLength, readOnly, value } } />
 		)
 	}
+
 	return (
 		<>
 			<div className={ clsx({

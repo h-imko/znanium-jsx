@@ -1,54 +1,4 @@
-/**
- * @typedef {object} extra
- * @property {string} label
- * @property {import("react").JSX.Element} content
- */
-
 import clsx from "clsx"
-
-/**
- * @typedef {object} controls
- * @property {boolean} [submit]
- * @property {boolean} [reset]
- */
-
-function Item(item) {
-	return (
-		<div className="form__item"> { item } </div>
-	)
-}
-
-function Row(items) {
-	return (
-		<div className="form__row"> { items.map(Item) } </div>
-	)
-}
-
-/**
- * @param {extra} param0
- */
-function Extra({ label, content }) {
-	return (
-		<div className="form__extra">
-			<button type="button" className="form__extra__toggler">{ label }</button>
-			<div className="form__extra__content"> { content } </div>
-		</div>
-	)
-}
-
-/**
- * @param {controls} param0
- */
-function Controls({ submit, reset }) {
-	return (
-		Row([
-			<div className="form__controls">
-				{ submit && <button type="submit" className="button">{ submit }</button> }
-				{ reset && <button type="reset" className="button button--secondary">{ reset }</button> }
-			</div>
-		])
-	)
-}
 
 /**
  * @param {Object} param0 
@@ -59,6 +9,57 @@ function Controls({ submit, reset }) {
  * @param {boolean} param0.slim
  */
 export default function ({ items, extra, controls, bordered, slim }) {
+
+	/**
+	 * @typedef {object} extra
+	 * @property {string} label
+	 * @property {import("react").JSX.Element} content
+	 */
+
+	/**
+	 * @typedef {object} controls
+	 * @property {boolean} [submit]
+	 * @property {boolean} [reset]
+	 */
+
+	function Item(item) {
+		return (
+			<div className="form__item"> { item } </div>
+		)
+	}
+
+	function Row(items) {
+		return (
+			<div className="form__row"> { items.map(Item) } </div>
+		)
+	}
+
+	/**
+	 * @param {extra} param0
+	 */
+	function Extra({ label, content }) {
+		return (
+			<div className="form__extra">
+				<button type="button" className="form__extra__toggler">{ label }</button>
+				<div className="form__extra__content"> { content } </div>
+			</div>
+		)
+	}
+
+	/**
+	 * @param {controls} param0
+	 */
+	function Controls({ submit, reset }) {
+		return (
+			Row([
+				<div className="form__controls">
+					{ submit && <button type="submit" className="button">{ submit }</button> }
+					{ reset && <button type="reset" className="button button--secondary">{ reset }</button> }
+				</div>
+			])
+		)
+	}
+
 	return (
 		<form className={
 			clsx({

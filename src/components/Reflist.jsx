@@ -97,6 +97,7 @@ export default function ({ titleLink, actions, pack, text, books, links }) {
       </div>
     )
   }
+
   return (
     <div className="reflist">
       <Item title={ "Голованов Николай Николаевич" } textString={ "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempore sint aspernatur adipisci nesciunt eaque tempora dicta odio amet, fugit minima quas aliquid, repudiandae ad sapiente nihil laudantium expedita et?" } />

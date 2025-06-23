@@ -5,100 +5,6 @@ import Help from "./Help"
 import SelectSimple from "./SelectSimple"
 
 /**
- * @typedef itemSimpleButton
- * @property {string} button.icon 
- * @property {string} button.text
- */
-
-/**
- * @typedef itemSimple 
- * @property {string} select 
- * @property {itemSimpleButton} button 
- * @property {{ button1: itemSimpleButton, button2: itemSimpleButton, text: string}} switchItem 
- */
-
-export function Item({ children, popover }) {
-
-	function Popover() {
-		const popoverId = uuid()
-
-		return (
-			<>
-				<Button popovertarget={ popoverId } icon={ "download" } text={ "Экспорт в Excel" } />
-				<div className="controls__item__popover" data-popover="" id={ popoverId }>
-					<ExportList />
-				</div>
-			</>
-		)
-	}
-
-	return (
-		<div className="controls__item">
-			{ children }
-			{ popover && <Popover /> }
-		</div>
-	)
-}
-
-export function Button({ isActive, title, popovertarget, isCollapse, icon, text }) {
-	return (
-		<button
-			type="button"
-			className={
-				clsx({
-					"controls__button": true,
-					"controls__button--collapse": isCollapse,
-					"is-active": isActive
-				})
-			}
-			title={ title }
-			data-popovertarget={ popovertarget }
-		>
-			{ icon && <span className={ `icon icon--${icon}` }></span> }
-			{ text }
-		</button>
-	)
-}
-
-/**
- * @param {itemSimple} param0
- */
-function ItemSimple({ select, button, switchItem }) {
-	function SelectInner() {
-		return (
-			<>
-				<span>{ select }</span>
-				<SelectSimple />
-			</>
-		)
-	}
-
-	function ButtonInner() {
-		return (
-			<Button icon={ button.icon } text={ button.text } />
-		)
-	}
-
-	function SwitchInner() {
-		return (
-			<>
-				<span>{ switchItem.text }</span>
-				<Button icon={ switchItem.button1.icon } text={ switchItem.button1.text } />
-				<Button icon={ switchItem.button2.icon } text={ switchItem.button2.text } />
-			</>
-		)
-	}
-
-	return (
-		<Item>
-			{ select && <SelectInner /> }
-			{ button && <ButtonInner /> }
-			{ switchItem && <SwitchInner /> }
-		</Item>
-	)
-}
-
-/**
  * @param {Object} param0 
  * @param {boolean} param0.total 
  * @param {boolean} param0.price 
@@ -114,6 +20,101 @@ function ItemSimple({ select, button, switchItem }) {
  * @param {boolean} param0.children 
  */
 export default function ({ total, price, excel, showBy, expand, items }) {
+
+	/**
+	 * @typedef itemSimpleButton
+	 * @property {string} button.icon 
+	 * @property {string} button.text
+	 */
+
+	/**
+	 * @typedef itemSimple 
+	 * @property {string} select 
+	 * @property {itemSimpleButton} button 
+	 * @property {{ button1: itemSimpleButton, button2: itemSimpleButton, text: string}} switchItem 
+	 */
+
+	function Item({ children, popover }) {
+
+		function Popover() {
+			const popoverId = uuid()
+
+			return (
+				<>
+					<Button popovertarget={ popoverId } icon={ "download" } text={ "Экспорт в Excel" } />
+					<div className="controls__item__popover" data-popover="" id={ popoverId }>
+						<ExportList />
+					</div>
+				</>
+			)
+		}
+
+		return (
+			<div className="controls__item">
+				{ children }
+				{ popover && <Popover /> }
+			</div>
+		)
+	}
+
+	function Button({ isActive, title, popovertarget, isCollapse, icon, text }) {
+		return (
+			<button
+				type="button"
+				className={
+					clsx({
+						"controls__button": true,
+						"controls__button--collapse": isCollapse,
+						"is-active": isActive
+					})
+				}
+				title={ title }
+				data-popovertarget={ popovertarget }
+			>
+				{ icon && <span className={ `icon icon--${icon}` }></span> }
+				{ text }
+			</button>
+		)
+	}
+
+	/**
+	 * @param {itemSimple} param0
+	 */
+	function ItemSimple({ select, button, switchItem }) {
+		function SelectInner() {
+			return (
+				<>
+					<span>{ select }</span>
+					<SelectSimple />
+				</>
+			)
+		}
+
+		function ButtonInner() {
+			return (
+				<Button icon={ button.icon } text={ button.text } />
+			)
+		}
+
+		function SwitchInner() {
+			return (
+				<>
+					<span>{ switchItem.text }</span>
+					<Button icon={ switchItem.button1.icon } text={ switchItem.button1.text } />
+					<Button icon={ switchItem.button2.icon } text={ switchItem.button2.text } />
+				</>
+			)
+		}
+
+		return (
+			<Item>
+				{ select && <SelectInner /> }
+				{ button && <ButtonInner /> }
+				{ switchItem && <SwitchInner /> }
+			</Item>
+		)
+	}
+	
 	return (
 		<div className="controls">
 			{ total && (

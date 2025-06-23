@@ -1,10 +1,11 @@
-function DialogButton() {
-	return (
-		<button type="button" className="custom-select__dialog" data-dialog="dialog_list_for_select" title="Открыть полный список"></button>
-	)
-}
-
 export default function ({ label, hasDialog, hasSource, multiple }) {
+
+	function DialogButton() {
+		return (
+			<button type="button" className="custom-select__dialog" data-dialog="dialog_list_for_select" title="Открыть полный список"></button>
+		)
+	}
+
 	return (
 		<div className="custom-select" data-source={ hasSource && "/assets/static/3.json" } data-list={ hasDialog && "testlist" }>
 			<div className="custom-select__label">{ label ?? "Я селект" }</div>
