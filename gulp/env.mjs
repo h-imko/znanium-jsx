@@ -23,4 +23,4 @@ const gulpMem = new gulpMemory(),
 gulpMem.logFn = null
 gulpMem.serveBasePath = "./build"
 
-export { bs, argv, convertingImgTypes, gulpMem, destGulp }
+export { argv, bs, convertingImgTypes, destGulp, gulpMem }

@@ -1,11 +1,11 @@
 import { LOOP, Splide } from "@splidejs/splide"
+import { v7 as uuid } from "uuid"
+import counter from "./_counter"
+import dialog from "./_dialog"
+import dropzone from "./_Dropzone"
 import { breakpoints, ifClickInside, makeSplide } from "./_helpers"
 import select from "./_select"
-import dialog from "./_dialog"
-import counter from "./_counter"
-import dropzone from "./_Dropzone"
 import initToasts from "./_toast"
-import { v7 as uuid } from "uuid"
 
 document.addEventListener("DOMContentLoaded", () => {
 	const { makeToast } = initToasts()

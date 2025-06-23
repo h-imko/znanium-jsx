@@ -1,12 +1,12 @@
 import fs from "fs"
 import rename from "gulp-rename"
 import path from "path"
-import { changeExt, transform } from "./service.mjs"
-import { argv, bs, convertingImgTypes, gulpMem } from "./env.mjs"
 import sharp from "sharp"
-import wawoff2 from "wawoff2"
-import Vinyl from "vinyl"
 import svgo from "svgo"
+import Vinyl from "vinyl"
+import wawoff2 from "wawoff2"
+import { argv, bs, convertingImgTypes, gulpMem } from "./env.mjs"
+import { changeExt, transform } from "./service.mjs"
 
 function ext(newExt, ...oldExt) {
 	return rename((path) => {
@@ -172,4 +172,4 @@ function getDestPath(inSrc, ...replaces) {
 }
 
 
-export { ext, newer, replace, reload, replaceSrc, clean, removeExcess, iconsToCSS, ttfToWoff, sharpWebp, getDestPath, svgOptimize }
+export { clean, ext, getDestPath, iconsToCSS, newer, reload, removeExcess, replace, replaceSrc, sharpWebp, svgOptimize, ttfToWoff }

@@ -1,5 +1,5 @@
-import { Intersection } from '@splidejs/splide-extension-intersection'
 import Splide from "@splidejs/splide"
+import { Intersection } from '@splidejs/splide-extension-intersection'
 // import { Grid } from "@splidejs/splide-extension-grid"
 import { childGalleryPropertyName } from "./_gallery"
 

@@ -1,23 +1,22 @@
 import clsx from "clsx"
-import { v4 as uuid } from "uuid"
-
-const id = uuid()
-
-function Textarea({ placeholder, required, maxLength, readOnly, value }) {
-	return (
-		<textarea { ...{ id, placeholder, required, maxLength, readOnly } }>
-			{ value }
-		</textarea>
-	)
-}
-
-function Input({ placeholder, required, maxLength, readOnly, value, type }) {
-	return (
-		<input { ...{ type: type ?? "text", id, placeholder, required, maxLength, readOnly, value } } />
-	)
-}
+import { v7 as uuid } from "uuid"
 
 export default function ({ label, type, textarea, small, required, maxLength, readOnly, value, buttonEye, customButton, customButtonLink, caption, placeholder = " " }) {
+	const id = uuid()
+
+	function Textarea({ placeholder, required, maxLength, readOnly, value }) {
+		return (
+			<textarea { ...{ id, placeholder, required, maxLength, readOnly } }>
+				{ value }
+			</textarea>
+		)
+	}
+
+	function Input({ placeholder, required, maxLength, readOnly, value, type }) {
+		return (
+			<input { ...{ type: type ?? "text", id, placeholder, required, maxLength, readOnly, value } } />
+		)
+	}
 	return (
 		<>
 			<div className={ clsx({
