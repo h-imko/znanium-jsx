@@ -1,11 +1,11 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
+import Controls from "../../../components/Controls"
 import Filter from "../../../components/Filter"
-import Controls, { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
-import Table from "../../../components/Table"
-import Input from "../../../components/Input"
-import Select from "../../../components/Select"
 import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
+import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import Select from "../../../components/Select"
+import Table from "../../../components/Table"
 
 export default function index() {
   return (

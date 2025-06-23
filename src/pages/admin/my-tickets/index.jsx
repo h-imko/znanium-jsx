@@ -1,8 +1,8 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Table from "../../../components/Table"
 import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
 import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import Table from "../../../components/Table"
 import Text from "../../../components/Text"
 
 export default function index() {

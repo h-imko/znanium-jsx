@@ -1,8 +1,8 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Table from "../../../components/Table"
 import Checkbox from "../../../components/Checkbox"
+import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
 import Select from "../../../components/Select"
+import Table from "../../../components/Table"
 
 export default function index() {
   return (

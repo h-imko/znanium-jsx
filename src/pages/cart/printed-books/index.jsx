@@ -1,8 +1,8 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Cart from "../../../components/Cart"
-import Table from "../../../components/Table"
 import Counter from "../../../components/Counter"
+import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
+import Table from "../../../components/Table"
 
 export default function index() {
 	return (

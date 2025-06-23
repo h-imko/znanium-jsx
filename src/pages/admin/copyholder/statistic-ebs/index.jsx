@@ -1,9 +1,9 @@
-import Page from "../../../../components/Page"
+import Controls from "../../../../components/Controls"
+import FundList from "../../../../components/FundList"
 import Generic from "../../../../components/Generic"
 import Links from "../../../../components/Links"
-import Controls from "../../../../components/Controls"
+import Page from "../../../../components/Page"
 import Text from "../../../../components/Text"
-import FundList from "../../../../components/FundList"
 
 export default function index() {
   return (

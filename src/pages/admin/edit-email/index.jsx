@@ -1,7 +1,7 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
 import Input from "../../../components/Input"
+import Page from "../../../components/Page"
 
 export default function index() {
   return (

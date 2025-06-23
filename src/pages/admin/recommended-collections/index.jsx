@@ -1,8 +1,8 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Controls from "../../../components/Controls"
-import Table from "../../../components/Table"
+import Generic from "../../../components/Generic"
 import IconButtons from "../../../components/IconButtons"
+import Page from "../../../components/Page"
+import Table from "../../../components/Table"
 
 export default function index() {
   return (

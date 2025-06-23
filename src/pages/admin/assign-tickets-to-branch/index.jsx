@@ -1,9 +1,9 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Form from "../../../components/Form"
-import Input from "../../../components/Input"
-import Text from "../../../components/Text"
 import Checkbox from "../../../components/Checkbox"
+import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
+import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import Text from "../../../components/Text"
 
 export default function index() {
   return (

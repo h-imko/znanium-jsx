@@ -1,14 +1,14 @@
-import CollectionSpecial from "../components/CollectionSpecial"
-import Page from "../components/Page"
-import M31 from "../components/M31"
-import Banners from "../components/Banners"
-import Singleform from "../components/Singleform"
-import Showcase from "../components/Showcase"
 import Advantages from "../components/Advantages"
-import Tariffs from "../components/Tariffs"
-import NewsCard from "../components/News/NewsCard"
-import WebinarCard from "../components/Webinar/WebinarCard"
+import Banners from "../components/Banners"
 import CardsSlider from "../components/CardsSlider"
+import CollectionSpecial from "../components/CollectionSpecial"
+import M31 from "../components/M31"
+import NewsCard from "../components/News/NewsCard"
+import Page from "../components/Page"
+import Showcase from "../components/Showcase"
+import Singleform from "../components/Singleform"
+import Tariffs from "../components/Tariffs"
+import WebinarCard from "../components/Webinar/WebinarCard"
 
 const cardsDataNews = [
 	{

@@ -1,12 +1,12 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Manual from "../../../components/Manual"
+import Page from "../../../components/Page"
 
 export default function index() {
   return (
     <Page aside breadcrumbs search>
       <Generic title="Руководства для читателя">
-        <Manual> 
+        <Manual>
           <p></p>
           <p><span style="color:#008000;">Читатель</span>&nbsp;(читатель-физическое лицо) — авторизованный пользователь ЭБС, имеющий доступ к полному тексту документов, входящих в его подписку. Использует ресурсы персонифицированной библиотечной рабочей среды, поисковые сервисы и возможности ридера в своей образовательной и научной деятельности. Любой пользователь ЭБС, независимо от его роли, фактически является читателем.</p>
           <p><a href="/help/reader-registration">Регистрация на портале ZNANIUM</a></p>

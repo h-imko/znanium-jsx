@@ -1,7 +1,7 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
-import Table from "../../../components/Table"
 import IconButtons from "../../../components/IconButtons"
+import Page from "../../../components/Page"
+import Table from "../../../components/Table"
 
 export default function index() {
   return (

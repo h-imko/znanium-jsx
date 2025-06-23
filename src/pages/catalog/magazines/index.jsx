@@ -1,6 +1,6 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import NavTiles from "../../../components/NavTiles"
+import Page from "../../../components/Page"
 
 export default function index() {
 	return (

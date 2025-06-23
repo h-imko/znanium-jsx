@@ -1,9 +1,9 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Cart from "../../../components/Cart"
-import Table from "../../../components/Table"
-import SelectSimple from "../../../components/SelectSimple"
+import Generic from "../../../components/Generic"
 import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import SelectSimple from "../../../components/SelectSimple"
+import Table from "../../../components/Table"
 
 export default function index() {
 	return (

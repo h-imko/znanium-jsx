@@ -1,6 +1,6 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Firstvisit from "../../../components/Firstvisit"
+import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
 import Text from "../../../components/Text"
 
 export default function index() {

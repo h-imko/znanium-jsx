@@ -1,9 +1,9 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Text from "../../../components/Text"
-import Reviews from "../../../components/Reviews"
 import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
 import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import Reviews from "../../../components/Reviews"
+import Text from "../../../components/Text"
 
 export default function index() {
   return (

@@ -1,6 +1,6 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Groups from "../../../components/Groups"
+import Page from "../../../components/Page"
 
 export default function index() {
   return (

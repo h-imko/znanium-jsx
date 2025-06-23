@@ -1,13 +1,11 @@
-import Page from "../../../../components/Page"
-import Generic from "../../../../components/Generic"
 import Filter from "../../../../components/Filter"
-import Table from "../../../../components/Table"
-import Input from "../../../../components/Input"
 import Form from "../../../../components/Form"
-import Links from "../../../../components/Links"
-import Checkbox from "../../../../components/Checkbox"
+import Generic from "../../../../components/Generic"
 import IconButtons from "../../../../components/IconButtons"
-import Labels from "../../../../components/Labels"
+import Input from "../../../../components/Input"
+import Links from "../../../../components/Links"
+import Page from "../../../../components/Page"
+import Table from "../../../../components/Table"
 
 export default function index() {
   return (

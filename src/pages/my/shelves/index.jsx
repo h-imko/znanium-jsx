@@ -1,6 +1,6 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
 import Controls from "../../../components/Controls"
+import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
 import Shelves from "../../../components/Shelves"
 
 export default function index() {

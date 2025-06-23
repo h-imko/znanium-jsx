@@ -1,5 +1,5 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
 import Table from "../../../components/Table"
 
 export default function index() {

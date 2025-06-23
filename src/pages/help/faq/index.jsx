@@ -1,12 +1,12 @@
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Manual from "../../../components/Manual"
+import Page from "../../../components/Page"
 
 export default function index() {
   return (
     <Page aside breadcrumbs search>
       <Generic title="Частые вопросы">
-        <Manual> 
+        <Manual>
           <p></p>
           <ul>
             <li><a href="#n1">Как стать пользователем ЭБС?</a></li>
@@ -53,7 +53,7 @@ export default function index() {
           <p>&nbsp;</p>
           <p><strong><a name="n10"></a>Что такое «Книга с дополнительными материалами» (Гибридная книга)?</strong></p>
           <p>Книга с дополнительными материалами (Гибридная книга) — это традиционная бумажная версия книги, дополненная электронным контентом. Гибридные книги представлены в&nbsp;специальном разделе ЭБС Znanium — «<a href="/catalog/appx-documents">Книги с доп. материалами</a>». Доступ к дополнительным материалам таких книг возможен для покупателей их печатных версий и&nbsp;подписчиков ЭБС Znanium.</p>
-          <p><a href="/download/images/gibrid.jpg" target="blank"><img src="https://znanium.ru/download/images/gibrid_thumbnail.jpg" style="height:282px; width:400px"/></a></p>
+          <p><a href="/download/images/gibrid.jpg" target="blank"><img src="https://znanium.ru/download/images/gibrid_thumbnail.jpg" style="height:282px; width:400px" /></a></p>
           <p>&nbsp;</p>
           <p><strong><a name="n11"></a>Чем отличаются документ и наименование?</strong></p>
           <p>Документ — это единица фонда ЭБС. Наименование — это объединение документов:&nbsp;изданий, версий, выпусков под одним названием. Например, на странице книги (наименования) мы показываем все её переиздания (документы) в блоке «Выпуски издания». Для журнала документом будет являться каждый отдельный номер журнала, а наименованием — название журнала.</p>

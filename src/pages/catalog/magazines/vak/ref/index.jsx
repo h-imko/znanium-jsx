@@ -1,8 +1,8 @@
-import Page from "../../../../../components/Page"
-import Generic from "../../../../../components/Generic"
+import Bookslist from "../../../../../components/Bookslist"
 import Controls from "../../../../../components/Controls"
 import Document from "../../../../../components/Document"
-import Bookslist from "../../../../../components/Bookslist"
+import Generic from "../../../../../components/Generic"
+import Page from "../../../../../components/Page"
 
 export default function index() {
 	return (

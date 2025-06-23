@@ -1,7 +1,7 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Text from "../../../components/Text"
 import AffiliatedAuthors from "../../../components/AffiliatedAuthors"
+import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
+import Text from "../../../components/Text"
 
 export default function index() {
   return (

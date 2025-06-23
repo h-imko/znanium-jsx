@@ -1,7 +1,6 @@
 import Collections from "../../../components/Collections"
-import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
-import Controls from "../../../components/Controls"
+import Page from "../../../components/Page"
 
 export default function index() {
 	return (

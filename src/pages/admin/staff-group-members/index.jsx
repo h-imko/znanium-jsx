@@ -1,14 +1,14 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Filter from "../../../components/Filter"
-import Controls from "../../../components/Controls"
-import Table from "../../../components/Table"
 import Checkbox from "../../../components/Checkbox"
+import Controls from "../../../components/Controls"
+import Fieldset from "../../../components/Fieldset"
+import Filter from "../../../components/Filter"
+import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
 import IconButtons from "../../../components/IconButtons"
 import Input from "../../../components/Input"
+import Page from "../../../components/Page"
 import SelectSimple from "../../../components/SelectSimple"
-import Form from "../../../components/Form"
-import Fieldset from "../../../components/Fieldset"
+import Table from "../../../components/Table"
 
 export default function index() {
   return (

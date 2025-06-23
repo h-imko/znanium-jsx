@@ -1,7 +1,7 @@
-import Page from "../../../../components/Page"
-import Generic from "../../../../components/Generic"
-import Document from "../../../../components/Document"
 import Bookslist from "../../../../components/Bookslist"
+import Document from "../../../../components/Document"
+import Generic from "../../../../components/Generic"
+import Page from "../../../../components/Page"
 
 export default function index() {
 	return (

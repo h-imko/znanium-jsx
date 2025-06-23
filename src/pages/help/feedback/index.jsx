@@ -1,9 +1,9 @@
-import Page from "../../../components/Page"
-import Generic from "../../../components/Generic"
-import Form from "../../../components/Form"
-import Input from "../../../components/Input"
-import SelectSimple from "../../../components/SelectSimple"
 import Dropzone from "../../../components/Dropzone"
+import Form from "../../../components/Form"
+import Generic from "../../../components/Generic"
+import Input from "../../../components/Input"
+import Page from "../../../components/Page"
+import SelectSimple from "../../../components/SelectSimple"
 
 export default function index() {
   return (

@@ -1,7 +1,7 @@
-import Page from "../../../components/Page"
+import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
+import Page from "../../../components/Page"
 import Reflist from "../../../components/Reflist"
-import Controls, { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
 
 export default function index() {
   return (

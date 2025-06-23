@@ -1,12 +1,10 @@
-import Page from "../../../../components/Page"
+import Chart from "../../../../components/Chart"
+import Controls from "../../../../components/Controls"
 import Generic from "../../../../components/Generic"
 import Links from "../../../../components/Links"
-import Controls from "../../../../components/Controls"
-import { Button as ControlsButton, Item as ControlsItem } from "../../../../components/Controls"
+import Page from "../../../../components/Page"
 import Table from "../../../../components/Table"
-import SelectSimple from "../../../../components/SelectSimple"
 import Text from "../../../../components/Text"
-import Chart from "../../../../components/Chart"
 
 export default function index() {
   return (

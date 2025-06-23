@@ -1,10 +1,8 @@
-import Page from "../../../components/Page"
+import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
 import Links from "../../../components/Links"
-import Controls from "../../../components/Controls"
-import { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
+import Page from "../../../components/Page"
 import Table from "../../../components/Table"
-import SelectSimple from "../../../components/SelectSimple"
 import Text from "../../../components/Text"
 
 export default function index() {
