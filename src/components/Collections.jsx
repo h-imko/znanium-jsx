@@ -42,7 +42,7 @@ export default function () {
 			)
 		}
 
-		function Child() {
+		function Wrapper() {
 			return (
 				<div className="collections__item__wrapper" data-accordion-wrapper>
 					<div className="collections__item__content" data-accordion-content>
@@ -63,7 +63,7 @@ export default function () {
 
 		return (
 			<div className="collections__item" data-accordion={ isAccordion }>
-				{ isAccordion ? <> <HeaderButton />  <Child />  </> : <Header /> }
+				{ isAccordion ? <> <HeaderButton />  <Wrapper />  </> : <Header /> }
 			</div>
 		)
 	}

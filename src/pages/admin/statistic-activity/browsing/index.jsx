@@ -39,16 +39,14 @@ export default function index() {
           submit: "Применить",
           reset: "Очистить"
         } } /> } />
-        <Controls excel>
-          <ControlsItem>
-            <span>Год</span>
-            <SelectSimple />
-          </ControlsItem>
-          <ControlsItem>
-            <span>Месяц</span>
-            <SelectSimple />
-          </ControlsItem>
-        </Controls>
+        <Controls excel items={ [
+          {
+            select: "Год"
+          },
+          {
+            select: "Месяц"
+          }
+        ] } />
         <div class="table-wrapper">
           <table class="table table--small">
             <thead>

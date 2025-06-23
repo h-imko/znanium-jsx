@@ -48,16 +48,14 @@ export default function index() {
           submit: "Применить",
           reset: "Очистить"
         } } /> } />
-        <Controls excel showBy>
-          <ControlsItem>
-            <span>Год</span>
-            <SelectSimple />
-          </ControlsItem>
-          <ControlsItem>
-            <span>Месяц</span>
-            <SelectSimple />
-          </ControlsItem>
-        </Controls>
+        <Controls excel showBy items={ [
+          {
+            select: "Год"
+          },
+          {
+            select: "Месяц"
+          }
+        ] } />
         <Table small data={ {
           headers: [
             {

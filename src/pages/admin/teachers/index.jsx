@@ -2,7 +2,6 @@ import Page from "../../../components/Page"
 import Generic from "../../../components/Generic"
 import Filter from "../../../components/Filter"
 import Controls from "../../../components/Controls"
-import { Button as ControlsButton, Item as ControlsItem } from "../../../components/Controls"
 import Table from "../../../components/Table"
 import IconButtons from "../../../components/IconButtons"
 import Input from "../../../components/Input"
@@ -29,14 +28,20 @@ export default function index() {
             reset: "Очистить"
           } } />
         } />
-        <Controls showBy>
-          <ControlsItem>
-            <ControlsButton icon={ "add_box" } text={ "Выдать ключи всем" } />
-          </ControlsItem>
-          <ControlsItem>
-            <ControlsButton icon={ "add_box" } text={ "Добавить преподавателя" } />
-          </ControlsItem>
-        </Controls>
+        <Controls showBy items={ [
+          {
+            button: {
+              icon: "add_box",
+              text: "Выдать ключи всем"
+            }
+          },
+          {
+            button: {
+              icon: "add_box",
+              text: "Добавить преподавателя"
+            }
+          }
+        ] } />
         <Table data={ {
           headers: [
             {

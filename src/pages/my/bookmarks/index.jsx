@@ -7,7 +7,19 @@ export default function index() {
 	return (
 		<Page aside breadcrumbs>
 			<Generic title="Закладки" >
-				<Controls showBy sortType />
+				<Controls showBy items={ [
+					{
+						switchItem: {
+							button1: {
+								icon: "tune",
+							},
+							button2: {
+								icon: "match_case",
+							},
+							text: "Сортировка"
+						}
+					}
+				] } />
 				<Simplebooks />
 			</Generic>
 		</Page>

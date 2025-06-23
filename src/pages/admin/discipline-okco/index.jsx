@@ -24,14 +24,20 @@ export default function index() {
             reset: "Очистить"
           } } />
         } />
-        <Controls showBy>
-          <ControlsItem>
-            <ControlsButton icon={ "download" } text={ "Экспорт в Excel рубрик и количества" } />
-          </ControlsItem>
-          <ControlsItem>
-            <ControlsButton icon={ "download" } text={ "Экспорт списка документов в Excel" } />
-          </ControlsItem>
-        </Controls>
+        <Controls showBy items={ [
+          {
+            button: {
+              icon: "download",
+              text: "Экспорт в Excel рубрик и количества"
+            }
+          },
+          {
+            button: {
+              icon: "download",
+              text: "Экспорт списка документов в Excel"
+            }
+          }
+        ] } />
         <Table small data={ {
           headers: [
             {

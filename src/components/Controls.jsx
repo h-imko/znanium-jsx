@@ -4,10 +4,24 @@ import ExportList from "./ExportList"
 import SelectSimple from "./SelectSimple"
 import { v4 as uuid } from "uuid"
 
+/**
+ * @typedef itemSimpleButton
+ * @property {string} button.icon 
+ * @property {string} button.text
+ */
+
+/**
+ * @typedef itemSimple 
+ * @property {string} select 
+ * @property {itemSimpleButton} button 
+ * @property {{ button1: itemSimpleButton, button2: itemSimpleButton, text: string}} switchItem 
+ */
+
 export function Item({ children, popover }) {
-	const popoverId = uuid()
 
 	function Popover() {
+		const popoverId = uuid()
+
 		return (
 			<>
 				<Button popovertarget={ popoverId } icon={ "download" } text={ "Экспорт в Excel" } />
@@ -26,7 +40,7 @@ export function Item({ children, popover }) {
 	)
 }
 
-export function Button({ isActive, children, title, popovertarget, isCollapse, icon, text }) {
+export function Button({ isActive, title, popovertarget, isCollapse, icon, text }) {
 	return (
 		<button
 			type="button"
@@ -46,18 +60,66 @@ export function Button({ isActive, children, title, popovertarget, isCollapse, i
 	)
 }
 
-export default function ({ total, price, excel, showBy, showType, sortBy, createShelf, expand, sortType, addReader, children }) {
+/**
+ * @param {itemSimple} param0
+ */
+function ItemSimple({ select, button, switchItem }) {
+	function SelectInner() {
+		return (
+			<>
+				<span>{ select }</span>
+				<SelectSimple />
+			</>
+		)
+	}
+
+	function ButtonInner() {
+		return (
+			<Button icon={ button.icon } text={ button.text } />
+		)
+	}
+
+	function SwitchInner() {
+		return (
+			<>
+				<span>{ switchItem.text }</span>
+				<Button icon={ switchItem.button1.icon } text={ switchItem.button1.text } />
+				<Button icon={ switchItem.button2.icon } text={ switchItem.button2.text } />
+			</>
+		)
+	}
+
+	return (
+		<Item>
+			{ select && <SelectInner /> }
+			{ button && <ButtonInner /> }
+			{ switchItem && <SwitchInner /> }
+		</Item>
+	)
+}
+
+/**
+ * @param {Object} param0 
+ * @param {boolean} param0.total 
+ * @param {boolean} param0.price 
+ * @param {boolean} param0.excel 
+ * @param {boolean} param0.showBy 
+ * @param {boolean} param0.showType 
+ * @param {boolean} param0.sortBy 
+ * @param {boolean} param0.createShelf 
+ * @param {boolean} param0.expand 
+ * @param {boolean} param0.sortType 
+ * @param {boolean} param0.addReader 
+ * @param {itemSimple[]} param0.items 
+ * @param {boolean} param0.children 
+ */
+export default function ({ total, price, excel, showBy, expand, items }) {
 	return (
 		<div className="controls">
 			{ total && (
 				<Item>
 					<span>Наименований — 332, документов — 334 </span>
 					<Help />
-				</Item>
-			) }
-			{ createShelf && (
-				<Item>
-					<Button icon={ "view_grid" } text={ "создать полку" } />
 				</Item>
 			) }
 			{ price && (
@@ -75,41 +137,17 @@ export default function ({ total, price, excel, showBy, showType, sortBy, create
 					<span>Показано <em>1-10</em> из <em> 10 </em> </span>
 				</Item>
 			) }
+			{
+				items?.map(ItemSimple)
+			}
 			{ excel && (
 				<Item popover />
-			) }
-			{ addReader && (
-				<Item>
-					<Button icon={ "add_box" } text={ "добавить читателя" } />
-				</Item>
-			) }
-			{ showType && (
-				<Item>
-
-					<span>Отображение</span>
-					<Button icon={ "view_grid" } />
-					<Button icon={ "view_list" } />
-				</Item>
-			) }
-			{ sortType && (
-				<Item>
-					<span>Сортировка</span>
-					<Button icon={ "tune" } />
-					<Button icon={ "match_case" } />
-				</Item>
-			) }
-			{ sortBy && (
-				<Item>
-					<span>Сортировка по</span>
-					<SelectSimple />
-				</Item>
 			) }
 			{ expand && (
 				<Item>
 					<Button isCollapse />
 				</Item>
 			) }
-			{ children }
 		</div>
 	)
 }

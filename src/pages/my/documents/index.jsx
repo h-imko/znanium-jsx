@@ -10,7 +10,22 @@ export default function index() {
 		<Page aside breadcrumbs search >
 			<Filter applied togglerText="Изменить условия поиска" />
 			<Generic title="Книги, журналы, статьи в моих подписках" >
-				<Controls total excel showBy showType sortBy />
+				<Controls total excel showBy items={ [
+					{
+						switchItem: {
+							button1: {
+								icon: "view_grid",
+							},
+							button2: {
+								icon: "view_list",
+							},
+							text: "Отображение"
+						}
+					},
+					{
+						select: "Сортировка по"
+					}
+				] } />
 				<Bookslist>
 					<Document />
 					<Document />

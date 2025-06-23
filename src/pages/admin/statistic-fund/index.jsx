@@ -15,12 +15,11 @@ export default function index() {
         <Text>
           <p>Доступный фонд — количество документов, доступных пользователям по всем активным подпискам. Данные — на последний день месяца. Данные по демоподпискам в отчет не включаются.</p>
         </Text>
-        <Controls excel>
-          <ControlsItem>
-            <span>Год</span>
-            <SelectSimple />
-          </ControlsItem>
-        </Controls>
+        <Controls excel items={ [
+          {
+            select: "Год"
+          }
+        ] } />
         <Table data={ {
           headers: [
             {

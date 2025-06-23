@@ -17,16 +17,14 @@ export default function index() {
           <p>Сумму Анонимных сессий и Зарегистрированных пользователей, которая отображена в столбце "Аноним. + зарег.", можно использовать в параметре "Численность зарегистрированных пользователей библиотеки" <a href="#">отчета ВПО-2</a>.</p>
           <p>Данные — на текущий момент времени.</p>
         </Text>
-        <Controls excel>
-          <ControlsItem>
-            <span>Год</span>
-            <SelectSimple />
-          </ControlsItem>
-          <ControlsItem>
-            <span>Месяц</span>
-            <SelectSimple />
-          </ControlsItem>
-        </Controls>
+        <Controls excel items={ [
+          {
+            select: "Год"
+          },
+          {
+            select: "Месяц"
+          }
+        ] } />
         <div class="table-wrapper">
           <table class="table table--small">
             <thead>

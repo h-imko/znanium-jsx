@@ -16,16 +16,14 @@ export default function index() {
         <Text>
           <p>В отчете отображается статистика отказов по причине отсутствия документа в подписке — запросы полнотекстовых документов, которые не доступны авторизованному пользователю, т.е. запросы документов, которые не входят в подписку клиента.</p>
         </Text>
-        <Controls excel>
-          <ControlsItem>
-            <span>Год</span>
-            <SelectSimple />
-          </ControlsItem>
-          <ControlsItem>
-            <span>Месяц</span>
-            <SelectSimple />
-          </ControlsItem>
-        </Controls>
+        <Controls excel items={ [
+          {
+            select: "Год"
+          },
+          {
+            select: "Месяц"
+          }
+        ] } />
         <Table small data={ {
           headers: [
             {

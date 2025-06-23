@@ -13,7 +13,7 @@ import Fieldset from "../../../components/Fieldset"
 export default function index() {
   return (
     <Page aside breadcrumbs>
-      <Generic title={<>\<a href="#">Все пользователи</a>\<a href="">Базовая кафедра торговой политики</a></>}>
+      <Generic title={ <>\<a href="#">Все пользователи</a>\<a href="">Базовая кафедра торговой политики</a></> }>
         <button type="button" class="button">Выдать ключи всем, учитывая фильтры</button>
         <Filter togglerText="Фильтр" form={
           <Form bordered items={
@@ -50,7 +50,14 @@ export default function index() {
             reset: "Очистить"
           } } />
         } />
-        <Controls showBy excel addReader />
+        <Controls showBy excel items={ [
+          {
+            button: {
+              icon: "add_box",
+              text: "добавить читателя"
+            }
+          }
+        ] } />
         <Table data={ {
           headers: [
             {
