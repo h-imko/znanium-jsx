@@ -88,8 +88,6 @@ function passComponents(cb) {
 }
 
 function html() {
-	console.log(gulp.lastRun(html) > gulp.lastRun(passComponents), gulp.lastRun(html), gulp.lastRun(passComponents))
-
 	return gulp.src(["./src/**/*.jsx", "!./src/components/**/*.jsx"],
 		{
 			read: false,
