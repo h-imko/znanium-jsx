@@ -26,7 +26,7 @@ export default function ({ content }) {
               </div>
             </div>
           </div>
-          <a href="" className="webinar__button"> Смотреть</a>
+          <a href="#" className="webinar__button"> Смотреть</a>
         </div>
       </div>
     )
@@ -80,7 +80,7 @@ export default function ({ content }) {
           </ul>
           <div className="webinar__main__extra">
             <h4>Дополнительные материалы</h4>
-            <p><a href="">Проекты ИНФРА.М по поддержке научного просвещения.pdf</a></p>
+            <p><a href="#">Проекты ИНФРА.М по поддержке научного просвещения.pdf</a></p>
             <p>
               <a href="https://znanium.ru/webinarfiles/stuff/download?id=a35a00ab0682db2ca87317f028679cbf.9a102a8f7c2318fff0ff05cf8d72270e.pdf" _target="_blank">
                 Приказ Минтруда РФ от 12.04.2013 N 148Н Об утверждении уровней квалификации в целях разработки.pdf </a>
@@ -120,7 +120,7 @@ export default function ({ content }) {
           </ol>
           <p>Подключайтесь к нашим вебинарам «<a href="https://znanium.ru/webinars">CoZnanium по вторникам</a>»! Записи прошедших вебинаров смотрите в «Видеотеке знаний» в&nbsp;<a href="https://www.youtube.com/channel/UC8lr8z9q-gDQbTXcrxsRasQ" target="_blank">Youtube&nbsp;</a>или&nbsp;<a href="https://vk.com/video/playlist/-38772636_7" target="_blank">Вконтакте</a>.</p>
           <div className="webinar__button is-disabled">Зарегистрироваться</div>
-          <p>Для регистрации на вебинар <a href="">авторизуйтесь</a> или <a href="">зарегистрируйтесь</a> в ЭБС.</p>
+          <p>Для регистрации на вебинар <a href="#">авторизуйтесь</a> или <a href="#">зарегистрируйтесь</a> в ЭБС.</p>
         </div>
       </div>
     )

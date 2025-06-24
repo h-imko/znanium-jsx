@@ -48,40 +48,40 @@ export default function ({ titleLink, actions, pack, text, books, links }) {
 
     function Text() {
       return (
-        <div class="reflist__item__text">
+        <div className="reflist__item__text">
           { textString }
         </div>)
     }
 
     function Links() {
       return (
-        <div class="reflist__item__links">
-          <a href="" class="reflist__item__link">Наименований — 33</a>
-          <div class="reflist__item__link">Нет Аффилиаций</div>
+        <div className="reflist__item__links">
+          <a href="#" className="reflist__item__link">Наименований — 33</a>
+          <div className="reflist__item__link">Нет Аффилиаций</div>
         </div>
       )
     }
 
     function Books() {
       return (
-        <div class="reflist__item__books">
-          <a href="" class="reflist__item__book">
+        <div className="reflist__item__books">
+          <a href="#" className="reflist__item__book">
             <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
           </a>
           { manyBooks && <>
-            <a href="" class="reflist__item__book">
+            <a href="#" className="reflist__item__book">
               <img src="/src/assets/static/img/7.webp" alt="Книга такая-то" />
             </a>
-            <a href="" class="reflist__item__book">
+            <a href="#" className="reflist__item__book">
               <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
             </a>
-            <a href="" class="reflist__item__book">
+            <a href="#" className="reflist__item__book">
               <img src="/src/assets/static/img/7.webp" alt="Книга такая-то" />
             </a>
-            <a href="" class="reflist__item__book">
+            <a href="#" className="reflist__item__book">
               <img src="/src/assets/static/img/6.webp" alt="Книга такая-то" />
             </a>
-            <a href="" class="reflist__item__books__link">Перейти к списку</a>
+            <a href="#" className="reflist__item__books__link">Перейти к списку</a>
           </> }
         </div>
       )

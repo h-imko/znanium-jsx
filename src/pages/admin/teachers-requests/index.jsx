@@ -95,9 +95,9 @@ export default function index() {
             ]
           ]
         } } />
-        <div class="button-group">
-          <button type="button" class="button" disabled=""> В корзину </button>
-          <button type="button" class="button" disabled=""> Отказать </button>
+        <div className="button-group">
+          <button type="button" className="button" disabled=""> В корзину </button>
+          <button type="button" className="button" disabled=""> Отказать </button>
         </div>
       </Generic >
     </Page>

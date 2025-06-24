@@ -14,7 +14,7 @@ export default function () {
 						<div className="singleform__main__group">
 							<input type="text" className="singleform__input" placeholder="Поиск по страницам сайта" required aria-label="Поисковый запрос" />
 							<div className="singleform__controls">
-								<a href="" className="singleform__controls__item" title="Расширенный поиск">
+								<a href="#" className="singleform__controls__item" title="Расширенный поиск">
 									<span className="icon icon--gear">
 									</span>
 								</a>

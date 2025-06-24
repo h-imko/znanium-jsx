@@ -67,7 +67,7 @@ export default function index() {
               "",
               <>
                 <button type="button">55139-75478-17 + истекшие ключи</button>
-                <button type="button" class="button button--small">Выдать ключи</button>
+                <button type="button" className="button button--small">Выдать ключи</button>
               </>,
               <IconButtons items={ [
                 {

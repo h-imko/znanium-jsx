@@ -9,7 +9,7 @@ export default function index() {
       <Generic title="Аффилированные авторы" p={ "Общее количество авторов - 597" }>
         <AffiliatedAuthors />
         <Text>
-          <a href="">Все книги</a>
+          <a href="#">Все книги</a>
         </Text>
       </Generic>
     </Page>

@@ -11,7 +11,7 @@ export default function ({ pattern, color, isButtonActive, title }) {
 					<span>Еманов Алексей Леонидович</span>
 					<span>Нестерова Альбина Николаевна</span>
 				</div>
-				<a href="" className={
+				<a href="#" className={
 					clsx({
 						"webinar-card__link": true,
 						"webinar-card__link--alt": isButtonActive,

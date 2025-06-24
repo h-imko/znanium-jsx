@@ -23,8 +23,8 @@ export default function index() {
             select: "Месяц"
           }
         ] } />
-        <div class="table-wrapper">
-          <table class="table table--small">
+        <div className="table-wrapper">
+          <table className="table table--small">
             <thead>
               <tr>
                 <th rowspan="2">Период</th>

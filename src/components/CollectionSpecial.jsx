@@ -58,13 +58,13 @@ export default function () {
 						{ text }
 					</div>
 					<div className="collections-special__card__footer">
-						<a href="" className="collections-special__card__link">В коллекцию</a>
+						<a href="#" className="collections-special__card__link">В коллекцию</a>
 					</div>
 				</div>
 			</div>
 		)
 	}
-	
+
 	return (
 		<div className="collections-special">
 			<div className="container-fluid">

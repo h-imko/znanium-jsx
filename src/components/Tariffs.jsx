@@ -49,7 +49,7 @@ export default function () {
 								</div>
 							</div>
 							<div className="tariffs__item__footer">
-								<a href="" className="tariffs__item__link">Подробнее</a>
+								<a href="#" className="tariffs__item__link">Подробнее</a>
 							</div>
 						</div>
 					</div>

@@ -24,19 +24,19 @@ export default function index() {
 						rows: [
 							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
+								<a href="#">Полная коллекция по педагогике</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
+								<a href="#">Полная коллекция по педагогике</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Полная коллекция по педагогике</a>,
+								<a href="#">Полная коллекция по педагогике</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],

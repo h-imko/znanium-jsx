@@ -66,7 +66,7 @@ export default function () {
           </div>
         </div>
         <div className="quotes__export">
-          <a href="" className="quotes__export__link" download> Экспорт списка в TXT </a>
+          <a href="#" className="quotes__export__link" download> Экспорт списка в TXT </a>
         </div>
       </div>
       <div className="quotes__list">

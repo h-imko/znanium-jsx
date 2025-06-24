@@ -22,7 +22,7 @@ export default function ({ items }) {
       )
     } else {
       return (
-        <a href="" className="icon-buttons__item" title={ data.title }>
+        <a href="#" className="icon-buttons__item" title={ data.title }>
           <span className={ `icon icon--${data.icon}` }></span>
         </a>
       )

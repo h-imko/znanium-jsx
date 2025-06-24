@@ -13,8 +13,8 @@ import Table from "../../../components/Table"
 export default function index() {
   return (
     <Page aside breadcrumbs>
-      <Generic title={ <>\<a href="#">Все пользователи</a>\<a href="">Базовая кафедра торговой политики</a></> }>
-        <button type="button" class="button">Выдать ключи всем, учитывая фильтры</button>
+      <Generic title={ <>\<a href="#">Все пользователи</a>\<a href="#">Базовая кафедра торговой политики</a></> }>
+        <button type="button" className="button">Выдать ключи всем, учитывая фильтры</button>
         <Filter togglerText="Фильтр" form={
           <Form bordered items={
             [
@@ -102,44 +102,44 @@ export default function index() {
             ]
           ]
         } } />
-        <div class="button-group">
-          <button type="button" class="button" disabled=""> Выдать ключи </button>
-          <button type="button" class="button" disabled=""> Отозвать ключи </button>
-          <button type="button" class="button" disabled=""> Перенести в группу... </button>
-          <button type="button" class="button" disabled=""> Удалить из группы</button>
-          <button type="button" class="button">Удалить из всех групп </button>
+        <div className="button-group">
+          <button type="button" className="button" disabled=""> Выдать ключи </button>
+          <button type="button" className="button" disabled=""> Отозвать ключи </button>
+          <button type="button" className="button" disabled=""> Перенести в группу... </button>
+          <button type="button" className="button" disabled=""> Удалить из группы</button>
+          <button type="button" className="button">Удалить из всех групп </button>
         </div>
-        <div class="controls">
-          <div class="controls__item">
-            <button type="button" class="controls__button" data-popovertarget="popover-actions">
+        <div className="controls">
+          <div className="controls__item">
+            <button type="button" className="controls__button" data-popovertarget="popover-actions">
               <span> Операции с группой </span>
             </button>
-            <div class="controls__item__popover" data-popover="" id="popover-actions">
-              <div class="export-list">
-                <div class="export-list__item">
-                  <div class="export-list__item__name"><span>Заполнить студентов из файла .csv</span></div>
-                  <div class="export-list__item__value">
-                    <a href="">Скачать образец файла</a>
+            <div className="controls__item__popover" data-popover="" id="popover-actions">
+              <div className="export-list">
+                <div className="export-list__item">
+                  <div className="export-list__item__name"><span>Заполнить студентов из файла .csv</span></div>
+                  <div className="export-list__item__value">
+                    <a href="#">Скачать образец файла</a>
                     <label>
-                      <span class="icon icon--upload"></span>
+                      <span className="icon icon--upload"></span>
                       <span>Выбрать файл</span>
                       <input type="file" name="" id="" />
                     </label>
                   </div>
                 </div>
-                <div class="export-list__item">
-                  <div class="export-list__item__name"><span>Генератор учетных записей</span></div>
-                  <div class="export-list__item__value">
-                    <a href=""> Скачать не активированные логины </a>
+                <div className="export-list__item">
+                  <div className="export-list__item__name"><span>Генератор учетных записей</span></div>
+                  <div className="export-list__item__value">
+                    <a href="#"> Скачать не активированные логины </a>
                     <button type="button">Создать новые логины списком</button>
                   </div>
                 </div>
-                <div class="export-list__item">
-                  <div class="export-list__item__name"><span>Заполнить преподавателей из файла .csv</span></div>
-                  <div class="export-list__item__value">
-                    <a href="">Скачать образец файла</a>
+                <div className="export-list__item">
+                  <div className="export-list__item__name"><span>Заполнить преподавателей из файла .csv</span></div>
+                  <div className="export-list__item__value">
+                    <a href="#">Скачать образец файла</a>
                     <label>
-                      <span class="icon icon--upload"></span>
+                      <span className="icon icon--upload"></span>
                       <span>Выбрать файл</span>
                       <input type="file" name="" id="" />
                     </label>

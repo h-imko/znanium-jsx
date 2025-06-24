@@ -43,7 +43,7 @@ export default function ({ empty }) {
 	function link(text) {
 		return (
 			<li>
-				<a href="">{ text }</a>
+				<a href="#">{ text }</a>
 			</li>
 		)
 	}
@@ -88,7 +88,7 @@ export default function ({ empty }) {
 				"is-active": !index
 			}) }  >
 				<div className="showcase__item__main is-active">
-					<h4 className="showcase__item__title">{ empty ? (<>Пожалуйста, выберите интересующие Вас рубрики на странице <a href=""> Мои предпочтения </a></>) : `Заголовок ${index}` } </h4>
+					<h4 className="showcase__item__title">{ empty ? (<>Пожалуйста, выберите интересующие Вас рубрики на странице <a href="#"> Мои предпочтения </a></>) : `Заголовок ${index}` } </h4>
 					{ empty || slider() }
 				</div>
 				{ empty || extra() }

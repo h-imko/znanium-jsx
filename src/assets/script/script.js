@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector(".test-toast")?.addEventListener("click", () => {
 			setTimeout(() => {
 				makeToast({
-					title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat facere nesciunt ab officiis itaque qui , <a href="">labore, inventore eos. Illum, impedit.</a>`,
+					title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat facere nesciunt ab officiis itaque qui , <a href="#">labore, inventore eos. Illum, impedit.</a>`,
 					type: "warning",
 				})
 				setTimeout(() => {

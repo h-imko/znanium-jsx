@@ -14,7 +14,7 @@ export default function () {
 
 	function item({ img, text }) {
 		return (
-			<a href="" className="nav-tiles__item">
+			<a href="#" className="nav-tiles__item">
 				<StreakImg img={ img } />
 				<span>{ text }</span>
 			</a>

@@ -1,15 +1,15 @@
-import { LabelsAll } from "./Labels"
-import ExportList from "./ExportList"
-import AccordionList from "./AccordionList"
-import DocumentsSlider from "../components/DocumentsSlider"
 import clsx from "clsx"
+import DocumentsSlider from "../components/DocumentsSlider"
+import AccordionList from "./AccordionList"
+import ExportList from "./ExportList"
+import { LabelsAll } from "./Labels"
 
 export default function Document({ isDetail, isMagazine, isSub }) {
 
 	function Actions() {
 		return (
 			<div className="document__actions">
-				<a href="" className="document__action" title="Ознакомиться">
+				<a href="#" className="document__action" title="Ознакомиться">
 					<span className="icon icon--read"></span>
 				</a>
 				<button type="button" className="document__action" title="Рекомендовать для студентов">
@@ -23,7 +23,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 	}
 
 	function ColAccess() {
-		
+
 		function Exrta() {
 			return (
 				<div className="document__accesses__extra" data-accordion="">
@@ -40,7 +40,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 									<div className="block-arrow-border__bottom">
 										<div className="document__offer__body">
 											<span>
-												Отправьте <a href="">заявку на&nbsp;подключение к&nbsp;Znanium</a> по&nbsp;договору
+												Отправьте <a href="#">заявку на&nbsp;подключение к&nbsp;Znanium</a> по&nbsp;договору
 											</span>
 										</div>
 									</div>
@@ -48,7 +48,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							</div>
 							<div className="document__offer">
 								<div className="document__offer__body">
-									<a href="" className="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
+									<a href="#" className="document__offer___buttonnk">Купить в составе основной коллекции от 899&nbsp;₽</a>
 								</div>
 							</div>
 						</div>
@@ -70,8 +70,8 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					<div className="document__offer">
 						<div className="document__offer__body">
 							<span className="document__offer__name">Бумажная книга</span>
-							<span className="document__offer__price">1&nbsp;590&nbsp;₽ <a href="" className="help" title="Смотреть справку"></a></span>
-							<a href="" className="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
+							<span className="document__offer__price">1&nbsp;590&nbsp;₽ <a href="#" className="help" title="Смотреть справку"></a></span>
+							<a href="#" className="document__offer__button is-active" title="Перейти в корзину">В корзине</a>
 						</div>
 					</div>
 					{ isDetail && <Exrta /> }
@@ -89,7 +89,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					<>
 						<div className="document__info__item">
 							<dt>Издательство:</dt>
-							<dd><a href="">СОЛОН-Пресс</a></dd>
+							<dd><a href="#">СОЛОН-Пресс</a></dd>
 						</div>
 						<div className="document__info__item">
 							<dt>Год издания: </dt>
@@ -98,19 +98,19 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 						<div className="document__info__item">
 							<dt>Авторы: </dt>
 							<dd>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
+								<a href="#">Курушин Александр Александрович, </a>
+								<a href="#">Нефедов Евгений Иванович,</a>
+								<a href="#"> Смольский Сергей Михайлович</a>
 								<button type="button" className="rest-toggler" title="Показать остальное"></button>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
-								<a href="">Курушин Александр Александрович, </a>
-								<a href="">Нефедов Евгений Иванович,</a>
-								<a href=""> Смольский Сергей Михайлович</a>
+								<a href="#">Курушин Александр Александрович, </a>
+								<a href="#">Нефедов Евгений Иванович,</a>
+								<a href="#"> Смольский Сергей Михайлович</a>
+								<a href="#">Курушин Александр Александрович, </a>
+								<a href="#">Нефедов Евгений Иванович,</a>
+								<a href="#"> Смольский Сергей Михайлович</a>
+								<a href="#">Курушин Александр Александрович, </a>
+								<a href="#">Нефедов Евгений Иванович,</a>
+								<a href="#"> Смольский Сергей Михайлович</a>
 							</dd>
 						</div>
 					</>
@@ -157,7 +157,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							"document__info__block--mobile": isMobile
 						})
 					} data-accordion>
-						<button class="document__info__block__toggler" title="Развернуть/свернуть" type="button" data-accordion-toggler> { title } </button>
+						<button className="document__info__block__toggler" title="Развернуть/свернуть" type="button" data-accordion-toggler> { title } </button>
 						<div className="document__info__block__wrapper" data-accordion-wrapper>
 							<div className="document__info__block__content" data-accordion-content>
 								<dl className="document__info__list">
@@ -181,7 +181,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function Header() {
 			if (!isDetail || isSub) {
 				return (
-					<a href="" className="document__header">
+					<a href="#" className="document__header">
 						<span className="document__title"> Современный русский язык. Лексикология. Фразеология </span>
 						<span className="document__subtitle"> Учебное пособие </span>
 					</a>
@@ -216,7 +216,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 	function ColMain() {
 		return (
 			<div className="document__col document__col--main">
-				<a href="" className="document__cover" title="Перейти к документу">
+				<a href="#" className="document__cover" title="Перейти к документу">
 					<img src="/assets/static/img/12.webp" alt="Обложка" />
 				</a>
 				{ isSub || <Actions /> }
@@ -235,7 +235,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					return (
 						<div className="document__other__group__access">
 							<em>8 000 ₽</em>
-							<a href="" className="document__other__button">В корзину</a>
+							<a href="#" className="document__other__button">В корзину</a>
 						</div>
 					)
 				}
@@ -291,10 +291,10 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 		function Collections() {
 			return (
 				<div className="document__collections">
-					<a href="">Основная коллекция ЭБС</a>
-					<a href="">Основная коллекция ЭБС</a>
-					<a href="">Основная коллекция ЭБС</a>
-					<a href="">Основная коллекция ЭБС</a>
+					<a href="#">Основная коллекция ЭБС</a>
+					<a href="#">Основная коллекция ЭБС</a>
+					<a href="#">Основная коллекция ЭБС</a>
+					<a href="#">Основная коллекция ЭБС</a>
 				</div>
 			)
 		}
@@ -305,7 +305,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					<div className="document__classifiers__item">
 						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
 						<div className="document__classifiers__item__value">
-							<a href="">020202: Государственное регулирование предпринимательства</a>
+							<a href="#">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
 					<div className="document__classifiers__item">
@@ -314,8 +314,8 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							<div className="document__classifiers__item">
 								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
 								<div className="document__classifiers__item__value">
-									<a href="">38.04.06: Торговое дело</a>
-									<a href="">38.04.07: Товароведение</a>
+									<a href="#">38.04.06: Торговое дело</a>
+									<a href="#">38.04.07: Товароведение</a>
 								</div>
 							</div>
 						</div>
@@ -323,7 +323,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					<div className="document__classifiers__item">
 						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
 						<div className="document__classifiers__item__value">
-							<a href="">020202: Государственное регулирование предпринимательства</a>
+							<a href="#">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
 					<div className="document__classifiers__item">
@@ -332,8 +332,8 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							<div className="document__classifiers__item">
 								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
 								<div className="document__classifiers__item__value">
-									<a href="">38.04.06: Торговое дело</a>
-									<a href="">38.04.07: Товароведение</a>
+									<a href="#">38.04.06: Торговое дело</a>
+									<a href="#">38.04.07: Товароведение</a>
 								</div>
 							</div>
 						</div>
@@ -341,7 +341,7 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 					<div className="document__classifiers__item">
 						<div className="document__classifiers__item__name"><span>Тематика:</span></div>
 						<div className="document__classifiers__item__value">
-							<a href="">020202: Государственное регулирование предпринимательства</a>
+							<a href="#">020202: Государственное регулирование предпринимательства</a>
 						</div>
 					</div>
 					<div className="document__classifiers__item">
@@ -350,8 +350,8 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							<div className="document__classifiers__item">
 								<div className="document__classifiers__item__name"><span>ВО - Магистратура</span></div>
 								<div className="document__classifiers__item__value">
-									<a href="">38.04.06: Торговое дело</a>
-									<a href="">38.04.07: Товароведение</a>
+									<a href="#">38.04.06: Торговое дело</a>
+									<a href="#">38.04.07: Товароведение</a>
 								</div>
 							</div>
 						</div>
@@ -364,16 +364,16 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 			return (
 				<div className="document__affiliation">
 					<div className="document__affiliation__item">
-						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
-						<a href=""><span>Донецкий Государственный Университет</span></a>
+						<a href="#"><em>Дмитриченко Лилия Ивановна</em></a>
+						<a href="#"><span>Донецкий Государственный Университет</span></a>
 					</div>
 					<div className="document__affiliation__item">
-						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
-						<a href=""><span>Донецкий Государственный Университет</span></a>
+						<a href="#"><em>Дмитриченко Лилия Ивановна</em></a>
+						<a href="#"><span>Донецкий Государственный Университет</span></a>
 					</div>
 					<div className="document__affiliation__item">
-						<a href=""><em>Дмитриченко Лилия Ивановна</em></a>
-						<a href=""><span>Донецкий Государственный Университет</span></a>
+						<a href="#"><em>Дмитриченко Лилия Ивановна</em></a>
+						<a href="#"><span>Донецкий Государственный Университет</span></a>
 					</div>
 
 				</div>
@@ -429,13 +429,13 @@ export default function Document({ isDetail, isMagazine, isSub }) {
 							© Новосибирский государственный университет
 							экономики и управления «НИНХ», 2023
 						</pre>
-						<div className="document__fragments__item__caption"><a href="">стр. 2</a></div>
+						<div className="document__fragments__item__caption"><a href="#">стр. 2</a></div>
 					</div>
 				)
 			}
 			return (
 				<div className="document__fragments">
-					<p>Фрагмент текстового слоя документа размещен для индексирующих роботов. Для полноценной работы с документом, пожалуйста, перейдите в <a href="">ридер</a></p>
+					<p>Фрагмент текстового слоя документа размещен для индексирующих роботов. Для полноценной работы с документом, пожалуйста, перейдите в <a href="#">ридер</a></p>
 					<Item />
 					<Item />
 					<Item />

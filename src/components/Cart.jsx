@@ -5,19 +5,19 @@ export default function ({ children }) {
     <div className="cart">
       <div className="cart__main">
         <div className="cart__tabs">
-          <a href="" className="cart__tabs__item is-active">
+          <a href="#" className="cart__tabs__item is-active">
             <span>Коллекции (7)</span>
             <span>3 189 024 ₽</span>
           </a>
-          <a href="" className="cart__tabs__item">
+          <a href="#" className="cart__tabs__item">
             <span>Отдельные документы (7)</span>
             <span>3 189 024 ₽</span>
           </a>
-          <a href="" className="cart__tabs__item">
+          <a href="#" className="cart__tabs__item">
             <span>Журналы (7)</span>
             <span>3 189 024 ₽</span>
           </a>
-          <a href="" className="cart__tabs__item">
+          <a href="#" className="cart__tabs__item">
             <span>Печатные издания (7)</span>
             <span>3 189 024 ₽</span>
           </a>

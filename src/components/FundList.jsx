@@ -4,12 +4,12 @@ export default function ({ nocode }) {
 
     function Header() {
       return (
-        <div class="fund-list__item__header">
-          { children && !nocode && <button class="fund-list__item__toggler" data-accordion-toggler></button> }
-          <div class="fund-list__item__title">
-            { nocode || <div class="fund-list__item__title__code">02</div> }
-            <a href="" class="fund-list__item__title__name">Бизнес. Предпринимательство. Сервис</a>
-            <div class="fund-list__item__title__count">1</div>
+        <div className="fund-list__item__header">
+          { children && !nocode && <button className="fund-list__item__toggler" data-accordion-toggler></button> }
+          <div className="fund-list__item__title">
+            { nocode || <div className="fund-list__item__title__code">02</div> }
+            <a href="#" className="fund-list__item__title__name">Бизнес. Предпринимательство. Сервис</a>
+            <div className="fund-list__item__title__count">1</div>
           </div>
         </div>
       )
@@ -17,8 +17,8 @@ export default function ({ nocode }) {
 
     function Wrapper() {
       return (
-        <div class="fund-list__item__wrapper" data-accordion-wrapper>
-          <div class="fund-list__item__content" data-accordion-content>
+        <div className="fund-list__item__wrapper" data-accordion-wrapper>
+          <div className="fund-list__item__content" data-accordion-content>
             { children }
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function ({ nocode }) {
     }
 
     return (
-      <div class="fund-list__item" data-accordion>
+      <div className="fund-list__item" data-accordion>
         <Header />
         { children && !nocode && <Wrapper /> }
       </div>

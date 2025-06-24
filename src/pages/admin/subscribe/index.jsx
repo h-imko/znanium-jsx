@@ -6,13 +6,13 @@ export default function index() {
   return (
     <Page aside breadcrumbs>
       <Generic title="Подписки">
-        <a href="" class="button-text">
-          <span class="icon icon--arrow_backward"></span>
+        <a href="#" className="button-text">
+          <span className="icon icon--arrow_backward"></span>
           Назад в "Подписки"
         </a>
         <p>Подписчик: <b>Никитка</b></p>
-        <div class="table-wrapper">
-          <table class="table table--small table--bordered table--slim">
+        <div className="table-wrapper">
+          <table className="table table--small table--bordered table--slim">
             <tbody>
               <tr>
                 <th>Подписка № </th>
@@ -64,24 +64,24 @@ export default function index() {
               </tr>
               <tr>
                 <td colspan="2">
-                  <div class="text">
+                  <div className="text">
                     <b>Состав подписки:</b>
                     <ul>
-                      <li><a href="">Все документы подписки</a></li>
-                      <li><a href="">Основная коллекция ЭБС</a></li>
-                      <li><a href="">Альпина Диджитал</a></li>
-                      <li><a href="">Нефтегазопромысловое оборудование</a></li>
-                      <li><a href="">Теоретическая механика</a></li>
-                      <li><a href="">Детали машин</a></li>
-                      <li><a href="">Электротехника</a></li>
-                      <li><a href="">Гидромеханика и гидродинамика</a></li>
-                      <li><a href="">Сопротивление материалов</a></li>
-                      <li><a href="">Гидромашины и компрессоры</a></li>
-                      <li><a href="">Механика грунтов, основания и фундаменты</a></li>
-                      <li><a href="">Физика</a></li>
-                      <li><a href="">Издательство "Просвещение". ФПУ 10-11 класс. ЭФУ</a></li>
-                      <li><a href="">Книги вне коллекций</a></li>
-                      <li><a href="">Электронная энциклопедия</a></li>
+                      <li><a href="#">Все документы подписки</a></li>
+                      <li><a href="#">Основная коллекция ЭБС</a></li>
+                      <li><a href="#">Альпина Диджитал</a></li>
+                      <li><a href="#">Нефтегазопромысловое оборудование</a></li>
+                      <li><a href="#">Теоретическая механика</a></li>
+                      <li><a href="#">Детали машин</a></li>
+                      <li><a href="#">Электротехника</a></li>
+                      <li><a href="#">Гидромеханика и гидродинамика</a></li>
+                      <li><a href="#">Сопротивление материалов</a></li>
+                      <li><a href="#">Гидромашины и компрессоры</a></li>
+                      <li><a href="#">Механика грунтов, основания и фундаменты</a></li>
+                      <li><a href="#">Физика</a></li>
+                      <li><a href="#">Издательство "Просвещение". ФПУ 10-11 класс. ЭФУ</a></li>
+                      <li><a href="#">Книги вне коллекций</a></li>
+                      <li><a href="#">Электронная энциклопедия</a></li>
                     </ul>
                   </div>
                 </td>

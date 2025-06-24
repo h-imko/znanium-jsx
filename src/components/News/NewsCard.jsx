@@ -1,6 +1,6 @@
 export default function ({ img, title }) {
 	return (
-		<a href="" className="news-card">
+		<a href="#" className="news-card">
 			<div className="news-card__img" style={ `--img: /src/assets/static/img/${img}.webp` }>
 				<img src={ `/src/assets/static/img/${img}.webp` } alt="Заполните меня" />
 			</div>

@@ -60,18 +60,18 @@ export default function index() {
               ]
             ]
           } } />
-          <div class="settings__input">
-            <button type="submit" class="settings__button">Сохранить</button>
+          <div className="settings__input">
+            <button type="submit" className="settings__button">Сохранить</button>
           </div>
         </form>
         <form className="settings__block">
           <h4>Каталог </h4>
           <Checkbox label={ "Показывать цены в каталоге на доступные издания и коллекции" } />
-          <div class="settings__input">
-            <button type="submit" class="settings__button">Сохранить</button>
+          <div className="settings__input">
+            <button type="submit" className="settings__button">Сохранить</button>
           </div>
         </form>
-        <div class="settings__block">
+        <div className="settings__block">
           <h4>Список IP читальных залов </h4>
           <Table data={ {
             headers: [

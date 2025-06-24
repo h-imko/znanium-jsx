@@ -128,7 +128,7 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
-						<a href="">
+						<a href="#">
 							<h1> Цены </h1>
 						</a>
 						<ul>
@@ -145,7 +145,7 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
-						<a href="">
+						<a href="#">
 							<h1> Корзина </h1>
 						</a>
 						<ul>
@@ -184,7 +184,7 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
-						<a href="">
+						<a href="#">
 							<h1> кабинет </h1>
 						</a>
 						<ul>
@@ -206,7 +206,7 @@ export default function index() {
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1> Мой профиль </h1>
 								</a>
 								<ul>
@@ -228,7 +228,7 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1> пользователи </h1>
 								</a>
 								<ul>
@@ -257,12 +257,12 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1>Статистика</h1>
 								</a>
 								<ul>
 									<li>
-										<a href="">
+										<a href="#">
 											<h1>Фонд</h1>
 										</a>
 										<ul>
@@ -289,7 +289,7 @@ export default function index() {
 										</a>
 									</li>
 									<li>
-										<a href="">
+										<a href="#">
 											<h1> активность </h1>
 										</a>
 										<ul>
@@ -338,7 +338,7 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1> Статистика COUNTER R5 </h1>
 								</a>
 								<ul>
@@ -360,7 +360,7 @@ export default function index() {
 								</ul>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1> Правообладателю </h1>
 								</a>
 								<ul>
@@ -416,7 +416,7 @@ export default function index() {
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<h1> Моё учебное заведение </h1>
 								</a>
 								<ul>
@@ -508,7 +508,7 @@ export default function index() {
 						</ul>
 					</li>
 					<li>
-						<a href="">
+						<a href="#">
 							<h1> О проекте </h1>
 						</a>
 						<ul>

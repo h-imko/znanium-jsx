@@ -73,9 +73,9 @@ export default function index() {
             ]
           ]
         } } />
-        <div class="button-group">
-          <button type="button" class="button" disabled=""> Выдать ключи выбранным </button>
-          <button type="button" class="button" disabled="">Отклонить выбранные заявки </button>
+        <div className="button-group">
+          <button type="button" className="button" disabled=""> Выдать ключи выбранным </button>
+          <button type="button" className="button" disabled="">Отклонить выбранные заявки </button>
         </div>
       </Generic >
     </Page>

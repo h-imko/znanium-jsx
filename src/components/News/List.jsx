@@ -22,7 +22,7 @@ const data = [
 export default function () {
   function Item({ img, text }) {
     return (
-      <a href="" className="news-list__item">
+      <a href="#" className="news-list__item">
         <div className="news-list__item__img" style={ `--img: url(/src/assets/static/img/${img}.webp)` }>
           <img src={ `/src/assets/static/img/${img}.webp` } alt="Заполните меня" />
         </div>

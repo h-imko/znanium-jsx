@@ -88,7 +88,7 @@ export default function () {
 								<div className="advantages__item__promo__title"> Получите тестовый доступ к&nbsp;ЭБС на&nbsp;30&nbsp;дней</div>
 								<span>(для юрлиц)</span>
 								<img src="/src/assets/static/img/22.webp" alt="Заполните меня" className="advantages__item__promo__img" />
-								<a href="" className="advantages__item__promo__link"> Получить доступ </a>
+								<a href="#" className="advantages__item__promo__link"> Получить доступ </a>
 							</div>
 						</div>
 					</div>

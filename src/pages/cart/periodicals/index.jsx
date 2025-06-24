@@ -24,19 +24,19 @@ export default function index() {
 						rows: [
 							[
 								1,
-								<a href="">Аудитор, 2021</a>,
+								<a href="#">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Аудитор, 2021</a>,
+								<a href="#">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],
 							[
 								1,
-								<a href="">Аудитор, 2021</a>,
+								<a href="#">Аудитор, 2021</a>,
 								<>2&nbsp;544&nbsp;520&nbsp;₽</>,
 								<button type="button" className="cart__table__button" title="Удалить товар"><span className="icon icon--delete"></span></button>
 							],

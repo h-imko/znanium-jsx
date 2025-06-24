@@ -9,8 +9,8 @@ export default function index() {
   return (
     <Page aside breadcrumbs>
       <Generic title="Передать ключи в филиал">
-        <a href="" class="button-text">
-          <span class="icon icon--arrow_backward"></span>
+        <a href="#" className="button-text">
+          <span className="icon icon--arrow_backward"></span>
           Назад к филиалам
         </a>
         <Text>

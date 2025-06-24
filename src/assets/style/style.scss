@@ -139,7 +139,7 @@
 	}
 
 	a {
-		&:not([href=""]) {
+		&:not([href="#"]) {
 			color: var(--color-primary);
 
 			&:hover {

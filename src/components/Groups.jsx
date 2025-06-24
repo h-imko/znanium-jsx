@@ -7,10 +7,10 @@ export default function () {
     function Header() {
       return (
 
-        <div class="groups__item__header">
-          { children && <button type="button" class="groups__item__toggler" title="Свернуть/развернуть" data-accordion-toggler></button> }
-          <a href="" class="groups__item__title">Все пользователи (206)</a>
-          <div class="groups__item__controls">
+        <div className="groups__item__header">
+          { children && <button type="button" className="groups__item__toggler" title="Свернуть/развернуть" data-accordion-toggler></button> }
+          <a href="#" className="groups__item__title">Все пользователи (206)</a>
+          <div className="groups__item__controls">
             <IconButtons items={ [
               {
                 icon: "add",

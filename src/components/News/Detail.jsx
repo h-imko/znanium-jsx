@@ -226,17 +226,17 @@ export default function () {
               <p>Также не забывайте, что мы проводим конкурсы для авторов! Узнайте подробнее о каждом из них в наших <a href="https://vk.com/wall-38772636_3220">соцсетях</a>.</p>
             </div>
             <div className="news__tags">
-              <a href="">Библиотека </a>
-              <a href="">ЭБС Znanium </a>
-              <a href="">Книги </a>
-              <a href="">Библиотекарь </a>
+              <a href="#">Библиотека </a>
+              <a href="#">ЭБС Znanium </a>
+              <a href="#">Книги </a>
+              <a href="#">Библиотекарь </a>
             </div>
             <div className="news__socials">
               <Socials />
             </div>
           </div>
           <div className="news__aside">
-            <a href="" className="news-card">
+            <a href="#" className="news-card">
               <div className="news-card__img" style="--img: url(/assets/static/img/10.webp)">
                 <img src="/assets/static/img/10.webp" alt="Заполните меня" />
               </div>
@@ -246,7 +246,7 @@ export default function () {
                 <span className="date"> 6 декабря 2024 </span>
               </div>
             </a>
-            <a href="" className="news__banner">
+            <a href="#" className="news__banner">
               <img src="/assets/static/img/19.webp" alt="Заполните меня" />
             </a>
             <WebinarCard />

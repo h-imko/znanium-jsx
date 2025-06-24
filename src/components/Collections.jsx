@@ -4,7 +4,7 @@ export default function () {
 		return (
 			<div className="collections__collection">
 				<div className="collections__collection__info">
-					<a href="" className="collections__collection__title">Базовая коллекция ЭБС. СПО (9670)</a>
+					<a href="#" className="collections__collection__title">Базовая коллекция ЭБС. СПО (9670)</a>
 					<div className="collections__collection__labels">
 						<div className="labels">
 							<div className="label label--alt1">

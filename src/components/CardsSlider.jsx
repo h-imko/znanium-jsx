@@ -5,7 +5,7 @@ export default function ({ title, cards }) {
 		<div className="cards-slider">
 			<div className="container-fluid">
 				<div className="cards-slider__inner">
-					<a href="" className="cards-slider__title">
+					<a href="#" className="cards-slider__title">
 						<h2> { title } </h2>
 					</a>
 					<div className="cards-slider__slider">
