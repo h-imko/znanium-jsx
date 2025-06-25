@@ -1,0 +1,42 @@
+@use "button";
+@use "font";
+@use "breakpoint" as *;
+@use "mixins" as *;
+
+.cookie-alert {
+  bottom: 0;
+  top: unset;
+  width: 100%;
+  height: fit-content;
+  max-width: unset;
+  max-height: unset;
+  border: none;
+  background-color: #fff;
+
+  &__inner {
+    padding: gap-scale(1.5) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: gap-scale(1.5);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      @include hoverType1;
+    }
+  }
+
+  &__accept {
+    @extend %button;
+  }
+}

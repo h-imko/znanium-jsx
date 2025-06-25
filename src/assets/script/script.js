@@ -33,6 +33,27 @@ document.addEventListener("DOMContentLoaded", () => {
 	accessibility()
 	testToasts()
 	fpl()
+	cookieAlert()
+
+	function cookieAlert() {
+		const dialog = document.querySelector("dialog.cookie-alert")
+		const accept = dialog.querySelector(".cookie-alert__accept")
+
+		let accepted
+
+		dialog.showModal()
+
+		accept.addEventListener("click", () => {
+			accepted = true
+			dialog.close()
+		})
+
+		dialog.addEventListener("close", () => {
+			if (!accepted) {
+				dialog.showModal()
+			}
+		})
+	}
 
 	function testToasts() {
 		document.querySelector(".test-toast")?.addEventListener("click", () => {

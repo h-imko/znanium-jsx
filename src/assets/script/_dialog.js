@@ -1,7 +1,7 @@
 import { ifClickInside } from "./_helpers"
 
 export default function dialog() {
-	document.querySelectorAll("dialog").forEach(dialog => {
+	document.querySelectorAll(".dialog").forEach(dialog => {
 		const body = dialog.querySelector(".dialog__body")
 
 		dialog.addEventListener("close", event => {
