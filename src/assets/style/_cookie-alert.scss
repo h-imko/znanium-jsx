@@ -4,21 +4,17 @@
 @use "mixins" as *;
 
 .cookie-alert {
+  position: sticky;
   bottom: 0;
-  top: unset;
-  width: 100%;
-  height: fit-content;
-  max-width: unset;
-  max-height: unset;
-  border: none;
   background-color: #fff;
+  border-top: var(--default-border-width) solid var(--color-accent);
 
   &__inner {
-    padding: gap-scale(1.5) 0;
+    padding: gap-scale(.5) 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: gap-scale(1.5);
+    gap: gap-scale(0.5);
 
     @media (max-width: $mobile) {
       flex-direction: column;
@@ -29,7 +25,9 @@
   &__text {
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 8px;
+    @extend %font-2;
 
     a {
       @include hoverType1;
@@ -37,6 +35,6 @@
   }
 
   &__accept {
-    @extend %button;
+    @extend %button, %button--small;
   }
 }

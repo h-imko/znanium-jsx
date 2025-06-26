@@ -1,19 +1,16 @@
 export default function () {
   return (
-    <dialog className="cookie-alert">
-      <div className="container">
+    <div className="cookie-alert">
+      <div className="container-fluid">
         <div className="cookie-alert__inner">
           <div className="cookie-alert__text">
-            <h2 className="cookie-alert__title">
-              Мы используем куки
-            </h2>
-            <p>Для работы с сайтом необходимо ваше разрешение на сбор и использование cookie-файлов. Подробную информацию смотрите на странице <a href="">политика использования персональных данных</a></p>
+            <p>Мы используем файлы cookie для вашего удобства. Продолжая пользоваться сайтом, вы соглашаетесь с политикой использования cookie. <a href=""> Подробнее </a> </p>
           </div>
           <div className="cookie-alert__actions">
             <button type="button" className="cookie-alert__accept">Принять</button>
           </div>
         </div>
       </div>
-    </dialog>
+    </div>
   )
 }
