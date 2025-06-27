@@ -3,6 +3,7 @@ import Generic from "../../../components/Generic"
 import IconButtons from "../../../components/IconButtons"
 import Links from "../../../components/Links"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Table from "../../../components/Table"
 import Text from "../../../components/Text"
 
@@ -76,6 +77,7 @@ export default function index() {
             ],
           ]
         } } />
+        <Pagination />
         <Text>
           <p>
             <img src="https://znanium.ru/uploads/managers/Исагулова_Марианна_Тенгизовна_2-small.jpg" align="left" style="display: inline; width: auto; margin-right: 20px;" />

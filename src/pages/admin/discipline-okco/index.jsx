@@ -4,6 +4,7 @@ import Form from "../../../components/Form"
 import Generic from "../../../components/Generic"
 import Input from "../../../components/Input"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Select from "../../../components/Select"
 import Table from "../../../components/Table"
 
@@ -91,6 +92,7 @@ export default function index() {
             ]
           ]
         } } />
+        <Pagination />
       </Generic >
     </Page>
   )
