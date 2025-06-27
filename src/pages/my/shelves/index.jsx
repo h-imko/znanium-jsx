@@ -1,6 +1,7 @@
 import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Shelves from "../../../components/Shelves"
 
 export default function index() {
@@ -32,6 +33,7 @@ export default function index() {
 					}
 				] } />
 				<Shelves />
+				<Pagination />
 			</Generic>
 		</Page>
 	)

@@ -4,6 +4,7 @@ import Document from "../../../../../components/Document"
 import Filter from "../../../../../components/Filter"
 import Generic from "../../../../../components/Generic"
 import Page from "../../../../../components/Page"
+import Pagination from "../../../../../components/Pagination"
 
 export default function index() {
 	return (
@@ -35,6 +36,7 @@ export default function index() {
 					<Document />
 					<Document />
 				</Bookslist>
+				<Pagination />
 			</Generic>
 		</Page>
 	)
