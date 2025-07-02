@@ -7,6 +7,7 @@ import Generic from "../../../components/Generic"
 import IconButtons from "../../../components/IconButtons"
 import Input from "../../../components/Input"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import SelectSimple from "../../../components/SelectSimple"
 import Table from "../../../components/Table"
 
@@ -102,6 +103,7 @@ export default function index() {
             ]
           ]
         } } />
+        <Pagination />
         <div className="button-group">
           <button type="button" className="button" disabled=""> Выдать ключи </button>
           <button type="button" className="button" disabled=""> Отозвать ключи </button>

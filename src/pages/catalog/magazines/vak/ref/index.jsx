@@ -3,6 +3,7 @@ import Controls from "../../../../../components/Controls"
 import Document from "../../../../../components/Document"
 import Generic from "../../../../../components/Generic"
 import Page from "../../../../../components/Page"
+import Pagination from "../../../../../components/Pagination"
 
 export default function index() {
 	return (
@@ -16,6 +17,7 @@ export default function index() {
 					<Document isMagazine />
 					<Document isMagazine />
 				</Bookslist>
+				<Pagination />
 			</Generic>
 		</Page>
 	)

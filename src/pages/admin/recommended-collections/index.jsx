@@ -2,6 +2,7 @@ import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
 import IconButtons from "../../../components/IconButtons"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Table from "../../../components/Table"
 
 export default function index() {
@@ -40,6 +41,7 @@ export default function index() {
             ]
           ]
         } } />
+        <Pagination />
       </Generic >
     </Page>
   )

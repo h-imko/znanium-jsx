@@ -2,6 +2,7 @@ import Alphabetical from "../../../components/Alphabetical"
 import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Reflist from "../../../components/Reflist"
 
 export default function index() {
@@ -11,6 +12,7 @@ export default function index() {
         <Alphabetical />
         <Controls showBy />
         <Reflist links pack titleLink />
+        <Pagination />
       </Generic >
     </Page>
   )

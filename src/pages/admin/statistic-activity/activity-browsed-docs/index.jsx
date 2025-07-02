@@ -6,6 +6,7 @@ import Generic from "../../../../components/Generic"
 import Input from "../../../../components/Input"
 import Links from "../../../../components/Links"
 import Page from "../../../../components/Page"
+import Pagination from "../../../../components/Pagination"
 import Select from "../../../../components/Select"
 import SelectSimple from "../../../../components/SelectSimple"
 import Table from "../../../../components/Table"
@@ -88,6 +89,7 @@ export default function index() {
             ]
           ]
         } } />
+        <Pagination />
         <Text>
           <h4>По филиалам</h4>
           <p>Данные по филиалам не включены в верхний отчет по головному подразделению.</p>

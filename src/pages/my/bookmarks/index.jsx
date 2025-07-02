@@ -1,6 +1,7 @@
 import Controls from "../../../components/Controls"
 import Generic from "../../../components/Generic"
 import Page from "../../../components/Page"
+import Pagination from "../../../components/Pagination"
 import Simplebooks from "../../../components/Simplebooks"
 
 export default function index() {
@@ -21,6 +22,7 @@ export default function index() {
 					}
 				] } />
 				<Simplebooks />
+				<Pagination />
 			</Generic>
 		</Page>
 	)

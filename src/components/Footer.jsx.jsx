@@ -1,4 +1,3 @@
-import CookieAlert from "./CookieAlert"
 import Logo from "./Logo"
 import Socials from "./Socials"
 import Toasts from "./Toasts"
@@ -91,7 +90,7 @@ export default function () {
 				</div>
 			</footer>
 			<Toasts />
-			<CookieAlert />
+			{/* <CookieAlert /> */}
 		</>
 	)
 }
