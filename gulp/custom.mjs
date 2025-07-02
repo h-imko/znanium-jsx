@@ -2,7 +2,7 @@ import fs from "fs"
 import rename from "gulp-rename"
 import path from "path"
 import sharp from "sharp"
-import svgo from "svgo"
+import * as svgo from "svgo"
 import Vinyl from "vinyl"
 import wawoff2 from "wawoff2"
 import { argv, bs, convertingImgTypes, gulpMem } from "./env.mjs"
@@ -173,3 +173,4 @@ function getDestPath(inSrc, ...replaces) {
 
 
 export { clean, ext, getDestPath, iconsToCSS, newer, reload, removeExcess, replace, replaceSrc, sharpWebp, svgOptimize, ttfToWoff }
+
