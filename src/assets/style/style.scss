@@ -89,6 +89,8 @@
 @use "news-card";
 @use "webinar-card";
 @use "chart";
+@use "recservice";
+@use "recservice1";
 @use "affiliated-authors";
 
 @keyframes move-out {
@@ -111,7 +113,6 @@
 	}
 }
 
-/* Apply the custom animation to the old and new page states */
 ::view-transition-old(root) {
 	animation: 0.4s ease-in both move-out;
 }

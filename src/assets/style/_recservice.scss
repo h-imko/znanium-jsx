@@ -1,0 +1,31 @@
+@use "mixins" as *;
+@use "button" as *;
+@use "font" as *;
+
+.recservice {
+  display: flex;
+  flex-direction: column;
+  gap: gap-scale(1);
+  max-width: 700px;
+
+  &__item {
+    padding: gap-scale(0.75) gap-scale(1);
+    border: var(--default-border);
+    border-radius: var(--default-border-radius-small);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: gap-scale(0.25);
+
+    &__name {
+      @extend %h4;
+      @include hoverType3;
+    }
+
+    &__action {
+      @extend %button;
+      grid-column: 2;
+      grid-row: 1 / 3;
+    }
+  }
+}

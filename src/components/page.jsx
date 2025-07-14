@@ -1,10 +1,10 @@
-import AccordionNav from "./AccordionNav"
-import Breadcrumbs from "./Breadcrumbs"
-import Footer from "./Footer.jsx"
-import Head from "./Head"
-import Header from "./Header"
-import Singleform from "./Singleform"
-import Calendar from "./Webinar/Calendar"
+import AccordionNav from "./AccordionNav.jsx"
+import Breadcrumbs from "./Breadcrumbs.jsx"
+import Footer from "./Footer.jsx.jsx"
+import Head from "./Head.jsx"
+import Header from "./Header.jsx"
+import Singleform from "./Singleform.jsx"
+import Calendar from "./Webinar/Calendar.jsx"
 
 export default function ({ children, aside, breadcrumbs, search, calendar }) {
 	function Aside() {

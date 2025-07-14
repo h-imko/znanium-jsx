@@ -129,7 +129,8 @@
 	th {
 		color: var(--color-primary);
 
-		&:has(input) {
+		&:has(input),
+		&:empty {
 			width: 0;
 			min-width: min-content;
 		}
