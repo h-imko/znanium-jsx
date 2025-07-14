@@ -69,11 +69,11 @@ export default function ({ data, small, slim, bordered, }) {
           "table--bordered": bordered
         })
       }>
-        <thead>
+        { data.headers && <thead>
           <tr>
             { data.headers.map(Th) }
           </tr>
-        </thead>
+        </thead> }
         <tbody>
           { data.rows.map(Tr) }
         </tbody>

@@ -185,6 +185,20 @@ export default function index() {
 										<a href="/src/pages/recservice/journals/project/index.jsx">
 											<h1> проект вариант 1 </h1>
 										</a>
+										<ul>
+											<li>
+												<a href="/src/pages/recservice/journals/project/result/index.jsx">
+													<h1> результат </h1>
+												</a>
+												<ul>
+													<li>
+														<a href="/src/pages/recservice/journals/project/result/item/index.jsx">
+															<h1> элемент </h1>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
 									</li>
 									<li>
 										<a href="/src/pages/recservice/journals/project/index.1.jsx">
