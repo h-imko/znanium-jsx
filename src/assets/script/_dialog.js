@@ -10,6 +10,10 @@ export default function dialog() {
 
 		})
 
+		dialog.querySelector("button[type=reset]")?.addEventListener("click", () => {
+			dialog.close()
+		})
+
 		dialog.querySelectorAll("[data-dialog-selfcloser]").forEach(dialogCloser => {
 			dialogCloser.addEventListener("click", () => {
 				dialog.close()

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	accessibility()
 	testToasts()
 	fpl()
-	cookieAlert()
+	// cookieAlert()
 
 	function cookieAlert() {
 		const dialog = document.querySelector("dialog.cookie-alert")
