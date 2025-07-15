@@ -129,6 +129,7 @@ function html() {
 		}))
 		.pipe(ext(".html"))
 		.pipe(replace("/src/assets/", argv.prod ? "/" : "/assets/"))
+		.pipe(replace("/src/", "/"))
 		.pipe(destGulp.dest(getDestPath()))
 		.pipe(bs.stream())
 }
