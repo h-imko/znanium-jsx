@@ -8,7 +8,7 @@ import sourcemaps from "gulp-sourcemaps"
 import { stacksvg } from "gulp-stacksvg"
 import render from 'preact-render-to-string'
 import * as rawsass from "sass-embedded"
-import { clean, ext, getDestPath, iconsToCSS, newer, reload, removeExcess, replaceSrc, sharpWebp, svgOptimize, ttfToWoff } from "./gulp/custom.mjs"
+import { clean, ext, getDestPath, iconsToCSS, newer, reload, removeExcess, replace, sharpWebp, svgOptimize, ttfToWoff } from "./gulp/custom.mjs"
 import { argv, bs, convertingImgTypes, destGulp, gulpMem } from "./gulp/env.mjs"
 import { nothing, printPaintedMessage, transform } from "./gulp/service.mjs"
 
@@ -52,7 +52,7 @@ function css() {
 			bs.notify("CSS Error")
 			this.emit("end")
 		})
-		.pipe(replaceSrc())
+		.pipe(replace("/src/assets/", argv.prod ? "../" : "/"))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write("./"))
 		.pipe(destGulp.dest(getDestPath()))
@@ -128,7 +128,7 @@ function html() {
 			this.emit("end")
 		}))
 		.pipe(ext(".html"))
-		.pipe(replaceSrc())
+		.pipe(replace("/src/assets/", argv.prod ? "/" : "/assets/"))
 		.pipe(destGulp.dest(getDestPath()))
 		.pipe(bs.stream())
 }
