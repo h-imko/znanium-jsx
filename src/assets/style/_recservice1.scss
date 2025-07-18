@@ -36,4 +36,23 @@
       cursor: wait;
     }
   }
+
+  &__tabs {
+    display: flex;
+    gap: gap-scale(0.25);
+  }
+
+  &__tab {
+    padding: gap-scale(0.5);
+    border: var(--default-border);
+    border-radius: var(--default-border-radius-small);
+    @include hoverTypeBorder;
+    @include hoverType2;
+  }
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+    }
+  }
 }

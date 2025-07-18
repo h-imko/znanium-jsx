@@ -33,7 +33,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	accessibility()
 	testToasts()
 	fpl()
+	recserviceTabs()
 	// cookieAlert()
+
+	function recserviceTabs() {
+		document.querySelectorAll(".recservice1").forEach(block => {
+			const tabs = block.querySelectorAll(".recservice1__tab")
+			const contents = block.querySelectorAll(".recservice1__content")
+
+			tabs.forEach(tab => {
+				tab.addEventListener("click", () => {
+					tabs.forEach((tabCompared, jndex) => {
+						const isCurrent = tab == tabCompared
+
+						tabCompared.classList.toggle("is-active", isCurrent)
+						contents[jndex].classList.toggle("is-active", isCurrent)
+					})
+				})
+			})
+		})
+	}
 
 	function cookieAlert() {
 		const dialog = document.querySelector("dialog.cookie-alert")
