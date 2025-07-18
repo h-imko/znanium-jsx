@@ -2,6 +2,7 @@ import Dropzone from "../../../components/Dropzone"
 import Filter from "../../../components/Filter"
 import Form from "../../../components/Form"
 import Generic from "../../../components/Generic"
+import IconButtons from "../../../components/IconButtons"
 import Input from "../../../components/Input"
 import Page from "../../../components/Page"
 import Pagination from "../../../components/Pagination"
@@ -49,7 +50,18 @@ export default function index() {
 						[
 							<a href="#">Какое-то название запроса</a>,
 							<time>21.01.05  14:99</time>,
-							<button type="button" className="cart__table__button" title="Удалить"><span className="icon icon--delete"></span></button>
+							<IconButtons items={ [
+								{
+									icon: "eye",
+									isButton: true,
+									title: "Открыть"
+								},
+								{
+									icon: "delete",
+									isButton: true,
+									title: "Удалить"
+								},
+							] } />
 						],
 					]
 				} } />
