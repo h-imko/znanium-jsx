@@ -1,6 +1,7 @@
 @use "mixins" as *;
 @use "text" as *;
 @use "breakpoint" as *;
+@use "icon" as *;
 
 .dropzone {
 	display: flex;
@@ -24,14 +25,17 @@
 		transition: border-color ease var(--default-duration);
 		order: 1;
 		@include hoverTypeBorder;
-
-		&__accent {}
+		position: relative;
 	}
 
 	&__label &__input {
 		position: absolute;
-		width: 0;
-		height: 0;
+		inset: 0;
+		opacity: 0;
+	}
+
+	&.is-dragover &__label {
+		border-color: var(--color-accent);
 	}
 
 	&.is-full &__label {
@@ -77,8 +81,21 @@
 			order: -1;
 			flex-shrink: 0;
 
+			&:has(img:not([src])) {
+				&::after {
+					content: "";
+					@extend %icon, %icon--description;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
 			img {
 				height: 100%;
+
+				&:not([src]) {
+					display: none;
+				}
 			}
 		}
 

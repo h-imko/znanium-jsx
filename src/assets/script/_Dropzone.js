@@ -57,6 +57,8 @@ export default function () {
 		}
 
 		input.addEventListener("change", function () {
+			dropzone.classList.remove("is-dragover")
+
 			for (const file of this.files) {
 				if (accept && (!accept.includes(file.type) || !file.type)) {
 					alert(`Файл такого типа не поддерживается - ${file.name}`)
@@ -79,11 +81,11 @@ export default function () {
 		})
 
 		input.addEventListener("dragenter", () => {
-			input.classList.add("is-dragover")
+			dropzone.classList.add("is-dragover")
 		})
 
 		input.addEventListener("dragleave", () => {
-			input.classList.remove("is-dragover")
+			dropzone.classList.remove("is-dragover")
 		})
 	})
 }
