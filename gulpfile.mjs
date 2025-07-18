@@ -52,7 +52,7 @@ function css() {
 			bs.notify("CSS Error")
 			this.emit("end")
 		})
-		.pipe(replace("/src/assets/", argv.prod ? "../" : "/"))
+		.pipe(replace("/src/assets/", argv.prod ? "../" : "/assets/"))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write("./"))
 		.pipe(destGulp.dest(getDestPath()))
