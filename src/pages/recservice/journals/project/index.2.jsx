@@ -2,15 +2,26 @@ import Generic from "../../../../components/Generic"
 import IconButtons from "../../../../components/IconButtons"
 import Loader from "../../../../components/Loader"
 import Page from "../../../../components/Page"
+import Text from "../../../../components/Text"
 
 export default function index() {
 	return (
 		<Page breadcrumbs  >
-			<Generic title={ "Какое-то название запроса" } p={ <>От  21.04.99  23:49 <br /> Файл:  capusta.txt </> }>
-				<div className="button-group">
-					<button type="button" className="button" > Редактировать </button>
-					<button type="button" className="button button--secondary" > Удалить </button>
-				</div>
+			<Generic title={ "Какое-то название запроса" } p={ <IconButtons items={ [
+				{
+					icon: "edit",
+					isButton: true,
+					title: "редактировать"
+				},
+				{
+					icon: "delete",
+					isButton: true,
+					title: "Удалить"
+				},
+			] } /> }>
+				<Text>
+					<span>От  21.04.99  23:49 <br /> Файл: capusta.txt</span>
+				</Text>
 				<h2>Результаты</h2>
 				<div className="recservice1">
 					<div className="recservice1__tabs">
@@ -24,7 +35,6 @@ export default function index() {
 								<button className="button">Выполнить анализ</button>
 								<div className="recservice1__analysis">
 									<Loader />
-									<span className="recservice1__analysis__time">1 21.01.05  14:99</span>
 									<IconButtons items={ [
 										{
 											icon: "delete",
@@ -59,7 +69,6 @@ export default function index() {
 								<button className="button">Выполнить анализ</button>
 								<div className="recservice1__analysis">
 									<Loader />
-									<span className="recservice1__analysis__time">3 21.01.05  14:99</span>
 									<IconButtons items={ [
 										{
 											icon: "delete",

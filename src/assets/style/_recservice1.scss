@@ -8,11 +8,10 @@
   max-width: 700px;
 
   &__item {
-    padding: gap-scale(0.75) gap-scale(1);
+    padding: gap-scale(0.75) gap-scale(1) gap-scale(0.75) 0;
     display: flex;
     flex-direction: column;
     gap: gap-scale(0.5);
-    border-bottom: var(--default-border);
   }
 
   &__analysis {
@@ -24,12 +23,15 @@
     border-radius: var(--default-border-radius-small);
 
     &__time {
-      margin-right: auto;
       @include hoverType3;
     }
 
     .loader {
       --loader-size: 32px;
+    }
+
+    .icon-buttons {
+      margin-left: auto;
     }
 
     &:has(> .loader) &__time {

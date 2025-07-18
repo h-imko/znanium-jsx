@@ -11,23 +11,29 @@
 		:is(h1, h2, h3, h4, h5, h6) {
 			color: var(--color-primary);
 			display: inline;
+			margin-right: 0.5ch;
 		}
 
-		p:has(.help, button) {
+		> div:has(.help, button, .icon-buttons) {
 			margin-top: 0;
 			display: inline-flex;
 		}
 
-		p:has(button) {
+		> div:has(button) {
 			vertical-align: sub;
 			--icon-size: 32;
 		}
 
-		.help {
+		.help,
+		.icon-buttons {
 			vertical-align: baseline;
 		}
 
-		p {
+		.icon-buttons {
+			display: inline-flex;
+		}
+
+		> div {
 			margin-top: 8px;
 		}
 
