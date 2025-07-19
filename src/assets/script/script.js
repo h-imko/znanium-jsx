@@ -20,7 +20,7 @@ import showcase from "./_showcase"
 import singleform from "./_singleform"
 import sliders from "./_sliders"
 import table from "./_table"
-import makeToast from "./_toast"
+import toast from "./_toast"
 
 document.addEventListener("DOMContentLoaded", () => {
 	m31()
@@ -51,37 +51,37 @@ document.addEventListener("DOMContentLoaded", () => {
 	function testToasts() {
 		document.querySelector(".test-toast")?.addEventListener("click", () => {
 			setTimeout(() => {
-				makeToast({
+				toast({
 					title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat facere nesciunt ab officiis itaque qui , <a href="#">labore, inventore eos. Illum, impedit.</a>`,
 					type: "warning",
 				})
 				setTimeout(() => {
-					makeToast({
+					toast({
 						title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur",
 						text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur eveniet, ad facere eligendi reprehenderit ducimus minus voluptate iste.Quasi officiis placeat aperiam cupiditate, iusto odio dignissimos?",
 						type: "success",
 					})
 					setTimeout(() => {
-						makeToast({
+						toast({
 							title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur",
 							text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur eveniet, ad facere eligendi reprehenderit ducimus minus voluptate iste.Quasi officiis placeat aperiam cupiditate, iusto odio dignissimos?",
 							type: "error"
 						})
 						setTimeout(() => {
-							makeToast({
+							toast({
 								title: "Неописуемо важная информация, срочно прочитать",
 								text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur eveniet, ad facere eligendi reprehenderit ducimus minus voluptate iste.Quasi officiis placeat aperiam cupiditate, iusto odio dignissimos?"
 							})
 							setTimeout(() => {
-								makeToast({
+								toast({
 									title: "Неописуемо важная информация, срочно прочитать",
 								})
 								setTimeout(() => {
-									makeToast({
+									toast({
 										text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur eveniet, ad facere eligendi reprehenderit ducimus minus voluptate iste.Quasi officiis placeat aperiam cupiditate, iusto odio dignissimos?"
 									})
 									setTimeout(() => {
-										makeToast({
+										toast({
 											type: "error",
 											text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero, commodi maxime tempora aspernatur eveniet, ad facere eligendi reprehenderit ducimus minus voluptate iste.Quasi officiis placeat aperiam cupiditate, iusto odio dignissimos?"
 										})

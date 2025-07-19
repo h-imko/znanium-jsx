@@ -1,4 +1,4 @@
-import makeToast from "./_toast"
+import toast from "./_toast"
 
 export default function () {
   document.querySelectorAll(".fpl__item__link").forEach(item => {
@@ -8,7 +8,7 @@ export default function () {
       link.selectionStart = 0
       link.selectionEnd = link.value.length
       link.focus()
-      makeToast({
+      toast({
         title: "Скопируйте выделенный текст",
         text: "Произошла непредвиденная ошибка, скопируйте текст вручную",
         type: "error",
@@ -19,7 +19,7 @@ export default function () {
       if (navigator.clipboard) {
         try {
           navigator.clipboard.writeText(link.value).then(() => {
-            makeToast({
+            toast({
               title: "Успешно скопировано",
               type: "success",
               timeout: 3000,

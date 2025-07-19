@@ -15,7 +15,6 @@ export default function select() {
 		const optionsSelected = new Map()
 		const options = isStatic ? getDOMOptions() : await fetchOptions()
 		const optionsNodes = new Map()
-		window.biba = optionsNodes
 
 		function getDOMOptions() {
 			return originalOptions.map(option => {

@@ -3,6 +3,7 @@ export default function () {
 
   document.querySelectorAll(`.${selector}`).forEach(list => {
     const controls = document.querySelectorAll(".controls")
+
     controls.forEach(controlsBlock => {
       controlsBlock.querySelectorAll(`.controls__item[data-for="${selector}"][data-type="view"]`).forEach(item => {
         const buttonDefault = item.querySelector("button:not([data-view-alt])")

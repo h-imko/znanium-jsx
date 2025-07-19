@@ -1,3 +1,5 @@
+import toast from "./_toast"
+
 export default function () {
   document.querySelectorAll(".document").forEach(doc => {
     doc.querySelectorAll(".document__tabs").forEach(tabs => {
@@ -20,7 +22,7 @@ export default function () {
 
       function showError() {
         window.getSelection().selectAllChildren(text)
-        makeToast({
+        toast({
           title: "Скопируйте выделенный текст",
           text: "Произошла непредвиденная ошибка, скопируйте текст вручную",
           type: "error",
@@ -31,7 +33,7 @@ export default function () {
         if (navigator.clipboard) {
           try {
             navigator.clipboard.writeText(text.textContent).then(() => {
-              makeToast({
+              toast({
                 title: "Успешно скопировано",
                 type: "success",
                 timeout: 3000,

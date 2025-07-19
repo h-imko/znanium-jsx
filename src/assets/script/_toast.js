@@ -2,9 +2,6 @@ const toastPanel = document.querySelector(".toasts")
 const template = toastPanel?.querySelector("#toast-template")
 const toastList = toastPanel?.querySelector(".toasts__list")
 
-console.log("123")
-
-
 class Toast extends EventTarget {
 	constructor({ title, text, timeout, type } = {
 		title: "",

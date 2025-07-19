@@ -25,6 +25,7 @@ export default function () {
 
     window.addEventListener("scroll", () => {
       clearTimeout(currentScrollMove)
+
       currentScrollMove = setTimeout(() => {
         const scrolled = window.scrollY
 
