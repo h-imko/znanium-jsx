@@ -20,7 +20,7 @@ export default function () {
             </div>
           </div>
           <div className="fpl__item__link__field">
-            <Input value={ "https://znanium.org/read?id=378335&lms=03570044e37474fab18ad89adbb153f5" } readOnly customButton={ `<span className="icon icon--copy"></span>` } />
+            <Input value={ "https://znanium.org/read?id=378335&lms=03570044e37474fab18ad89adbb153f5" } readOnly customButton={ `<span class="icon icon--copy"></span>` } />
           </div>
           <div className="fpl__item__link__footer">
             <a href="#" className="fpl__item__link__pages">Диапазон страниц: с 1 по 7</a>

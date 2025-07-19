@@ -1,0 +1,1 @@
+export default accordions = new Map()

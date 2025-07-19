@@ -144,7 +144,7 @@ export function syncSplideGridToStyle(splide, container) {
 }
 
 export function headerHeightToCSS() {
-	let header = document.body.querySelector("header")
+	const header = document.body.querySelector("header")
 
 	function setSize() {
 		document.documentElement.style.setProperty("--header-height", `${header.getClientRects()[0].height}px`)

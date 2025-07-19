@@ -31,20 +31,24 @@
 		background-position-y: calc(75% + ((var(--scrolled) - var(--offset)) / var(--scroll-ratio)) * -1px);
 		@include themeHide;
 
-		&--1 {
+		&:nth-child(1) {
 			--scroll-ratio: 3;
+			background-image: url(/src/assets/static/img/space/1.webp);
 		}
 
-		&--2 {
+		&:nth-child(2) {
 			--scroll-ratio: 4;
+			background-image: url(/src/assets/static/img/space/2.webp);
 		}
 
-		&--3 {
+		&:nth-child(3) {
 			--scroll-ratio: 3;
+			background-image: url(/src/assets/static/img/space/3.webp);
 		}
 
-		&--4 {
+		&:nth-child(4) {
 			--scroll-ratio: 2;
+			background-image: url(/src/assets/static/img/space/4.webp);
 		}
 	}
 }
