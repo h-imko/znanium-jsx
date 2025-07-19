@@ -7,7 +7,7 @@ export default function ({ center }) {
       "loader--center": center
     }) } >
       <svg tabindex="-1">
-        <use href="/src/assets/static/img/icon/spinner_b.svg#self" tabindex="-1" />
+        <use href="/src/assets/static/img/complex-icons/stack.svg#spinner_b" tabindex="-1" />
       </svg>
     </div >
   )

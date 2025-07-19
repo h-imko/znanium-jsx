@@ -19,7 +19,7 @@ let esbuild = createGulpEsbuild({
 const sass = gSass(rawsass)
 
 function cleanExtraImgs() {
-	return gulp.src(["./src/assets/static/img/**/*.*", "!./src/assets/static/img/icon/stack.svg"], {
+	return gulp.src(["./src/assets/static/img/**/*.*", "!./src/assets/static/img/icon/stack.svg", "!./src/assets/static/img/complex-icons/stack.svg"], {
 		allowEmpty: true,
 		read: false,
 	})
@@ -165,6 +165,18 @@ function makeIconsStack() {
 		.pipe(gulp.dest(getDestPath(true, ["/img-raw", "/img"])))
 }
 
+function makeComplexIconsStack() {
+	return gulp.src("./src/assets/static/img-raw/complex-icons/**/*.svg")
+		.pipe(stacksvg({
+			separator: "__"
+		}))
+		.pipe(transform((chunk, encoding, callback) => {
+			chunk.path = `${chunk.base}/src/assets/static/img-raw/complex-icons/${chunk.path}`
+			callback(null, chunk)
+		}))
+		.pipe(gulp.dest(getDestPath(true, ["/img-raw", "/img"])))
+}
+
 function imageMin() {
 	return gulp.src("./src/assets/static/img-raw/**/*.*", {
 		allowEmpty: true,
@@ -218,6 +230,7 @@ function watch() {
 	gulp.watch(["./src/assets/script/**/*.*"], { events: "change" }, js)
 	gulp.watch(["./src/assets/style/**/*.*"], css)
 	gulp.watch(["./src/assets/static/img-raw/icon/**/*.svg"], gulp.parallel(makeIconsStack, makeIconsSCSS))
+	gulp.watch(["./src/assets/static/img-raw/complex-icons/**/*.svg"], gulp.parallel(makeComplexIconsStack))
 	gulp.watch(["./src/assets/static/img-raw/**/*.*"], { events: ["change", "add"] }, imageMin)
 	gulp.watch(["./src/assets/static/img-raw/**/*.*"], { events: ["unlink", "unlinkDir"] }, cleanExtraImgs)
 	gulp.watch(["./src/assets/static/**/*.*", "!./src/assets/static/img-raw/**/*.*"], copyStatic)
@@ -229,7 +242,8 @@ export default gulp.series(
 		imageMin,
 		cleanExtraImgs,
 		makeIconsSCSS,
-		makeIconsStack
+		makeIconsStack,
+		makeComplexIconsStack
 	),
 	passComponents,
 	gulp.parallel(
