@@ -4,12 +4,6 @@ export default function dialog() {
 	document.querySelectorAll(".dialog").forEach(dialog => {
 		const body = dialog.querySelector(".dialog__body")
 
-		dialog.addEventListener("close", event => {
-			// console.log(event)
-			// console.log(dialog.returnValue)
-
-		})
-
 		dialog.querySelector("button[type=reset]")?.addEventListener("click", () => {
 			dialog.close()
 		})

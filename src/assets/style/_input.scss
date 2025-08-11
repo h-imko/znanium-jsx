@@ -124,7 +124,7 @@
 		}
 	}
 
-	:is(input, textarea) {
+	:is(input, textarea):not(.dropzone__input) {
 		@extend %input__input-base;
 	}
 

@@ -1,7 +1,7 @@
 export default function () {
 	document.querySelectorAll(".dropzone:not(.is-initialized)").forEach(dropzone => {
 		dropzone.classList.add("is-initialized")
-		const input = dropzone.querySelector("input")
+		const input = dropzone.querySelector(".dropzone__input")
 		const list = dropzone.querySelector(".dropzone__list")
 		const files = new Set()
 		const accept = input.accept
@@ -60,8 +60,9 @@ export default function () {
 			dropzone.classList.remove("is-dragover")
 
 			for (const file of this.files) {
-				if (accept && (!accept.includes(file.type) || !file.type)) {
-					alert(`Файл такого типа не поддерживается - ${file.name}`)
+				let extension = file.name.slice(file.name.lastIndexOf('.')).toLowerCase();
+				if (accept && !accept.includes(extension)) {
+					alert(`Файл такого типа не поддерживается - ${file.name}`);
 				} else if (files.size == maxlength) {
 					alert(`Превышено максимальное количество файлов, файл ${file.name} не будет загружен`)
 				} else if (file.size > maxsize) {
