@@ -2,7 +2,7 @@ export default function () {
   document.querySelectorAll(".input").forEach(inputBlock => {
     const input = inputBlock.querySelector("input, textarea")
     const typeTogglers = inputBlock.querySelectorAll(`[data-input-button="toggleType"]`)
-    const characterCounters = inputBlock.querySelectorAll(".input__count")
+    const characterCounters = (inputBlock.closest(".form__item") ?? inputBlock).querySelectorAll(".input__count")
     const clearButtons = inputBlock.querySelectorAll(".input__clear")
 
     typeTogglers.forEach(toggler => {

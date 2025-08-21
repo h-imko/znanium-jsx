@@ -48,6 +48,11 @@
 		// color: var(--color-primary);
 	}
 
+	&__count {
+		@extend %font-2;
+		color: var(--color-primary-alt);
+	}
+
 	&__caption {
 		grid-column: 1 / -1;
 		@extend %font-2;
@@ -124,18 +129,21 @@
 		}
 	}
 
-	:is(input, textarea):not(.dropzone__input) {
-		@extend %input__input-base;
+	:not(.dropzone__input) {
+		&:is(textarea) {
+			@extend %input__input-base;
+			resize: vertical;
+			min-height: var(--input-height);
+			height: calc(var(--input-height) * 2);
+		}
+
+		&:is(input) {
+			@extend %input__input-base;
+		}
 	}
 
 	&.has-error :is(input, textarea):not(:disabled, :focus, :hover) {
 		border-color: var(--color-accent-alt1);
 		background-color: color-mix(in srgb, var(--color-accent-alt1) 10%, #0000);
-	}
-
-	textarea {
-		resize: vertical;
-		min-height: var(--input-height);
-		height: calc(var(--input-height) * 2);
 	}
 }

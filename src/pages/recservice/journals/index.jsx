@@ -13,6 +13,17 @@ export default function index() {
 	return (
 		<Page breadcrumbs  >
 			<Generic title={ "Рекомендательные сервисы" }>
+				<div className="form__item">
+
+					<div class="input">
+						<label for="1745250532410" class="input__label"> Содержание дисциплины из РПД </label>
+						<textarea type="text" id="1745250532410" placeholder="Вставьте текст с описанием дисциплины из РПД" required="" maxlength="32000"></textarea>
+						<div class="input__caption">
+							<div class="input__count"> <span class="input__count__current">0</span> / <span class="input__count__max">32000</span> </div>
+							<button type="button" class="input__clear">Очистить поле</button>
+						</div>
+					</div>
+				</div>
 				<Filter togglerText="Создать запрос" form={
 					<Form bordered items={
 						[
