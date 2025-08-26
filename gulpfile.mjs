@@ -128,7 +128,7 @@ function html() {
 			this.emit("end")
 		}))
 		.pipe(ext(".html"))
-		.pipe(replace("/src/assets/", argv.github ? "/zn-test/assets/build/" : argv.prod ? "/" : "/assets/"))
+		.pipe(replace("/src/assets/", argv.github ? "/zn-test/build/assets/" : argv.prod ? "/" : "/assets/"))
 		.pipe(replace("/src/", "/"))
 		.pipe(destGulp.dest(getDestPath()))
 		.pipe(bs.stream())
