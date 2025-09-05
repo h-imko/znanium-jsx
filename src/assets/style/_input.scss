@@ -134,7 +134,7 @@
 			@extend %input__input-base;
 			resize: vertical;
 			min-height: var(--input-height);
-			height: calc(var(--input-height) * 2);
+			height: calc(var(--input-height) * 3);
 		}
 
 		&:is(input) {
